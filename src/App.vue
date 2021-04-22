@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Navigation />
-    <v-main>
+    <v-main class="pt-16">
       <router-view :key="$route.path" />
     </v-main>
     <Footer />
@@ -31,3 +31,5 @@ export default {
   }
 };
 </script>
+
+<style lang="scss"></style>

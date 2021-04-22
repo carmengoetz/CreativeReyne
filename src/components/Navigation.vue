@@ -68,6 +68,14 @@ export default {
     text-transform: uppercase;
     text-decoration: none;
     color: #272727;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .router-link-exact-active {
+    color: red;
   }
 }
 </style>

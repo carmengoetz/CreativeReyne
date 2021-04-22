@@ -137,7 +137,6 @@ export default {
   background-color: #272727;
   background-size: contain;
   background-position: 50% 50%;
-  background-repeat: repeat;
   position: relative;
 }
 </style>
