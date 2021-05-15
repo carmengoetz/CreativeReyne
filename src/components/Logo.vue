@@ -3,7 +3,7 @@
     class="home__image"
     lazy-src=""
     max-width="400"
-    src="../assets/creative-reyne-thumb.gif"
+    src="../assets/images/creators-logo.png"
   ></v-img>
 </template>
 

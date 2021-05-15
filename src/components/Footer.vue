@@ -3,7 +3,7 @@
     <v-col class="text-center" cols="12">
       <Socials />
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Carmen Goetz</strong>
+        {{ new Date().getFullYear() }} — <strong>Creative Reyne</strong>
       </v-card-text>
     </v-col>
   </v-footer>

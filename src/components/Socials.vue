@@ -3,12 +3,12 @@
     <v-btn
       v-for="social in socials"
       :key="social.name"
-      class="ml-4"
+      class="ml-2"
       icon
       :href="social.link"
       target="_blank"
     >
-      <v-icon size="36px">
+      <v-icon size="24px">
         {{ social.icon }}
       </v-icon>
     </v-btn>
@@ -24,16 +24,6 @@ export default {
       icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
       socials: [
         {
-          link: "https://www.instagram.com/creativereyne/",
-          name: "Instagram",
-          icon: "mdi-instagram"
-        },
-        {
-          link: "https://twitter.com/CreativeReyne",
-          name: "Twitter",
-          icon: "mdi-twitter"
-        },
-        {
           link: "https://www.twitch.tv/creativereyne",
           name: "Twitch",
           icon: "mdi-twitch"
@@ -42,6 +32,16 @@ export default {
           link: "https://www.youtube.com/channel/UCyHVoqh4TK6XTRIi6m6d6UQ",
           name: "YouTube",
           icon: "mdi-youtube"
+        },
+        {
+          link: "https://www.instagram.com/creativereyne/",
+          name: "Instagram",
+          icon: "mdi-instagram"
+        },
+        {
+          link: "https://twitter.com/CreativeReyne",
+          name: "Twitter",
+          icon: "mdi-twitter"
         }
       ]
     };

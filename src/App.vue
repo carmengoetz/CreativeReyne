@@ -2,7 +2,9 @@
   <v-app>
     <Navigation />
     <v-main class="pt-16">
-      <router-view :key="$route.path" />
+      <ParticlesJS>
+        <router-view :key="$route.path" />
+      </ParticlesJS>
     </v-main>
     <Footer />
   </v-app>
@@ -11,12 +13,14 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
+import ParticlesJS from "@/components/ParticlesJS.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
-    Footer
+    Footer,
+    ParticlesJS
   },
   data: () => {
     return {
@@ -32,4 +36,10 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@font-face {
+  font-family: "MADEEvolveSansRegularEVO";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf")
+    format("opentype"); /* IE6-IE8 */
+}
+</style>

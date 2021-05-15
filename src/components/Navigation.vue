@@ -1,7 +1,14 @@
 <template>
-  <v-app-bar absolute color="white" elevate-on-scroll class="nav">
+  <v-app-bar absolute elevate-on-scroll class="nav">
     <v-toolbar-title>
       <router-link :to="{ name: 'Home' }" class="nav__brand"
+        ><v-img
+          class="mt-2"
+          lazy-src=""
+          width="50"
+          height="50"
+          src="../assets/images/creators-logo-thumb.png"
+        ></v-img
         >Creative Reyne</router-link
       >
     </v-toolbar-title>
@@ -46,36 +53,33 @@ export default {
   text-transform: uppercase;
   text-decoration: none;
   color: #272727;
+  padding: 4px 80px;
 
   &__brand {
     font-family: "Bebas Neue", cursive;
     font-size: 48px;
-    margin-left: 80px;
+    // margin-left: 80px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #272727;
+    display: inline-flex;
   }
 
   &__links {
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 24px;
-    margin: auto 80px;
+    // margin: auto 80px;
   }
 
   &__link {
-    font-family: "Montserrat", sans-serif;
+    font-family: "MADEEvolveSansRegularEVO";
+    font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #272727;
-
-    &:hover {
-      color: red;
-    }
   }
 
-  .router-link-exact-active {
-    color: red;
-  }
+  // .router-link-exact-active {
+  //   color: red;
+  // }
 }
 </style>
