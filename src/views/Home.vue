@@ -1,26 +1,24 @@
 <template>
   <div class="home">
-    <v-container class="mt-16">
-      <v-row>
-        <v-col cols="6">
-          <Logo />
+    <v-container class="mt-lg-0 mt-xl-16">
+      <v-row class="mt-16">
+        <v-col cols="12" class="col-lg-5 mt-lg-0 mt-xl-16">
+          <Logo class="mt-lg-n10 mx-sm-auto" />
         </v-col>
-        <v-col cols="6" class="mt-16">
-          <v-row>
-            <v-card-title class="home__title white--text text-h1 mt-16"
+        <v-col cols="12" class="col-lg-7 mt-lg-0 mt-xl-16">
+          <v-row class="mt-lg-0 mt-xl-12">
+            <v-card-title class="home__title white--text mt-16 mx-auto mx-lg-0"
               >Graphic Design</v-card-title
             >
           </v-row>
-          <v-row>
+          <v-row class="mx-sm-auto">
             <v-card-subtitle
-              class="home__subtitle white--text flex-wrap text-md-h5 text-subtitle-1"
+              class="home__subtitle white--text flex-wrap mt-10 mx-auto mx-lg-0"
               >For content creators and gaming communities</v-card-subtitle
             >
           </v-row>
-          <v-row>
-            <v-btn large outlined tile class="home__button white--text"
-              >Build Your Brand</v-btn
-            >
+          <v-row class="mt-16 mx-sm-auto">
+            <Buttons />
           </v-row>
         </v-col>
       </v-row>
@@ -30,11 +28,13 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
+import Buttons from "@/components/Buttons.vue";
 
 export default {
   name: "Home",
   components: {
-    Logo
+    Logo,
+    Buttons
   }
 };
 </script>
@@ -42,22 +42,41 @@ export default {
 <style scoped lang="scss">
 .home {
   &__title {
-    font-family: "MADEEvolveSansRegularEVO", sans-serif !important;
+    font-family: $MADEEvolveSansEVO, sans-serif !important;
+    font-size: 110px;
+
+    @media (max-width: $xl) {
+      font-size: 70px;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 60px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 50px;
+    }
   }
 
   &__subtitle {
-    font-family: "Montserrat", sans-serif;
-    font-size: 24px;
+    font-family: $AcuminPro, sans-serif !important;
+    font-size: 40px;
+    @media (max-width: $xl) {
+      font-size: 30px;
+    }
   }
 
   &__button {
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    text-transform: capitalize;
-
-    margin: 10% 20px;
+    font-family: $Consolas, serif;
+    font-size: 24px;
     border: 3px solid red;
-    letter-spacing: -2px;
+    width: 272px;
+    margin-left: 20px;
+
+    @media (max-width: $xl) {
+      width: 190px;
+      font-size: 16px;
+    }
   }
 }
 </style>

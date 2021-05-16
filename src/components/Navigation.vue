@@ -71,7 +71,7 @@ export default {
   padding: 0 80px;
 
   &__brand {
-    font-family: "Bebas Neue", cursive;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 64px;
     text-transform: uppercase;
     text-decoration: none;
@@ -85,7 +85,7 @@ export default {
   }
 
   &__link {
-    font-family: "MADEEvolveSansMediumEVO";
+    font-family: $MADEEvolveSansEVO, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;

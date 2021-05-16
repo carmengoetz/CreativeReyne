@@ -27,18 +27,20 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~vuetify/src/styles/styles.sass";
-
 @font-face {
-  font-family: "MADEEvolveSansRegularEVO";
+  font-family: "MADEEvolveSansEVO";
   src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf")
     format("opentype"); /* IE6-IE8 */
 }
 
 @font-face {
-  font-family: "MADEEvolveSansMediumEVO";
-  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Medium\ EVO.otf")
-    format("opentype"); /* IE6-IE8 */
+  font-family: "AcuminPro";
+  src: url("./assets/fonts/Acumin-RPro.otf") format("opentype"); /* IE6-IE8 */
+}
+
+@font-face {
+  font-family: "Consolas";
+  src: url("./assets/fonts/CONSOLA.TTF") format("truetype"); /* IE6-IE8 */
 }
 
 #app {
