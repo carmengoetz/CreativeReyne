@@ -18,7 +18,14 @@
             >
           </v-row>
           <v-row class="mt-16 mx-sm-auto">
-            <Buttons />
+            <div class="mx-auto mx-lg-0">
+              <Button
+                v-for="button in buttons"
+                :key="button.index"
+                :name="button.name"
+                :to="button.to"
+              />
+            </div>
           </v-row>
         </v-col>
       </v-row>
@@ -28,13 +35,31 @@
 
 <script>
 import Logo from "@/components/Logo.vue";
-import Buttons from "@/components/Buttons.vue";
+import Button from "@/components/Button.vue";
 
 export default {
   name: "Home",
   components: {
     Logo,
-    Buttons
+    Button
+  },
+  data: () => {
+    return {
+      buttons: [
+        {
+          name: "Build Your Brand",
+          to: "Brand"
+        },
+        {
+          name: "Portfolio",
+          to: "Portfolio"
+        },
+        {
+          name: "Contact",
+          to: "Contact"
+        }
+      ]
+    };
   }
 };
 </script>

@@ -34,6 +34,11 @@ export default {
 }
 
 @font-face {
+  font-family: "MADEEvolveSans";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype"); /* IE6-IE8 */
+}
+
+@font-face {
   font-family: "AcuminPro";
   src: url("./assets/fonts/Acumin-RPro.otf") format("opentype"); /* IE6-IE8 */
 }

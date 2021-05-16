@@ -34,7 +34,7 @@
     <v-item-group class="nav__links">
       <router-link
         v-for="page in pages"
-        :key="page.name"
+        :key="page.index"
         :to="{
           name: page.name
         }"
@@ -53,8 +53,8 @@ export default {
   data: () => {
     return {
       pages: [
-        { path: "/portfolio", name: "Portfolio", exact: false },
         { path: "/pricing", name: "Pricing", exact: false },
+        { path: "/portfolio", name: "Portfolio", exact: false },
         { path: "/contact", name: "Contact", exact: false }
       ]
     };
