@@ -1,17 +1,34 @@
 <template>
-  <v-app-bar absolute elevate-on-scroll class="nav">
-    <v-toolbar-title>
-      <router-link :to="{ name: 'Home' }" class="nav__brand"
-        ><v-img
-          class="mt-2"
+  <v-app-bar absolute elevate-on-scroll height="100px" class="nav py-0">
+    <v-menu open-on-hover bottom offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-toolbar-title v-bind="attrs" v-on="on">
+          <router-link
+            :to="{ name: 'Home' }"
+            class="nav__brand mt-1"
+            v-bind="attrs"
+            v-on="on"
+            ><v-img
+              class="mt-2"
+              lazy-src=""
+              width="78"
+              height="78"
+              src="../assets/images/creators-logo-thumb.png"
+            ></v-img
+            >Creative Reyne</router-link
+          >
+        </v-toolbar-title>
+      </template>
+      <v-btn tile color="white" height="72px" width="400px" class="pa-0 mt-0">
+        <v-img
           lazy-src=""
-          width="50"
-          height="50"
+          max-width="50"
+          max-height="50"
           src="../assets/images/creators-logo-thumb.png"
         ></v-img
-        >Creative Reyne</router-link
-      >
-    </v-toolbar-title>
+        >Standard Business
+      </v-btn>
+    </v-menu>
     <v-spacer></v-spacer>
 
     <v-item-group class="nav__links">
@@ -46,40 +63,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~vuetify/src/styles/styles.sass";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .nav {
   text-transform: uppercase;
   text-decoration: none;
-  color: #272727;
-  padding: 4px 80px;
+  color: $creator-primary;
+  padding: 0 80px;
 
   &__brand {
     font-family: "Bebas Neue", cursive;
-    font-size: 48px;
-    // margin-left: 80px;
+    font-size: 64px;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
   }
 
   &__links {
-    display: grid;
-    grid-auto-flow: column;
-    grid-column-gap: 24px;
-    // margin: auto 80px;
+    display: inline-flex;
+    height: 100px;
   }
 
   &__link {
-    font-family: "MADEEvolveSansRegularEVO";
+    font-family: "MADEEvolveSansMediumEVO";
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
-  }
+    padding: 32px 24px;
 
-  // .router-link-exact-active {
-  //   color: red;
-  // }
+    &:hover {
+      background-color: $creator-primary;
+      color: $text-white;
+    }
+  }
 }
 </style>

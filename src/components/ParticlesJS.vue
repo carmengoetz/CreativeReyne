@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="particles-js"><slot></slot></div>
+    <div id="particles-js" />
   </div>
 </template>
 
@@ -137,6 +137,6 @@ export default {
   background-color: #272727;
   background-size: contain;
   background-position: 50% 50%;
-  position: relative;
+  max-height: 700px;
 }
 </style>

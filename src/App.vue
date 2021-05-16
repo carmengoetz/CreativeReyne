@@ -2,9 +2,10 @@
   <v-app>
     <Navigation />
     <v-main class="pt-16">
-      <ParticlesJS>
-        <router-view :key="$route.path" />
-      </ParticlesJS>
+      <div class="content-container">
+        <ParticlesJS class="content" />
+        <router-view :key="$route.path" class="content" />
+      </div>
     </v-main>
     <Footer />
   </v-app>
@@ -41,5 +42,21 @@ export default {
   font-family: "MADEEvolveSansRegularEVO";
   src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf")
     format("opentype"); /* IE6-IE8 */
+}
+
+@font-face {
+  font-family: "MADEEvolveSansMediumEVO";
+  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Medium\ EVO.otf")
+    format("opentype"); /* IE6-IE8 */
+}
+
+.content-container {
+  display: grid;
+  background-color: #272727;
+}
+
+.content {
+  grid-column: 1;
+  grid-row: 1;
 }
 </style>

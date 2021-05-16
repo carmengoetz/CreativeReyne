@@ -2,7 +2,7 @@
   <v-img
     class="home__image"
     lazy-src=""
-    max-width="400"
+    max-width="600"
     src="../assets/images/creators-logo.png"
   ></v-img>
 </template>

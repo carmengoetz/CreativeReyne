@@ -1,8 +1,8 @@
 <template>
   <v-footer dark padless>
     <v-col class="text-center" cols="12">
-      <Socials />
-      <v-card-text class="white--text">
+      <Socials class="pb-n8" />
+      <v-card-text class="white--text pt-n8">
         {{ new Date().getFullYear() }} — <strong>Creative Reyne</strong>
       </v-card-text>
     </v-col>
