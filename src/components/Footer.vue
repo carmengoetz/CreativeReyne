@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless>
+  <v-footer padless dark class="footer">
     <v-col class="text-center" cols="12">
       <Socials class="pb-n8" />
       <v-card-text class="white--text pt-n8">
@@ -19,3 +19,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "~vuetify/src/styles/styles.sass";
+
+.footer {
+  background-color: $creator-primary !important;
+}
+</style>

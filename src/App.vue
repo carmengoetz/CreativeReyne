@@ -2,9 +2,9 @@
   <v-app>
     <Navigation />
     <v-main class="pt-16">
-      <div class="content-container">
-        <ParticlesJS class="content" />
-        <router-view :key="$route.path" class="content" />
+      <div class="app-container pt-9">
+        <ParticlesJS class="app-container__content" />
+        <router-view :key="$route.path" class="app-container__content" />
       </div>
     </v-main>
     <Footer />
@@ -22,22 +22,13 @@ export default {
     Navigation,
     Footer,
     ParticlesJS
-  },
-  data: () => {
-    return {
-      appTitle: "Awesome App",
-      sidebar: false,
-      pages: [
-        { path: "/portfolio", name: "Portfolio", exact: false },
-        { path: "/pricing", name: "Pricing", exact: false },
-        { path: "/contact", name: "Contact", exact: false }
-      ]
-    };
   }
 };
 </script>
 
 <style lang="scss">
+@import "~vuetify/src/styles/styles.sass";
+
 @font-face {
   font-family: "MADEEvolveSansRegularEVO";
   src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf")
@@ -50,13 +41,15 @@ export default {
     format("opentype"); /* IE6-IE8 */
 }
 
-.content-container {
-  display: grid;
-  background-color: #272727;
+#app {
+  background-color: $creator-primary;
 }
 
-.content {
-  grid-column: 1;
-  grid-row: 1;
+.app-container {
+  display: grid;
+  &__content {
+    grid-column: 1;
+    grid-row: 1;
+  }
 }
 </style>

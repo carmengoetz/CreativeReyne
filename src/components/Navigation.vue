@@ -63,13 +63,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~vuetify/src/styles/styles.sass";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .nav {
   text-transform: uppercase;
   text-decoration: none;
-  color: $creator-primary;
   padding: 0 80px;
 
   &__brand {
@@ -78,6 +76,7 @@ export default {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
+    color: $creator-primary;
   }
 
   &__links {

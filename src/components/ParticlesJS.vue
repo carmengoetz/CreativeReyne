@@ -132,11 +132,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "~vuetify/src/styles/styles.sass";
+
 #particles-js {
-  background-color: #272727;
-  background-size: contain;
-  background-position: 50% 50%;
-  max-height: 700px;
+  background-color: $creator-primary;
+  height: 80vh;
 }
 </style>
