@@ -20,7 +20,7 @@ export default {
 .button {
   font-family: $Consolas, serif;
   font-size: 24px;
-  border: 6px solid red;
+  border: 6px solid $creator-secondary;
   width: 272px;
 
   @media (max-width: $xl) {

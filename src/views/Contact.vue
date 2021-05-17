@@ -1,35 +1,51 @@
 <template>
-  <div class="contact my-16">
+  <div class="contact ma-16">
     <v-container>
       <v-row>
-        <v-col cols="12" md="5">
-          <Logo class="mx-auto" />
-          <div class="text-body-1 mt-4">
-            <span class="font-weight-bold">Alexander Reyne</span>
-            is a Graphic Designer currently residing in Saskatchewan, Canada. At
-            15 years old he realized he wanted to use his creative ability to
-            bring people’s passions to life. Almost 15 years later, with
-            experience in nearly every facet of the graphic design industry,
-            Alexander turned his attention to creating beautiful graphics for
-            online communities and streamers looking to stand out in their
-            space.
-          </div>
-        </v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="4">
           <v-row>
-            <v-col cols="6">
-              <v-card-title class="contact__email pl-0">
-                Contact Me
-              </v-card-title>
-            </v-col>
-            <v-spacer></v-spacer>
-            <v-col cols="6">
-              <Socials class="contact__socials text-right" />
-            </v-col>
+            <v-img
+              class="mt-2"
+              lazy-src=""
+              width="500"
+              max-height="500"
+              src="../assets/images/alexander-reyne.png"
+            ></v-img>
           </v-row>
           <v-row>
-            <Form />
+            <p class="contact__description mt-4">
+              <span class="contact__description--name">Alexander Reyne</span>
+              is a Graphic Designer currently residing in Saskatchewan, Canada.
+              At 15 years old he realized he wanted to use his creative ability
+              to bring people’s passions to life. Almost 15 years later, with
+              experience in nearly every facet of the graphic design industry,
+              Alexander turned his attention to creating beautiful graphics for
+              online communities and streamers looking to stand out in their
+              space.
+            </p>
+          </v-row>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col cols="12" md="7">
+          <v-row class="mb-4">
+            <v-card-title class="contact__title pl-0">Email Me</v-card-title>
+          </v-row>
+          <v-row justify="space-between">
+            <v-col cols="12">
+              <Form />
+            </v-col>
+          </v-row>
+          <v-row justify="center"
+            ><v-card-title class="contact__title pl-0 my-6"
+              >Direct Message Me</v-card-title
+            >
+          </v-row>
+          <v-row>
+            <Socials
+              class="contact__socials my-4"
+              size="60px"
+              className="mr-10"
+            />
           </v-row>
         </v-col>
       </v-row>
@@ -38,21 +54,42 @@
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
 import Form from "@/components/Form.vue";
 import Socials from "@/components/Socials.vue";
 
 export default {
   name: "Contact",
-  components: { Logo, Form, Socials }
+  components: { Form, Socials }
 };
 </script>
 
 <style lang="scss" scoped>
 .contact {
-  &__email {
-    font-family: "Montserrat", sans-serif;
-    font-size: 36px;
+  &__description {
+    font-family: $AcuminPro, sans-serif;
+    font-size: 24px;
+    color: $text-white;
+
+    &--name {
+      font-weight: 700;
+      color: $creator-secondary;
+    }
+  }
+
+  &__title {
+    font-family: $MADEEvolveSans, sans-serif;
+    font-size: 84px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-white;
+
+    @media (max-width: $xl) {
+      font-size: 64px;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 44px;
+    }
   }
 }
 </style>

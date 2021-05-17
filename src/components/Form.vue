@@ -1,65 +1,76 @@
 <template>
-  <v-form ref="form" @submit.prevent="sendEmail">
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="6">
-          <v-text-field
-            v-model="form.first"
-            :rules="rules.nameRules"
-            color="red"
-            label="First name *"
+  <v-form ref="form" class="form" @submit.prevent="sendEmail">
+    <v-row>
+      <v-col cols="6">
+        <v-row>
+          <label for="form_first" class="form__label">First Name:</label>
+        </v-row>
+        <v-row>
+          <input
+            id="form_first"
             name="from_first"
-            required
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" sm="6">
-          <v-text-field
-            v-model="form.last"
-            color="red"
-            label="Last name"
+            class="form__text form__text--name mb-4"
+            type="text"
+            required="required"
+            placeholder="Required"
+            v-model="form.first"
+          />
+        </v-row>
+      </v-col>
+      <v-col cols="6">
+        <v-row>
+          <label for="form_last" class="form__label">Last Name:</label>
+        </v-row>
+        <v-row>
+          <input
+            id="form_last"
             name="from_last"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12">
-          <v-text-field
-            v-model="form.email"
-            :rules="rules.emailRules"
-            color="red"
-            label="Email *"
-            name="from_email"
-            type="email"
-            required
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12">
-          <v-textarea
-            v-model="form.message"
-            color="red"
-            name="from_message"
-            required
-          >
-            <template v-slot:label>
-              <div>Message *</div>
-            </template>
-          </v-textarea>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-card-actions>
-          <v-btn
-            :disabled="!formIsValid"
-            outlined
-            tile
-            color="red"
-            large
-            type="submit"
-            class="contact__button"
-          >
-            Send Message
-          </v-btn>
-        </v-card-actions>
-      </v-row>
-    </v-container>
+            class="form__text form__text--name mb-4"
+            type="text"
+            v-model="form.last"
+          />
+        </v-row>
+      </v-col>
+    </v-row>
+    <v-row>
+      <label for="form_email" class="form__label">Email:</label>
+    </v-row>
+    <v-row>
+      <input
+        id="form_email"
+        name="from_email"
+        class="form__text mb-4"
+        type="email"
+        required="required"
+        placeholder="Required"
+        v-model="form.email"
+      />
+    </v-row>
+    <v-row>
+      <label for="form_message" class="form__label">Message:</label>
+    </v-row>
+    <v-row>
+      <textarea
+        id="form_message"
+        name="from_message"
+        class="form__text form__text--message mb-4"
+        required="required"
+        placeholder="Required"
+        v-model="form.message"
+      />
+    </v-row>
+
+    <v-row justify="end">
+      <v-btn
+        :disabled="!formIsValid"
+        large
+        outlined
+        tile
+        type="submit"
+        class="form__button white--text py-6 ma-5"
+        >SEND</v-btn
+      ></v-row
+    >
   </v-form>
 </template>
 
@@ -78,13 +89,6 @@ export default {
 
     return {
       form: Object.assign({}, defaultForm),
-      rules: {
-        nameRules: [v => !!v || "First name is required"],
-        emailRules: [
-          v => !!v || "E-mail is required",
-          v => /.+@.+/.test(v) || "E-mail must be valid"
-        ]
-      },
       defaultForm
     };
   },
@@ -101,10 +105,6 @@ export default {
   },
 
   methods: {
-    resetForm() {
-      this.form = Object.assign({}, this.defaultForm);
-      this.$refs.form.reset();
-    },
     sendEmail: e => {
       emailjs
         .sendForm(
@@ -115,10 +115,11 @@ export default {
         )
         .then(
           result => {
-            this.resetForm();
+            alert("Message Sent!");
             console.log("SUCCESS!", result.status, result.text);
           },
           error => {
+            alert("There was a problem sending your message, please try again");
             console.log("FAILED...", error);
           }
         );
@@ -127,4 +128,51 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form {
+  max-width: 1000px;
+
+  &__label {
+    font-family: $Consolas, serif;
+    font-size: 20px;
+    color: $creator-secondary;
+  }
+
+  &__text {
+    font-family: $Consolas, serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 0;
+    border: 4px solid white;
+    background: rgba(255, 255, 255, 0.04);
+    width: 98%;
+    padding: 20px;
+    z-index: 1;
+
+    &--name {
+      width: 96%;
+    }
+
+    &--message {
+      height: 192px;
+    }
+  }
+
+  &__button {
+    font-family: $Consolas, serif;
+    font-size: 24px;
+    border: 4px solid $creator-secondary;
+    width: 200px;
+
+    @media (max-width: $xl) {
+      font-size: 16px;
+    }
+
+    &[disabled] {
+      background: rgba(255, 255, 255, 0.1);
+      border: 4px solid rgba(213, 31, 38, 0.5);
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+  }
+}
+</style>

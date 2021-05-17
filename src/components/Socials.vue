@@ -1,24 +1,26 @@
 <template>
-  <v-card-text>
+  <v-row justify="center">
     <v-btn
       v-for="social in socials"
       :key="social.name"
-      class="ml-2"
+      color="white"
+      class="mr-2"
+      :class="className"
       icon
       :href="social.link"
       target="_blank"
     >
-      <v-icon size="24px">
+      <v-icon :size="size">
         {{ social.icon }}
       </v-icon>
     </v-btn>
-  </v-card-text>
+  </v-row>
 </template>
 
 <script>
 export default {
   name: "Socials",
-
+  props: ["size", "className"],
   data: () => {
     return {
       socials: [
