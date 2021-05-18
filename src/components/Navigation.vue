@@ -5,11 +5,18 @@
         <v-toolbar-title v-bind="attrs" v-on="on" class="mt-2 mt-lg-0">
           <router-link
             :to="{ name: 'Home' }"
-            class="nav__brand align-center mt-2"
+            class="nav__brand text-uppercase align-center mt-2"
             ><v-img
-              width="40"
+              v-if="site == 'creators'"
+              width="44"
+              height="48"
+              src="@/assets/images/creators/creators-logo-thumb.png"
+            ></v-img>
+            <v-img
+              v-else
+              width="44"
               height="44"
-              src="../assets/images/creators-logo-thumb.png"
+              src="@/assets/images/standard/standard-logo-thumb.png"
             ></v-img
             ><span class="align-center ml-2 mt-1"
               >Creative Reyne</span
@@ -17,7 +24,7 @@
           >
         </v-toolbar-title>
       </template>
-      <v-card tile flat color="white" width="300px" class="pa-0 brand__button">
+      <v-card tile flat color="white" width="300px" class="pa-0">
         <v-list class="pa-0">
           <v-list-item v-if="site == 'standard'" class="pa-0">
             <v-list-item-content class="pa-0">
@@ -25,33 +32,33 @@
                 text
                 tile
                 height="72"
-                class="justify-start"
+                class="nav__button text-uppercase justify-start"
                 @click="changeToCreators"
               >
                 <v-img
                   max-width="36"
                   max-height="40"
-                  src="../assets/images/creators-logo-thumb.png"
+                  src="@/assets/images/creators/creators-logo-thumb.png"
                 ></v-img>
-                Content Creators
+                <span class="align-center ml-2">Content Creators</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item v-if="site == 'creators'" class="pa-0">
+          <v-list-item v-else class="pa-0">
             <v-list-item-content class="pa-0">
               <v-btn
                 text
                 tile
                 height="72"
-                class="justify-start"
+                class="nav__button text-uppercase justify-start"
                 @click="changeToStandard"
               >
                 <v-img
                   max-width="36"
                   max-height="40"
-                  src="../assets/images/creators-logo-thumb.png"
+                  src="@/assets/images/standard/standard-logo-thumb.png"
                 ></v-img>
-                Standard Business
+                <span class="align-center ml-2">Standard Business</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -67,7 +74,7 @@
         :to="{
           name: page.name
         }"
-        class="nav__link"
+        class="nav__link text-uppercase py-7 px-6"
       >
         {{ page.name }}
       </router-link>
@@ -88,7 +95,7 @@
                 :to="{
                   name: page.name
                 }"
-                class="nav__link"
+                class="nav__link text-uppercase py-7 px-6"
               >
                 {{ page.name }}
               </router-link>
@@ -131,17 +138,16 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  text-transform: uppercase;
   text-decoration: none;
   padding: 0 80px;
 
   @media (max-width: $lg) {
     padding: 0 60px;
   }
+
   &__brand {
     font-family: $BebasNeue;
     font-size: 52px;
-    text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
     color: $creator-primary;
@@ -152,8 +158,10 @@ export default {
   }
 
   &__button {
-    text-align: start;
+    font-family: $BebasNeue;
+    font-size: 24px !important;
   }
+
   &__links {
     display: inline-flex;
     height: 80px;
@@ -162,9 +170,7 @@ export default {
   &__link {
     font-family: $MADEEvolveSansEVO;
     font-size: 20px;
-    text-transform: uppercase;
     text-decoration: none;
-    padding: 28px 24px;
 
     &:hover {
       background-color: $creator-primary;

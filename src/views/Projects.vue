@@ -41,16 +41,16 @@ export default {
   data: () => {
     return {
       images: [
-        require("@/assets/images/creators-logo-design1.png"),
-        require("@/assets/images/creators-logo-design2.png"),
-        require("@/assets/images/creators-logo-design3.png"),
-        require("@/assets/images/creators-websites1.png"),
-        require("@/assets/images/creators-websites2.png"),
-        require("@/assets/images/creators-websites3.png"),
-        require("@/assets/images/creators-badges1.png"),
-        require("@/assets/images/creators-badges2.png"),
-        require("@/assets/images/creators-emotes.png"),
-        require("@/assets/images/creators-brand-packages.png")
+        require("@/assets/images/creators/creators-logo-design1.png"),
+        require("@/assets/images/creators/creators-logo-design2.png"),
+        require("@/assets/images/creators/creators-logo-design3.png"),
+        require("@/assets/images/creators/creators-websites1.png"),
+        require("@/assets/images/creators/creators-websites2.png"),
+        require("@/assets/images/creators/creators-websites3.png"),
+        require("@/assets/images/creators/creators-badges1.png"),
+        require("@/assets/images/creators/creators-badges2.png"),
+        require("@/assets/images/creators/creators-emotes.png"),
+        require("@/assets/images/creators/creators-brand-packages.png")
       ],
       buttons: [
         {
@@ -69,38 +69,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.portfolio {
-  &__title {
-    font-family: $MADEEvolveSans !important;
-    font-size: 88px;
-    text-transform: uppercase;
-
-    @media (max-width: $xl) {
-      font-size: 72px;
-    }
-
-    @media (max-width: $lg) {
-      font-size: 56px;
-    }
-
-    @media (max-width: $md) {
-      font-size: 40px;
-    }
-  }
-
-  &__subtitle {
-    font-family: $MADEEvolveSansEVO !important;
-    font-size: 40px;
-    color: $creator-secondary;
-    text-transform: uppercase;
-  }
-
-  &__description {
-    font-family: $AcuminPro;
-    font-size: 20px;
-    color: $text-white;
-  }
-}
-</style>

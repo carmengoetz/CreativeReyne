@@ -2,7 +2,7 @@
   <div class="pricing my-16">
     <v-container>
       <v-row>
-        <v-card-title class="pricing__title white--text mx-auto"
+        <v-card-title class="pricing__title text-uppercase white--text mx-auto"
           >pricing</v-card-title
         >
       </v-row>
@@ -22,7 +22,7 @@
             ></v-img
           ></v-row>
           <v-row justify="center" justify-md="start">
-            <v-card-title class="pricing__subtitle mb-10">
+            <v-card-title class="pricing__subtitle text-uppercase mb-10">
               {{ col.title }}
             </v-card-title>
           </v-row>
@@ -78,7 +78,7 @@ export default {
     return {
       columns: [
         {
-          image: require("@/assets/images/creators-emotes.png"),
+          image: require("@/assets/images/creators/creators-emotes.png"),
           title: "Emotes/Badges",
           items: [
             {
@@ -100,7 +100,7 @@ export default {
           cols: "4"
         },
         {
-          image: require("@/assets/images/creators-socials.png"),
+          image: require("@/assets/images/creators/creators-socials.png"),
           title: "Social Package",
           items: [
             {
@@ -119,7 +119,7 @@ export default {
           cols: "3"
         },
         {
-          image: require("@/assets/images/creators-websites1.png"),
+          image: require("@/assets/images/creators/creators-websites1.png"),
           title: "Websites",
           items: [
             {
@@ -138,7 +138,7 @@ export default {
           cols: "3"
         },
         {
-          image: require("@/assets/images/creators-logo.png"),
+          image: require("@/assets/images/creators/creators-logo.png"),
           title: "Logo Design",
           items: [
             {
@@ -173,7 +173,6 @@ export default {
   &__title {
     font-family: $MADEEvolveSans !important;
     font-size: 88px;
-    text-transform: uppercase;
 
     @media (max-width: $xl) {
       font-size: 72px;
@@ -192,7 +191,6 @@ export default {
     font-family: $MADEEvolveSansEVO !important;
     font-size: 36px;
     color: white;
-    text-transform: uppercase;
 
     @media (max-width: $xl) {
       font-size: 28px;
@@ -200,7 +198,6 @@ export default {
   }
 
   &__item {
-    font-family: $AcuminPro;
     font-size: 20px;
     font-weight: 700;
     color: $creator-secondary;
@@ -211,7 +208,6 @@ export default {
   }
 
   &__price {
-    font-family: $AcuminPro;
     font-size: 20px;
     color: $text-white;
 
@@ -221,7 +217,6 @@ export default {
   }
 
   &__note {
-    font-family: $AcuminPro;
     font-size: 20px;
     color: $text-white;
     font-style: italic;

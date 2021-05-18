@@ -60,7 +60,7 @@ export default {
 #app {
   background-color: $creator-primary;
   width: unset;
-  font-family: "Courier New", Courier, monospace;
+  font-family: $AcuminPro;
 }
 
 .app-container {

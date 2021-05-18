@@ -26,7 +26,9 @@
         <v-spacer></v-spacer>
         <v-col cols="12" md="7">
           <v-row class="mb-4">
-            <v-card-title class="contact__title pl-0">Email Me</v-card-title>
+            <v-card-title class="contact__title text-uppercase pl-0"
+              >Email Me</v-card-title
+            >
           </v-row>
           <v-row justify="space-between">
             <v-col cols="12">
@@ -34,7 +36,7 @@
             </v-col>
           </v-row>
           <v-row justify="center"
-            ><v-card-title class="contact__title pl-0 my-6"
+            ><v-card-title class="contact__title text-uppercase pl-0 my-6"
               >Direct Message Me</v-card-title
             >
           </v-row>
@@ -67,7 +69,6 @@ export default {
 <style lang="scss" scoped>
 .contact {
   &__description {
-    font-family: $AcuminPro;
     font-size: 24px;
     color: $text-white;
 
@@ -81,7 +82,6 @@ export default {
     font-family: $MADEEvolveSans;
     font-size: 84px;
     font-weight: 500;
-    text-transform: uppercase;
     color: $text-white;
 
     @media (max-width: $xl) {

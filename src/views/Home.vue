@@ -6,7 +6,7 @@
           <v-img
             class="home__image mt-lg-n10 mx-auto"
             max-width="600"
-            src="@/assets/images/creators-logo.png"
+            src="@/assets/images/creators/creators-logo.png"
           ></v-img>
         </v-col>
         <v-col cols="12" class="col-lg-7 mt-lg-0 mt-xl-16">
@@ -81,7 +81,6 @@ export default {
   }
 
   &__subtitle {
-    font-family: $AcuminPro !important;
     font-size: 40px;
     @media (max-width: $xl) {
       font-size: 32px;
