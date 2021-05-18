@@ -3,17 +3,22 @@
     <v-container class="mt-lg-0 mt-xl-16">
       <v-row class="mt-16">
         <v-col cols="12" class="col-lg-5 mt-lg-0 mt-xl-16">
-          <Logo class="mt-lg-n10 mx-sm-auto" />
+          <v-img
+            class="home__image mt-lg-n10 mx-auto"
+            max-width="600"
+            src="@/assets/images/creators-logo.png"
+          ></v-img>
         </v-col>
         <v-col cols="12" class="col-lg-7 mt-lg-0 mt-xl-16">
           <v-row class="mt-lg-0 mt-xl-12">
-            <v-card-title class="home__title white--text mt-16 mx-auto mx-lg-0"
+            <v-card-title
+              class="home__title white--text mt-16 mx-auto mx-lg-0 text-no-wrap"
               >Graphic Design</v-card-title
             >
           </v-row>
           <v-row class="mx-sm-auto">
             <v-card-subtitle
-              class="home__subtitle white--text flex-wrap mt-10 mx-auto mx-lg-0"
+              class="home__subtitle white--text mt-10 mx-auto mx-lg-0 text-no-wrap"
               >For content creators and gaming communities</v-card-subtitle
             >
           </v-row>
@@ -34,13 +39,11 @@
 </template>
 
 <script>
-import Logo from "@/components/Logo.vue";
 import Button from "@/components/Button.vue";
 
 export default {
   name: "Home",
   components: {
-    Logo,
     Button
   },
   data: () => {
@@ -60,6 +63,9 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    document.title = "Creative Reyne";
   }
 };
 </script>
@@ -67,40 +73,18 @@ export default {
 <style scoped lang="scss">
 .home {
   &__title {
-    font-family: $MADEEvolveSansEVO, sans-serif !important;
-    font-size: 110px;
-
+    font-family: $MADEEvolveSansEVO !important;
+    font-size: 108px;
     @media (max-width: $xl) {
-      font-size: 70px;
-    }
-
-    @media (max-width: $lg) {
-      font-size: 60px;
-    }
-
-    @media (max-width: $md) {
-      font-size: 50px;
+      font-size: 88px;
     }
   }
 
   &__subtitle {
-    font-family: $AcuminPro, sans-serif !important;
+    font-family: $AcuminPro !important;
     font-size: 40px;
     @media (max-width: $xl) {
-      font-size: 30px;
-    }
-  }
-
-  &__button {
-    font-family: $Consolas, serif;
-    font-size: 24px;
-    border: 3px solid red;
-    width: 272px;
-    margin-left: 20px;
-
-    @media (max-width: $xl) {
-      width: 190px;
-      font-size: 16px;
+      font-size: 32px;
     }
   }
 }

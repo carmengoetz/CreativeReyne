@@ -18,7 +18,7 @@ export default {
 
 <style scoped lang="scss">
 .button {
-  font-family: $Consolas, serif;
+  font-family: $Consolas;
   font-size: 24px;
   border: 6px solid $creator-secondary;
   width: 272px;

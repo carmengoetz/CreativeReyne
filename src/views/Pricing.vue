@@ -7,11 +7,16 @@
         >
       </v-row>
       <v-row>
-        <v-col v-for="col in columns" :key="col.index" cols="12" md="6" lg="3">
+        <v-col
+          v-for="col in columns"
+          :key="col.index"
+          cols="12"
+          md="6"
+          :lg="col.cols"
+        >
           <v-row justify="center" justify-md="start">
             <v-img
               class="pricing__image"
-              lazy-src=""
               max-width="300"
               :src="col.image"
             ></v-img
@@ -73,7 +78,7 @@ export default {
     return {
       columns: [
         {
-          image: require("../assets/images/creators-emotes.png"),
+          image: require("@/assets/images/creators-emotes.png"),
           title: "Emotes/Badges",
           items: [
             {
@@ -91,10 +96,11 @@ export default {
               item: "Discord Emotes",
               prices: ["$30 each", "$20 each (set of 16)"]
             }
-          ]
+          ],
+          cols: "4"
         },
         {
-          image: require("../assets/images/creators-socials.png"),
+          image: require("@/assets/images/creators-socials.png"),
           title: "Social Package",
           items: [
             {
@@ -109,10 +115,11 @@ export default {
               item: "Twitch Panels",
               prices: ["$20 each"]
             }
-          ]
+          ],
+          cols: "3"
         },
         {
-          image: require("../assets/images/creators-websites1.png"),
+          image: require("@/assets/images/creators-websites1.png"),
           title: "Websites",
           items: [
             {
@@ -127,10 +134,11 @@ export default {
               item: "Add Merch Store",
               prices: ["$600"]
             }
-          ]
+          ],
+          cols: "3"
         },
         {
-          image: require("../assets/images/creators-logo.png"),
+          image: require("@/assets/images/creators-logo.png"),
           title: "Logo Design",
           items: [
             {
@@ -138,7 +146,8 @@ export default {
               prices: ["$500"],
               note: "(Prices vary depending on project)"
             }
-          ]
+          ],
+          cols: "2"
         }
       ],
       buttons: [
@@ -152,6 +161,9 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    document.title = "Creative Reyne - Pricing";
   }
 };
 </script>
@@ -159,7 +171,7 @@ export default {
 <style lang="scss" scoped>
 .pricing {
   &__title {
-    font-family: $MADEEvolveSans, sans-serif !important;
+    font-family: $MADEEvolveSans !important;
     font-size: 88px;
     text-transform: uppercase;
 
@@ -177,7 +189,7 @@ export default {
   }
 
   &__subtitle {
-    font-family: $MADEEvolveSansEVO, sans-serif !important;
+    font-family: $MADEEvolveSansEVO !important;
     font-size: 36px;
     color: white;
     text-transform: uppercase;
@@ -188,7 +200,7 @@ export default {
   }
 
   &__item {
-    font-family: $AcuminPro sans-serif;
+    font-family: $AcuminPro;
     font-size: 20px;
     font-weight: 700;
     color: $creator-secondary;
@@ -199,7 +211,7 @@ export default {
   }
 
   &__price {
-    font-family: $AcuminPro sans-serif;
+    font-family: $AcuminPro;
     font-size: 20px;
     color: $text-white;
 
@@ -209,7 +221,7 @@ export default {
   }
 
   &__note {
-    font-family: $AcuminPro sans-serif;
+    font-family: $AcuminPro;
     font-size: 20px;
     color: $text-white;
     font-style: italic;

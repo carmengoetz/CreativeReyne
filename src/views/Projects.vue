@@ -6,7 +6,6 @@
           v-for="image in images"
           :key="image.index"
           class="portfolio__image mx-auto"
-          lazy-src=""
           max-width="460"
           :src="image"
         ></v-img
@@ -42,16 +41,16 @@ export default {
   data: () => {
     return {
       images: [
-        require("../assets/images/creators-logo-design1.png"),
-        require("../assets/images/creators-logo-design2.png"),
-        require("../assets/images/creators-logo-design3.png"),
-        require("../assets/images/creators-websites1.png"),
-        require("../assets/images/creators-websites2.png"),
-        require("../assets/images/creators-websites3.png"),
-        require("../assets/images/creators-badges1.png"),
-        require("../assets/images/creators-badges2.png"),
-        require("../assets/images/creators-emotes.png"),
-        require("../assets/images/creators-brand-packages.png")
+        require("@/assets/images/creators-logo-design1.png"),
+        require("@/assets/images/creators-logo-design2.png"),
+        require("@/assets/images/creators-logo-design3.png"),
+        require("@/assets/images/creators-websites1.png"),
+        require("@/assets/images/creators-websites2.png"),
+        require("@/assets/images/creators-websites3.png"),
+        require("@/assets/images/creators-badges1.png"),
+        require("@/assets/images/creators-badges2.png"),
+        require("@/assets/images/creators-emotes.png"),
+        require("@/assets/images/creators-brand-packages.png")
       ],
       buttons: [
         {
@@ -64,6 +63,9 @@ export default {
         }
       ]
     };
+  },
+  created() {
+    document.title = "Creative Reyne - Projects";
   }
 };
 </script>
@@ -71,7 +73,7 @@ export default {
 <style lang="scss" scoped>
 .portfolio {
   &__title {
-    font-family: $MADEEvolveSans, sans-serif !important;
+    font-family: $MADEEvolveSans !important;
     font-size: 88px;
     text-transform: uppercase;
 
@@ -89,14 +91,14 @@ export default {
   }
 
   &__subtitle {
-    font-family: $MADEEvolveSansEVO, sans-serif !important;
+    font-family: $MADEEvolveSansEVO !important;
     font-size: 40px;
     color: $creator-secondary;
     text-transform: uppercase;
   }
 
   &__description {
-    font-family: $AcuminPro sans-serif;
+    font-family: $AcuminPro;
     font-size: 20px;
     color: $text-white;
   }

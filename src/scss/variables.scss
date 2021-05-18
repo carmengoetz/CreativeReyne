@@ -7,10 +7,11 @@ $text-black: #1A1A1A;
 $text-white: #FFFFFF;
 
 //fonts
-$MADEEvolveSansEVO: 'MADEEvolveSansEVO';
-$MADEEvolveSans: 'MADEEvolveSans';
-$AcuminPro: 'AcuminPro';
-$Consolas: 'Consolas';
+$BebasNeue: 'BebasNeue', 'Roboto', Arial , sans-serif;
+$MADEEvolveSansEVO: 'MADEEvolveSansEVO', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$MADEEvolveSans: 'MADEEvolveSans', 'Roboto', Arial, sans-serif;
+$AcuminPro: 'AcuminPro', 'Roboto', Arial, sans-serif;
+$Consolas: 'Consolas', 'Courier New', Courier, monospace;
 
 //breakpoints
 $xl: 1904px;

@@ -7,7 +7,6 @@
             :to="{ name: 'Home' }"
             class="nav__brand align-center mt-2"
             ><v-img
-              lazy-src=""
               width="40"
               height="44"
               src="../assets/images/creators-logo-thumb.png"
@@ -30,7 +29,6 @@
                 @click="changeToCreators"
               >
                 <v-img
-                  lazy-src=""
                   max-width="36"
                   max-height="40"
                   src="../assets/images/creators-logo-thumb.png"
@@ -49,7 +47,6 @@
                 @click="changeToStandard"
               >
                 <v-img
-                  lazy-src=""
                   max-width="36"
                   max-height="40"
                   src="../assets/images/creators-logo-thumb.png"
@@ -110,8 +107,8 @@ export default {
   data: () => {
     return {
       pages: [
-        { path: "/pricing", name: "Pricing", exact: false },
         { path: "/portfolio", name: "Portfolio", exact: false },
+        { path: "/pricing", name: "Pricing", exact: false },
         { path: "/contact", name: "Contact", exact: false }
       ]
     };
@@ -123,15 +120,9 @@ export default {
   },
   methods: {
     changeToCreators() {
-      // eslint-disable-next-line no-debugger
-      debugger;
-      // Dispatch the action to buy a TV
       this.$store.dispatch("changeToCreators");
     },
     changeToStandard() {
-      // eslint-disable-next-line no-debugger
-      debugger;
-      // Dispatch the action to buy two TVs
       this.$store.dispatch("changeToStandard");
     }
   }
@@ -139,8 +130,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 .nav {
   text-transform: uppercase;
   text-decoration: none;
@@ -150,7 +139,7 @@ export default {
     padding: 0 60px;
   }
   &__brand {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: $BebasNeue;
     font-size: 52px;
     text-transform: uppercase;
     text-decoration: none;
@@ -171,7 +160,7 @@ export default {
   }
 
   &__link {
-    font-family: $MADEEvolveSansEVO, sans-serif;
+    font-family: $MADEEvolveSansEVO;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;

@@ -133,13 +133,13 @@ export default {
   max-width: 1000px;
 
   &__label {
-    font-family: $Consolas, serif;
+    font-family: $Consolas;
     font-size: 20px;
     color: $creator-secondary;
   }
 
   &__text {
-    font-family: $Consolas, serif;
+    font-family: $Consolas;
     font-size: 20px;
     color: white;
     border-radius: 0;
@@ -154,12 +154,12 @@ export default {
     }
 
     &--message {
-      height: 192px;
+      height: 156px;
     }
   }
 
   &__button {
-    font-family: $Consolas, serif;
+    font-family: $Consolas;
     font-size: 24px;
     border: 4px solid $creator-secondary;
     width: 200px;

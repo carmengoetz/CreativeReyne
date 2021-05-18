@@ -5,10 +5,9 @@
         <v-col cols="12" md="4">
           <v-row>
             <v-img
-              lazy-src=""
               width="500"
               max-height="500"
-              src="../assets/images/alexander-reyne.png"
+              src="@/assets/images/alexander-reyne.png"
             ></v-img>
           </v-row>
           <v-row>
@@ -58,14 +57,17 @@ import Socials from "@/components/Socials.vue";
 
 export default {
   name: "Contact",
-  components: { Form, Socials }
+  components: { Form, Socials },
+  created() {
+    document.title = "Creative Reyne - Contact";
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .contact {
   &__description {
-    font-family: $AcuminPro, sans-serif;
+    font-family: $AcuminPro;
     font-size: 24px;
     color: $text-white;
 
@@ -76,7 +78,7 @@ export default {
   }
 
   &__title {
-    font-family: $MADEEvolveSans, sans-serif;
+    font-family: $MADEEvolveSans;
     font-size: 84px;
     font-weight: 500;
     text-transform: uppercase;
