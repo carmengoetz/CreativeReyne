@@ -2,12 +2,12 @@
   <div class="brand my-16">
     <v-container>
       <v-row>
-        <v-card-title class="brand__title white--text mx-auto my-12"
+        <v-card-title class="brand__title white--text mx-auto"
           >why choose creative reyne?</v-card-title
         >
       </v-row>
       <v-row>
-        <v-col v-for="col in columns" :key="col.index" col="4" class="mx-16">
+        <v-col v-for="col in columns" :key="col.index" col="4" class="mx-6">
           <v-row
             ><v-img
               class="brand__image mx-auto"
@@ -60,13 +60,13 @@ export default {
             "With over 10 years of experience in graphic design and printing, you can rest knowing I will find a solution that works for you and your platform"
         },
         {
-          image: require("../assets/images/creators-emotes-badges.png"),
+          image: require("../assets/images/creators-emotes.png"),
           title: "Tailored Process",
           description:
             "It all begins with an idea. Maybe you want to launch a new stream. Maybe you want to turn your youtube channel into something more. Or maybe you have a podcast to share with the world. Whatever it is, I will make sure you don’t go unnoticed"
         },
         {
-          image: require("../assets/images/creators-websites.png"),
+          image: require("../assets/images/creators-websites1.png"),
           title: "Industry Insider",
           description:
             "10 years of experience doesn’t just mean I know what to do, but also who to talk to. From the best local printers to the coolest product vendors, we know them all and can work with them to make sure your project is the best it can be."

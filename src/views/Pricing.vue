@@ -2,7 +2,7 @@
   <div class="pricing my-16">
     <v-container>
       <v-row>
-        <v-card-title class="pricing__title white--text mx-auto my-12"
+        <v-card-title class="pricing__title white--text mx-auto"
           >pricing</v-card-title
         >
       </v-row>
@@ -73,7 +73,7 @@ export default {
     return {
       columns: [
         {
-          image: require("../assets/images/creators-emotes-badges.png"),
+          image: require("../assets/images/creators-emotes.png"),
           title: "Emotes/Badges",
           items: [
             {
@@ -112,7 +112,7 @@ export default {
           ]
         },
         {
-          image: require("../assets/images/creators-websites.png"),
+          image: require("../assets/images/creators-websites1.png"),
           title: "Websites",
           items: [
             {
@@ -162,6 +162,18 @@ export default {
     font-family: $MADEEvolveSans, sans-serif !important;
     font-size: 88px;
     text-transform: uppercase;
+
+    @media (max-width: $xl) {
+      font-size: 72px;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 56px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 40px;
+    }
   }
 
   &__subtitle {

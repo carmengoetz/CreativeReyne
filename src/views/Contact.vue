@@ -1,11 +1,10 @@
 <template>
-  <div class="contact ma-16">
+  <div class="contact my-16">
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
           <v-row>
             <v-img
-              class="mt-2"
               lazy-src=""
               width="500"
               max-height="500"
