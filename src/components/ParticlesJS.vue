@@ -23,7 +23,7 @@ export default {
             value: 80,
             density: {
               enable: true,
-              value_area: 800,
+              value_area: 1000,
             },
           },
           color: {
@@ -55,7 +55,7 @@ export default {
             },
           },
           size: {
-            value: 3,
+            value: 2,
             random: true,
             anim: {
               enable: false,
@@ -68,14 +68,14 @@ export default {
             enable: true,
             distance: 150,
             color: "#ffffff",
-            opacity: 0.4,
+            opacity: 0.25,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 3,
+            speed: 1.5,
             direction: "none",
-            random: true,
+            random: false,
             straight: false,
             out_mode: "out",
             bounce: false,
@@ -90,12 +90,12 @@ export default {
           detect_on: "canvas",
           events: {
             onhover: {
-              enable: true,
+              enable: false,
               mode: "repulse",
             },
             onclick: {
-              enable: true,
-              mode: "push",
+              enable: false,
+              mode: "repulse",
             },
             resize: true,
           },

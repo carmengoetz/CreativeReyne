@@ -3,7 +3,7 @@
     <Navigation />
     <v-main class="pt-16">
       <div class="app-container pt-9">
-        <ParticlesJS class="app-container__content" />
+        <ParticlesJS v-if="site == 'creators'" class="app-container__content" />
         <router-view :key="$route.path" class="app-container__content" />
       </div>
     </v-main>
@@ -15,13 +15,17 @@
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
 import ParticlesJS from "@/components/ParticlesJS.vue";
-
 export default {
   name: "App",
   components: {
     Navigation,
     Footer,
     ParticlesJS
+  },
+  computed: {
+    site() {
+      return this.$store.state.site;
+    }
   }
 };
 </script>

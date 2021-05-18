@@ -1,41 +1,57 @@
 <template>
-  <v-app-bar absolute elevate-on-scroll height="100px" class="nav py-0">
+  <v-app-bar absolute elevate-on-scroll height="80px" class="nav py-0">
     <v-menu bottom open-on-hover tile offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-toolbar-title v-bind="attrs" v-on="on" class="mt-2 mt-lg-0">
-          <router-link :to="{ name: 'Home' }" class="nav__brand align-center"
+          <router-link
+            :to="{ name: 'Home' }"
+            class="nav__brand align-center mt-2"
             ><v-img
               lazy-src=""
-              width="78"
-              height="78"
+              width="40"
+              height="44"
               src="../assets/images/creators-logo-thumb.png"
             ></v-img
-            ><span class="align-center">Creative Reyne</span></router-link
+            ><span class="align-center ml-2 mt-1"
+              >Creative Reyne</span
+            ></router-link
           >
         </v-toolbar-title>
       </template>
-      <v-card tile flat color="white" width="400px" class="pa-0 brand__button">
+      <v-card tile flat color="white" width="300px" class="pa-0 brand__button">
         <v-list class="pa-0">
-          <v-list-item class="pa-0">
+          <v-list-item v-if="site == 'standard'" class="pa-0">
             <v-list-item-content class="pa-0">
-              <v-btn text tile height="72" class="justify-start">
+              <v-btn
+                text
+                tile
+                height="72"
+                class="justify-start"
+                @click="changeToCreators"
+              >
                 <v-img
                   lazy-src=""
-                  max-width="50"
-                  max-height="50"
+                  max-width="36"
+                  max-height="40"
                   src="../assets/images/creators-logo-thumb.png"
                 ></v-img>
                 Content Creators
               </v-btn>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item class="pa-0">
+          <v-list-item v-if="site == 'creators'" class="pa-0">
             <v-list-item-content class="pa-0">
-              <v-btn text tile height="72" class="justify-start">
+              <v-btn
+                text
+                tile
+                height="72"
+                class="justify-start"
+                @click="changeToStandard"
+              >
                 <v-img
                   lazy-src=""
-                  max-width="50"
-                  max-height="50"
+                  max-width="36"
+                  max-height="40"
                   src="../assets/images/creators-logo-thumb.png"
                 ></v-img>
                 Standard Business
@@ -99,6 +115,25 @@ export default {
         { path: "/contact", name: "Contact", exact: false }
       ]
     };
+  },
+  computed: {
+    site() {
+      return this.$store.state.site;
+    }
+  },
+  methods: {
+    changeToCreators() {
+      // eslint-disable-next-line no-debugger
+      debugger;
+      // Dispatch the action to buy a TV
+      this.$store.dispatch("changeToCreators");
+    },
+    changeToStandard() {
+      // eslint-disable-next-line no-debugger
+      debugger;
+      // Dispatch the action to buy two TVs
+      this.$store.dispatch("changeToStandard");
+    }
   }
 };
 </script>
@@ -116,14 +151,14 @@ export default {
   }
   &__brand {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 64px;
+    font-size: 52px;
     text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
     color: $creator-primary;
 
     @media (max-width: $lg) {
-      font-size: 50px;
+      font-size: 40px;
     }
   }
 
@@ -132,15 +167,15 @@ export default {
   }
   &__links {
     display: inline-flex;
-    height: 100px;
+    height: 80px;
   }
 
   &__link {
     font-family: $MADEEvolveSansEVO, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 32px 24px;
+    padding: 28px 24px;
 
     &:hover {
       background-color: $creator-primary;

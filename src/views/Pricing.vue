@@ -94,7 +94,7 @@ export default {
           ]
         },
         {
-          image: require("../assets/images/creators-emotes-badges.png"),
+          image: require("../assets/images/creators-socials.png"),
           title: "Social Package",
           items: [
             {
