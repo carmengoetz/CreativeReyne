@@ -50,6 +50,7 @@ export default {
 
 #app {
   background-color: $creator-primary;
+  width: unset;
 }
 
 .app-container {
