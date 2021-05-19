@@ -3,7 +3,16 @@
     <v-row>
       <v-col cols="6">
         <v-row>
-          <label for="form_first" class="form__label">First Name:</label>
+          <label
+            for="form_first"
+            class="form__label"
+            :class="
+              site == 'creators'
+                ? 'form__label--creators'
+                : 'form__label--standard'
+            "
+            >First Name:</label
+          >
         </v-row>
         <v-row>
           <input
@@ -19,7 +28,16 @@
       </v-col>
       <v-col cols="6">
         <v-row>
-          <label for="form_last" class="form__label">Last Name:</label>
+          <label
+            for="form_last"
+            class="form__label"
+            :class="
+              site == 'creators'
+                ? 'form__label--creators'
+                : 'form__label--standard'
+            "
+            >Last Name:</label
+          >
         </v-row>
         <v-row>
           <input
@@ -33,7 +51,14 @@
       </v-col>
     </v-row>
     <v-row>
-      <label for="form_email" class="form__label">Email:</label>
+      <label
+        for="form_email"
+        class="form__label"
+        :class="
+          site == 'creators' ? 'form__label--creators' : 'form__label--standard'
+        "
+        >Email:</label
+      >
     </v-row>
     <v-row>
       <input
@@ -47,7 +72,14 @@
       />
     </v-row>
     <v-row>
-      <label for="form_message" class="form__label">Message:</label>
+      <label
+        for="form_message"
+        class="form__label"
+        :class="
+          site == 'creators' ? 'form__label--creators' : 'form__label--standard'
+        "
+        >Message:</label
+      >
     </v-row>
     <v-row>
       <textarea
@@ -68,7 +100,12 @@
         tile
         type="submit"
         class="form__button white--text py-6 ma-5"
-        >SEND</v-btn
+        :class="
+          site == 'creators'
+            ? 'form__button--creators'
+            : 'form__button--standard'
+        "
+        >SEND MESSAGE</v-btn
       ></v-row
     >
   </v-form>
@@ -79,6 +116,7 @@ import emailjs from "emailjs-com";
 
 export default {
   name: "Form",
+  props: ["site"],
   data() {
     const defaultForm = Object.freeze({
       first: "",
@@ -135,7 +173,14 @@ export default {
   &__label {
     font-family: $Consolas;
     font-size: 20px;
-    color: $creator-secondary;
+
+    &--creators {
+      color: $creator-secondary !important;
+    }
+
+    &--standard {
+      color: $text-black;
+    }
   }
 
   &__text {
@@ -161,8 +206,23 @@ export default {
   &__button {
     font-family: $Consolas;
     font-size: 24px;
-    border: 4px solid $creator-secondary;
     width: 200px;
+
+    &--creators {
+      border: 4px solid $creator-secondary;
+
+      &[disabled] {
+        border: 4px solid rgba(213, 31, 38, 0.5);
+      }
+    }
+
+    &--standard {
+      border: 4px solid $text-black;
+
+      &[disabled] {
+        border: 4px solid rgba(26, 26, 26, 0.5);
+      }
+    }
 
     @media (max-width: $xl) {
       font-size: 16px;
@@ -170,7 +230,6 @@ export default {
 
     &[disabled] {
       background: rgba(255, 255, 255, 0.1);
-      border: 4px solid rgba(213, 31, 38, 0.5);
       color: rgba(255, 255, 255, 0.5) !important;
     }
   }

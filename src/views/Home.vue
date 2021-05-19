@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <v-container class="mt-lg-0 mt-xl-16 mb-16">
+    <v-container class="mb-16 mt-0 mt-xl-16">
       <v-row class="mt-16">
-        <v-col cols="12" class="col-lg-5 mt-lg-0 mt-xl-10">
+        <v-col cols="12" class="col-lg-5">
           <v-img
             v-if="site == 'creators'"
             class="home__image mt-lg-n10 mx-auto"
@@ -19,7 +19,7 @@
           ></v-img>
         </v-col>
         <v-spacer></v-spacer>
-        <v-col cols="12" class="col-lg-7 mt-lg-0 mt-xl-10">
+        <v-col cols="12" class="col-lg-7">
           <v-row class="mt-lg-0 mt-xl-12">
             <v-card-title
               class="home__title white--text mt-16 mx-auto mx-lg-0 text-no-wrap"
@@ -28,7 +28,6 @@
                   ? 'home__title--creators'
                   : 'home__title--standard'
               "
-              :color="site == 'creators' ? 'white' : 'black'"
               >Graphic Design</v-card-title
             >
           </v-row>

@@ -4,8 +4,8 @@
     :class="site == 'creators' ? 'app__creators' : 'app__standard'"
   >
     <Navigation />
-    <v-main class="pt-16">
-      <div class="app__container pt-9">
+    <v-main class="">
+      <div class="app__container">
         <ParticlesJS
           v-if="site == 'creators'"
           class="app__container--content1"
@@ -84,6 +84,7 @@ export default {
     }
 
     &--content2 {
+      margin-top: 80px;
       z-index: 1;
     }
   }

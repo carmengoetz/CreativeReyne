@@ -5,7 +5,7 @@
       :key="social.name"
       class="mr-2"
       :class="className"
-      :color="site == 'creators' ? 'white' : 'black'"
+      :color="site == 'creators' || page == 'contact' ? 'white' : 'black'"
       icon
       :href="social.link"
       target="_blank"
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "Socials",
-  props: ["site", "size", "className"],
+  props: ["site", "page", "size", "className"],
   data: () => {
     return {
       socials: [

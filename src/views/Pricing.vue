@@ -1,5 +1,5 @@
 <template>
-  <div class="pricing my-16">
+  <div class="pricing pt-16">
     <v-container>
       <v-row>
         <v-card-title class="pricing__title text-uppercase white--text mx-auto"

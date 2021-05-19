@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio my-16">
+  <div class="portfolio">
     <v-container>
       <v-row>
         <v-img

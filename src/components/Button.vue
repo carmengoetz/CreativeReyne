@@ -5,7 +5,13 @@
     tile
     :to="{ name: to }"
     class="button white--text mt-16 py-6 mx-3"
-    :class="site == 'creators' ? 'button__creators' : 'button__standard'"
+    :class="
+      site == 'creators'
+        ? 'button__creators'
+        : page == 'brand'
+        ? 'button__standard--white'
+        : 'button__standard--black'
+    "
     >{{ name }}</v-btn
   >
 </template>
@@ -13,7 +19,7 @@
 <script>
 export default {
   name: "Button",
-  props: ["name", "to"],
+  props: ["name", "to", "page"],
   computed: {
     site() {
       return this.$store.state.site;
@@ -39,7 +45,14 @@ export default {
   }
 
   &__standard {
-    border: 6px solid $text-black;
+    &--black {
+      border: 6px solid $text-black;
+    }
+
+    &--white {
+      border: 6px solid $text-white;
+      color: $text-black !important;
+    }
   }
 }
 </style>
