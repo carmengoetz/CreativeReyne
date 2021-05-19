@@ -1,13 +1,19 @@
 <template>
-  <v-app>
+  <v-app
+    class="app"
+    :class="site == 'creators' ? 'app__creators' : 'app__standard'"
+  >
     <Navigation />
     <v-main class="pt-16">
-      <div class="app-container pt-9">
-        <ParticlesJS v-if="site == 'creators'" class="app-container__content" />
-        <router-view :key="$route.path" class="app-container__content" />
+      <div class="app__container pt-9">
+        <ParticlesJS
+          v-if="site == 'creators'"
+          class="app__container--content1"
+        />
+        <router-view :key="$route.path" class="app__container--content2" />
       </div>
     </v-main>
-    <Footer />
+    <Footer :site="site" />
   </v-app>
 </template>
 
@@ -57,17 +63,29 @@ export default {
   src: url("./assets/fonts/CONSOLA.TTF") format("truetype");
 }
 
-#app {
-  background-color: $creator-primary;
-  width: unset;
+.app {
   font-family: $AcuminPro;
-}
 
-.app-container {
-  display: grid;
-  &__content {
-    grid-column: 1;
-    grid-row: 1;
+  &__creators {
+    background: $creator-primary !important;
+  }
+
+  &__standard {
+    background: $standard-primary !important;
+  }
+
+  &__container {
+    display: grid;
+
+    &--content1,
+    &--content2 {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &--content2 {
+      z-index: 1;
+    }
   }
 }
 </style>

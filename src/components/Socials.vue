@@ -3,9 +3,9 @@
     <v-btn
       v-for="social in socials"
       :key="social.name"
-      color="white"
       class="mr-2"
       :class="className"
+      :color="site == 'creators' ? 'white' : 'black'"
       icon
       :href="social.link"
       target="_blank"
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "Socials",
-  props: ["size", "className"],
+  props: ["site", "size", "className"],
   data: () => {
     return {
       socials: [
