@@ -16,7 +16,12 @@
         >
       </v-row>
       <v-row>
-        <v-col v-for="col in columns" :key="col.index" col="4" class="mx-6">
+        <v-col
+          v-for="col in columns"
+          :key="col.index"
+          col="4"
+          class="mx-6 mb-4"
+        >
           <v-row
             ><v-img
               class="brand__image mx-auto"

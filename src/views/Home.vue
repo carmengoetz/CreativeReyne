@@ -9,6 +9,13 @@
             max-height="584"
             width="600"
             src="@/assets/images/creators/creators-logo.png"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
           ></v-img>
           <v-img
             v-else
@@ -16,6 +23,13 @@
             max-height="488"
             width="500"
             src="@/assets/images/standard/standard-logo.png"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
           ></v-img>
         </v-col>
         <v-spacer></v-spacer>
