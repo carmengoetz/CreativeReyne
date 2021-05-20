@@ -1,10 +1,10 @@
 <template>
-  <v-container class="home mb-16 mt-0 mt-xl-16">
-    <v-row class="mt-16">
-      <v-col cols="12" class="col-lg-5">
+  <v-container class="home my-8 my-md-16">
+    <v-row class="mt-0 mt-xl-16">
+      <v-col cols="12" lg="5" class="mt-0 mt-md-8 mt-xl-16">
         <v-img
           v-if="site == 'creators'"
-          class="home__image mt-lg-n10 mx-auto"
+          class="home__image mx-auto"
           max-height="584"
           width="600"
           :src="creatorsLogo"
@@ -34,25 +34,35 @@
         ></v-img>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="12" class="col-lg-7">
-        <v-row class="mt-lg-0 mt-xl-12">
+      <v-col cols="12" lg="7">
+        <v-row
+          justify="center"
+          justify-lg="start"
+          class="mt-0 mt-md-8 mt-xl-16"
+        >
           <v-card-title
-            class="home__title white--text mt-16 mx-auto mx-lg-0 text-no-wrap"
+            class="home__title white--text my-0 mt-md-16 text-center mx-lg-4"
             :class="
               site == 'creators'
                 ? 'home__title--creators'
                 : 'home__title--standard'
             "
-            >{{ title }}</v-card-title
           >
+            {{ title }}
+          </v-card-title>
         </v-row>
-        <v-row class="mx-sm-auto">
+        <v-row justify="center" justify-lg="start" class="mx-sm-auto">
           <v-card-subtitle
-            class="home__subtitle white--text mt-10 mx-auto mx-lg-0 text-no-wrap"
-            >{{ subtitle }}</v-card-subtitle
+            class="home__subtitle white--text mt-0 mt-md-10 text-center mx-lg-2"
           >
+            {{ subtitle }}
+          </v-card-subtitle>
         </v-row>
-        <v-row justify="center" justify-lg="start" class="mt-16 mx-sm-auto">
+        <v-row
+          justify="center"
+          justify-lg="start"
+          class="mt-0 mt-lg-16 mx-sm-auto"
+        >
           <Button
             v-for="button in buttons"
             :key="button.index"
@@ -113,6 +123,7 @@ export default {
 .home {
   &__title {
     font-size: 108px;
+    word-break: normal !important;
 
     &--creators {
       font-family: $MADEEvolveSansEVO !important;
@@ -126,12 +137,24 @@ export default {
     @media (max-width: $xl) {
       font-size: 88px;
     }
+    @media (max-width: $md) {
+      line-height: 3rem;
+    }
+    @media (max-width: $sm) {
+      font-size: 60px;
+    }
   }
 
   &__subtitle {
     font-size: 40px;
+    word-break: normal !important;
+
     @media (max-width: $xl) {
       font-size: 32px;
+    }
+
+    @media (max-width: $md) {
+      line-height: 2.1rem;
     }
   }
 }

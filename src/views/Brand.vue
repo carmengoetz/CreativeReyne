@@ -1,25 +1,20 @@
 <template>
   <div>
-    <v-container class="brand py-16">
-      <v-row>
+    <v-container class="brand my-8 my-md-16">
+      <v-row no-gutters>
         <v-card-title
-          class="brand__title text-uppercase white--text mx-auto pb-10 pb-lg-16"
+          class="brand__title text-uppercase white--text text-center"
           :class="
             site == 'creators'
-              ? 'brand__title--creators'
-              : 'brand__title--standard'
+              ? 'brand__title--creators mb-4 mb-md-8'
+              : 'brand__title--standard mb-8 mb-md-16'
           "
           >{{ title }}</v-card-title
         >
       </v-row>
-      <v-row class="pt-0 pt-md-10">
-        <v-col
-          v-for="col in columns"
-          :key="col.index"
-          col="4"
-          class="mx-6 mb-4"
-        >
-          <v-row
+      <v-row no-gutters>
+        <v-col v-for="col in columns" :key="col.index" col="4">
+          <v-row no-gutters
             ><v-img
               class="brand__image mx-auto"
               contain
@@ -38,9 +33,9 @@
                   ></v-progress-circular>
                 </v-row> </template></v-img
           ></v-row>
-          <v-row>
+          <v-row no-gutters>
             <v-card-title
-              class="brand__subtitle text-uppercase mx-auto text-no-wrap"
+              class="brand__subtitle text-uppercase mx-auto text-no-wrap my-2"
               :class="
                 site == 'creators'
                   ? 'brand__subtitle--creators'
@@ -49,9 +44,9 @@
             >
               {{ col.title }}
             </v-card-title>
-            <v-row>
+            <v-row no-gutters>
               <p
-                class="brand__description mx-16 mt-5 text-center"
+                class="brand__description mx-16 text-center"
                 :class="
                   site == 'creators'
                     ? 'brand__description--creators'
@@ -64,7 +59,7 @@
           </v-row>
         </v-col>
       </v-row>
-      <v-row justify="center">
+      <v-row no-gutters justify="center">
         <Button
           v-for="button in buttons"
           :key="button.index"
@@ -121,7 +116,7 @@ export default {
 .brand {
   &__title {
     font-size: 88px;
-
+    word-break: normal !important;
     &--creators {
       font-family: $MADEEvolveSans !important;
     }

@@ -1,28 +1,33 @@
 <template>
-  <v-container class="pricing py-16">
-    <v-row>
+  <v-container class="pricing my-8 my-md-16">
+    <v-row no-gutters>
       <v-card-title
-        class="pricing__title text-uppercase white--text mx-auto pb-10 pd-lg-16"
+        class="pricing__title text-uppercase white--text mx-auto"
         :class="
           site == 'creators'
-            ? 'pricing__title--creators'
-            : 'pricing__title--standard'
+            ? 'pricing__title--creators mb-4 mb-md-8'
+            : 'pricing__title--standard  mb-8 mb-md-18'
         "
         >{{ title }}</v-card-title
       >
     </v-row>
-    <v-row class="pt-0 pt-md-10">
+    <v-row no-gutters>
       <v-col
         v-for="col in columns"
         :key="col.index"
         cols="12"
         md="6"
-        lg="3"
-        class="mb-4 ml-0 mr-0 ml-md-16 mr-md-n16 ml-lg-0 mr-lg-0 ml-xl-8 mr-xl-n8"
+        xl="3"
+        class="ml-0 mr-0 ml-md-16 mr-md-n16"
       >
-        <v-row justify="center" justify-md="start">
+        <v-row
+          no-gutters
+          justify="center"
+          justify-md="start"
+          class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
+        >
           <v-img
-            class="pricing__image mx-4"
+            class="pricing__image"
             max-width="300"
             :src="col.image"
             :lazy-src="col.imageLazy"
@@ -34,23 +39,33 @@
                 ></v-progress-circular>
               </v-row> </template></v-img
         ></v-row>
-        <v-row justify="center" justify-md="start">
+        <v-row
+          no-gutters
+          justify="center"
+          justify-md="start"
+          class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
+        >
           <v-card-title
-            class="pricing__subtitle text-uppercase text-no-wrap mb-10"
+            class="pricing__subtitle text-uppercase text-no-wrap my-2 ml-n4"
             :class="
               site == 'creators'
-                ? 'pricing__subtitle--creators'
-                : 'pricing__subtitle--standard'
+                ? 'pricing__subtitle--creators mt-3'
+                : 'pricing__subtitle--standard mt-3'
             "
           >
             {{ col.title }}
           </v-card-title>
         </v-row>
         <div v-for="item in col.items" :key="item.index">
-          <v-row justify="center" justify-md="start" class="pl-0 pl-md-4">
-            <v-col cols="1" sm="2" md="0" class="d-flex d-md-none"></v-col>
-            <v-col cols="5" md="6" xl="5">
-              <v-row>
+          <v-row
+            no-gutters
+            justify="start"
+            justify-md="start"
+            class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
+          >
+            <v-col cols="2" sm="3" md="0" class="d-flex d-md-none"></v-col>
+            <v-col cols="5" sm="4" md="5" xl="5">
+              <v-row no-gutters>
                 <p
                   class="pricing__item"
                   :class="
@@ -63,21 +78,20 @@
                 </p>
               </v-row>
             </v-col>
-            <v-col cols="6" sm="5" md="6" xl="7">
-              <v-row
-                justify="space-between"
-                v-for="price in item.prices"
-                :key="price.index"
-              >
+            <v-col cols="5" md="6" xl="7">
+              <v-row no-gutters v-for="price in item.prices" :key="price.index">
                 <p class="pricing__price">{{ price }}</p>
               </v-row>
             </v-col>
           </v-row>
-          <v-row>
+          <v-row
+            no-gutters
+            class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
+          >
             <v-col cols="1" sm="2" md="0" class="d-flex d-md-none"></v-col>
             <v-col cols="11" sm="10" md="12">
-              <p class="pricing__note ml-n3 ml-md-1 mt-n6">{{ item.note }}</p>
-              <ul class="pricing__list mt-n4">
+              <p class="pricing__note mt-n4">{{ item.note }}</p>
+              <ul class="pricing__list ml-2 mt-n4">
                 <li v-for="list in item.list" :key="list.index">
                   {{ list }}
                 </li>
@@ -88,7 +102,7 @@
       </v-col>
     </v-row>
 
-    <v-row justify="center" justify-md="end">
+    <v-row no-gutters justify="center" justify-md="end">
       <Button
         v-for="button in buttons"
         :key="button.index"

@@ -130,8 +130,10 @@ export default {
       title: nav.title,
       creatorsTitle: nav.creatorsTitle,
       creatorsLogo: nav.creatorsLogo,
+      creatorsLogoLazy: nav.creatorsLogoLazy,
       standardTitle: nav.standardTitle,
       standardLogo: nav.standardLogo,
+      standardLogoLazy: nav.standardLogoLazy,
       pages: [
         { path: "/portfolio", name: "Portfolio", exact: false },
         { path: "/pricing", name: "Pricing", exact: false },

@@ -4,7 +4,7 @@
     outlined
     tile
     :to="{ name: to }"
-    class="button white--text mt-16 py-6 mx-3"
+    class="button white--text mt-8 mt-lg-16 py-6 mx-3"
     :height="height ? height : 75"
     :width="width ? width : 272"
     :class="
@@ -37,7 +37,7 @@ export default {
   border: 6px solid $creator-secondary;
 
   @media (max-width: $xl) {
-    width: 190px;
+    width: 190px !important;
     font-size: 16px;
   }
 

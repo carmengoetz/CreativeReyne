@@ -5,7 +5,7 @@
         v-for="image in images"
         :key="image.index"
         class="portfolio__image mx-auto mt-16"
-        height="400"
+        max-height="400"
         :max-width="site == 'creators' ? '460' : '820'"
         :src="image.image"
         :lazy-src="image.imageLazy"

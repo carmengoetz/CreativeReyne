@@ -1,8 +1,8 @@
 <template>
   <v-form ref="form" class="form" @submit.prevent="sendEmail">
-    <v-row>
+    <v-row no-gutters>
       <v-col cols="6">
-        <v-row>
+        <v-row no-gutters>
           <label
             for="form_first"
             class="form__label"
@@ -14,7 +14,7 @@
             >First Name:</label
           >
         </v-row>
-        <v-row>
+        <v-row no-gutters>
           <input
             id="form_first"
             name="from_first"
@@ -27,7 +27,7 @@
         </v-row>
       </v-col>
       <v-col cols="6">
-        <v-row>
+        <v-row no-gutters>
           <label
             for="form_last"
             class="form__label"
@@ -39,7 +39,7 @@
             >Last Name:</label
           >
         </v-row>
-        <v-row>
+        <v-row no-gutters>
           <input
             id="form_last"
             name="from_last"
@@ -50,7 +50,7 @@
         </v-row>
       </v-col>
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <label
         for="form_email"
         class="form__label"
@@ -60,7 +60,7 @@
         >Email:</label
       >
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <input
         id="form_email"
         name="from_email"
@@ -71,7 +71,7 @@
         v-model="form.email"
       />
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <label
         for="form_message"
         class="form__label"
@@ -81,7 +81,7 @@
         >Message:</label
       >
     </v-row>
-    <v-row>
+    <v-row no-gutters>
       <textarea
         id="form_message"
         name="from_message"
@@ -92,7 +92,7 @@
       />
     </v-row>
 
-    <v-row justify="end">
+    <v-row no-gutters justify="end">
       <v-btn
         :disabled="!formIsValid"
         large

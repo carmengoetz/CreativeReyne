@@ -1,8 +1,8 @@
 <template>
-  <v-container class="contact py-16">
-    <v-row>
+  <v-container class="contact px-8 my-8 my-md-16">
+    <v-row no-gutters>
       <v-col cols="12" md="4">
-        <v-row class="">
+        <v-row no-gutters>
           <v-img width="500" max-height="500" :src="image" :lazy-src="imageLazy"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
@@ -13,7 +13,7 @@
               </v-row> </template
           ></v-img>
         </v-row>
-        <v-row>
+        <v-row no-gutters>
           <p class="contact__description mt-4">
             <span
               :class="
@@ -28,10 +28,10 @@
         </v-row>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="12" md="7" class="mx-4 mx-md-0">
-        <v-row class="mb-4">
+      <v-col cols="12" md="7">
+        <v-row no-gutters class="mb-7">
           <v-card-title
-            class="contact__title text-uppercase pl-0"
+            class="contact__title text-uppercase ml-0 pl-0"
             :class="
               site == 'creators'
                 ? 'contact__title--creators'
@@ -40,14 +40,14 @@
             >{{ title }}</v-card-title
           >
         </v-row>
-        <v-row justify="space-between">
+        <v-row no-gutters>
           <v-col cols="12">
             <Form :site="site" />
           </v-col>
         </v-row>
-        <v-row justify="center"
+        <v-row no-gutters justify="center"
           ><v-card-title
-            class="contact__title text-uppercase pl-0 my-6"
+            class="contact__title text-uppercase pl-0 my-6 text-center"
             :class="
               site == 'creators'
                 ? 'contact__title--creators'
@@ -56,7 +56,7 @@
             >{{ subtitle }}</v-card-title
           >
         </v-row>
-        <v-row>
+        <v-row no-gutters>
           <Socials
             class="contact__socials my-4"
             size="60px"
@@ -120,7 +120,7 @@ export default {
     font-size: 84px;
     font-weight: 500;
     color: $text-white;
-
+    word-break: normal !important;
     &--creators {
       font-family: $MADEEvolveSans;
     }

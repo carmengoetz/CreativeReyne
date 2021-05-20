@@ -11,7 +11,7 @@
   >
     <Navigation />
     <v-main>
-      <div class="app__container py-0 py-md-16">
+      <div class="app__container mt-4 py-16">
         <ParticlesJS
           v-if="site == 'creators'"
           class="app__container--content1"
@@ -97,7 +97,6 @@ export default {
     }
 
     &--content2 {
-      margin-top: 80px;
       z-index: 1;
     }
   }
