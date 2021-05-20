@@ -20,7 +20,14 @@
             :height="site == 'creators' ? '300' : '150'"
             max-width="300"
             :src="col.image"
-          ></v-img
+            :lazy-src="col.imageLazy"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template></v-img
         ></v-row>
         <v-row>
           <v-card-title

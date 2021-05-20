@@ -11,8 +11,15 @@
               width="44"
               height="48"
               :src="creatorsLogo"
+              :laz-src="creatorsLogoLazy"
             ></v-img>
-            <v-img v-else width="44" height="44" :src="standardLogo"></v-img
+            <v-img
+              v-else
+              width="44"
+              height="44"
+              :src="standardLogo"
+              :laz-src="standardLogoLazy"
+            ></v-img
             ><span class="align-center ml-2 mt-1 d-none d-sm-flex">{{
               title
             }}</span></router-link
@@ -34,6 +41,7 @@
                   max-width="36"
                   max-height="40"
                   :src="creatorsLogo"
+                  :laz-src="creatorsLogoLazy"
                 ></v-img>
                 <span class="align-center mx-auto">{{ creatorsTitle }}</span>
               </v-btn>
@@ -52,6 +60,7 @@
                   max-width="36"
                   max-height="40"
                   :src="standardLogo"
+                  :laz-src="standardLogoLazy"
                 ></v-img>
                 <span class="align-center mx-auto">{{ standardTitle }}</span>
               </v-btn>
@@ -148,6 +157,7 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
+  z-index: 2 !important;
   text-decoration: none;
   padding: 0 80px;
 

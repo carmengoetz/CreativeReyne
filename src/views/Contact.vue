@@ -3,7 +3,15 @@
     <v-row>
       <v-col cols="12" md="4">
         <v-row class="">
-          <v-img width="500" max-height="500" :src="image"></v-img>
+          <v-img width="500" max-height="500" :src="image" :lazy-src="imageLazy"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
         </v-row>
         <v-row>
           <p class="contact__description mt-4">
@@ -75,7 +83,8 @@ export default {
       subtitle: contact.subtitle,
       creatorsDescription: contact.creatorsDescription,
       standardDescription: contact.standardDescription,
-      image: contact.image
+      image: contact.image,
+      imageLazy: contact.imageLazy
     };
   },
   computed: {

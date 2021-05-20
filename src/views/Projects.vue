@@ -7,8 +7,15 @@
         class="portfolio__image mx-auto mt-16"
         height="400"
         :max-width="site == 'creators' ? '460' : '820'"
-        :src="image"
-      ></v-img
+        :src="image.image"
+        :lazy-src="image.imageLazy"
+        ><template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template></v-img
     ></v-row>
 
     <v-row class="justify-end">

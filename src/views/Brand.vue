@@ -3,7 +3,7 @@
     <v-container class="brand py-16">
       <v-row>
         <v-card-title
-          class="brand__title text-uppercase white--text mx-auto pb-16"
+          class="brand__title text-uppercase white--text mx-auto pb-10 pb-lg-16"
           :class="
             site == 'creators'
               ? 'brand__title--creators'
@@ -25,7 +25,18 @@
               contain
               max-width="400"
               :src="site == 'creators' ? col.imageCreators : col.imageStandard"
-            ></v-img
+              :lazy-src="
+                site == 'creators'
+                  ? col.imageCreatorsLazy
+                  : col.imageStandardLazy
+              "
+              ><template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row> </template></v-img
           ></v-row>
           <v-row>
             <v-card-title

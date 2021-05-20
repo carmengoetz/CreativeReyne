@@ -2,7 +2,7 @@
   <v-container class="pricing py-16">
     <v-row>
       <v-card-title
-        class="pricing__title text-uppercase white--text mx-auto pb-16"
+        class="pricing__title text-uppercase white--text mx-auto pb-10 pd-lg-16"
         :class="
           site == 'creators'
             ? 'pricing__title--creators'
@@ -25,7 +25,14 @@
             class="pricing__image mx-4"
             max-width="300"
             :src="col.image"
-          ></v-img
+            :lazy-src="col.imageLazy"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template></v-img
         ></v-row>
         <v-row justify="center" justify-md="start">
           <v-card-title

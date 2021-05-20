@@ -8,6 +8,7 @@
           max-height="584"
           width="600"
           :src="creatorsLogo"
+          :lazy-src="creatorsLogoLazy"
           ><template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
@@ -22,6 +23,7 @@
           max-height="488"
           width="500"
           :src="standardLogo"
+          :lazy-src="standardLogoLazy"
           ><template v-slot:placeholder>
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-progress-circular
@@ -77,7 +79,9 @@ export default {
       title: home.title,
       subtitle: home.subtitle,
       creatorsLogo: home.creatorsLogo,
+      creatorsLogoLazy: home.creatorsLogoLazy,
       standardLogo: home.standardLogo,
+      standardLogoLazy: home.standardLogoLazy,
       buttons: [
         {
           name: "Build Your Brand",
