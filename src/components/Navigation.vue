@@ -5,26 +5,21 @@
         <v-toolbar-title v-bind="attrs" v-on="on" class="mt-2 mt-lg-0">
           <router-link
             :to="{ name: 'Home' }"
-            class="nav__brand text-uppercase align-center mt-2"
+            class="nav__brand text-uppercase align-center mt-0 mt-lg-2"
             ><v-img
               v-if="site == 'creators'"
               width="44"
               height="48"
-              src="@/assets/images/creators/creators-logo-thumb.png"
+              :src="creatorsLogo"
             ></v-img>
-            <v-img
-              v-else
-              width="44"
-              height="44"
-              src="@/assets/images/standard/standard-logo-thumb.png"
-            ></v-img
-            ><span class="align-center ml-2 mt-1"
-              >Creative Reyne</span
-            ></router-link
+            <v-img v-else width="44" height="44" :src="standardLogo"></v-img
+            ><span class="align-center ml-2 mt-1 d-none d-sm-flex">{{
+              title
+            }}</span></router-link
           >
         </v-toolbar-title>
       </template>
-      <v-card tile flat color="white" width="300px" class="pa-0">
+      <v-card tile flat color="white" width="320px" class="pa-0">
         <v-list class="pa-0">
           <v-list-item v-if="site == 'standard'" class="pa-0">
             <v-list-item-content class="pa-0">
@@ -38,9 +33,9 @@
                 <v-img
                   max-width="36"
                   max-height="40"
-                  src="@/assets/images/creators/creators-logo-thumb.png"
+                  :src="creatorsLogo"
                 ></v-img>
-                <span class="align-center ml-2">Content Creators</span>
+                <span class="align-center mx-auto">{{ creatorsTitle }}</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -56,9 +51,9 @@
                 <v-img
                   max-width="36"
                   max-height="40"
-                  src="@/assets/images/standard/standard-logo-thumb.png"
+                  :src="standardLogo"
                 ></v-img>
-                <span class="align-center ml-2">Standard Business</span>
+                <span class="align-center mx-auto">{{ standardTitle }}</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -74,7 +69,10 @@
         :to="{
           name: page.name
         }"
-        class="nav__link text-uppercase py-7 px-6"
+        class="nav__link text-uppercase py-6 px-6"
+        :class="
+          site == 'creators' ? 'nav__link--creators' : 'nav__link--standard'
+        "
       >
         {{ page.name }}
       </router-link>
@@ -96,6 +94,11 @@
                   name: page.name
                 }"
                 class="nav__link text-uppercase py-7 px-6"
+                :class="
+                  site == 'creators'
+                    ? 'nav__link--creators'
+                    : 'nav__link--standard'
+                "
               >
                 {{ page.name }}
               </router-link>
@@ -108,11 +111,18 @@
 </template>
 
 <script>
+import { nav } from "@/constants";
+
 export default {
   name: "Navigation",
 
   data: () => {
     return {
+      title: nav.title,
+      creatorsTitle: nav.creatorsTitle,
+      creatorsLogo: nav.creatorsLogo,
+      standardTitle: nav.standardTitle,
+      standardLogo: nav.standardLogo,
       pages: [
         { path: "/portfolio", name: "Portfolio", exact: false },
         { path: "/pricing", name: "Pricing", exact: false },
@@ -145,6 +155,10 @@ export default {
     padding: 0 60px;
   }
 
+  @media (max-width: $sm) {
+    padding: 0 20px;
+  }
+
   &__brand {
     font-family: $BebasNeue;
     font-size: 52px;
@@ -168,9 +182,17 @@ export default {
   }
 
   &__link {
-    font-family: $MADEEvolveSansEVO;
-    font-size: 20px;
+    font-size: 24px;
     text-decoration: none;
+
+    &--creators {
+      font-family: $MADEEvolveSansEVO;
+    }
+
+    &--standard {
+      font-family: $BebasNeue;
+      letter-spacing: 0.24em;
+    }
 
     &:hover {
       background-color: $creator-primary;
