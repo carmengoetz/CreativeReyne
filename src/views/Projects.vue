@@ -6,7 +6,7 @@
         :key="image.index"
         class="portfolio__image mx-auto mt-16"
         height="400"
-        :max-width="site == 'creators' ? '460' : '800'"
+        :max-width="site == 'creators' ? '460' : '820'"
         :src="image"
       ></v-img
     ></v-row>

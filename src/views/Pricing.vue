@@ -2,7 +2,7 @@
   <v-container class="pricing py-16">
     <v-row>
       <v-card-title
-        class="pricing__title text-uppercase white--text mx-auto pb-12"
+        class="pricing__title text-uppercase white--text mx-auto pb-16"
         :class="
           site == 'creators'
             ? 'pricing__title--creators'
@@ -11,7 +11,7 @@
         >{{ title }}</v-card-title
       >
     </v-row>
-    <v-row>
+    <v-row class="pt-0 pt-md-10">
       <v-col
         v-for="col in columns"
         :key="col.index"

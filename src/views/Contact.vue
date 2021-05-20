@@ -15,7 +15,7 @@
               "
               >Alexander Reyne</span
             >
-            {{ description }}
+            {{ site == "creators" ? creatorsDescription : standardDescription }}
           </p>
         </v-row>
       </v-col>
@@ -73,7 +73,8 @@ export default {
     return {
       title: contact.title,
       subtitle: contact.subtitle,
-      description: contact.description,
+      creatorsDescription: contact.creatorsDescription,
+      standardDescription: contact.standardDescription,
       image: contact.image
     };
   },

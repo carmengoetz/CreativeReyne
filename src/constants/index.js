@@ -273,8 +273,10 @@ export const pricing = {
 export const contact = {
   title: "email me",
   subtitle: "direct message me",
-  description:
+  creatorsDescription:
     "is a Graphic Designer currently residing in Saskatchewan, Canada. At 15 years old he realized he wanted to use his creative ability to bring people’s passions to life. Almost 15 years later, with experience in nearly every facet of the graphic design industry, Alexander turned his attention to creating beautiful graphics for online communities and streamers looking to stand out in their space.",
+  standardDescription:
+    "is a Graphic Designer currently residing in Saskatchewan, Canada. At 15 years old he realized he wanted to use his creative ability to bring people’s passions to life. Almost 15 years later, with experience in nearly every facet of the graphic design industry, Alexander turned his attention to freelance design. Looking to help local and international businesses, Alex works from home on projects from all over the world.",
   image: require("@/assets/images/alexander-reyne.png")
 };
 

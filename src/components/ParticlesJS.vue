@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <div id="particles-js" />
-  </div>
+  <div id="particles-js" />
 </template>
 
 <script>
@@ -137,6 +135,6 @@ export default {
 
 #particles-js {
   background-color: $creator-primary;
-  height: 100%;
+  max-height: 100%;
 }
 </style>
