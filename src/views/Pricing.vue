@@ -1,96 +1,95 @@
 <template>
-  <div class="pricing pt-16">
-    <v-container>
-      <v-row>
-        <v-card-title
-          class="pricing__title text-uppercase white--text mx-auto mb-12"
-          :class="
-            site == 'creators'
-              ? 'pricing__title--creators'
-              : 'pricing__title--standard'
-          "
-          >pricing</v-card-title
-        >
-      </v-row>
-      <v-row>
-        <v-col
-          v-for="col in columns"
-          :key="col.index"
-          cols="12"
-          md="6"
-          :lg="col.cols"
-          class="mb-4 ml-0 mr-0 ml-md-16 mr-md-n16 ml-lg-0 mr-lg-0 ml-xl-8 mr-xl-n8"
-        >
-          <v-row justify="center" justify-md="start">
-            <v-img
-              class="pricing__image"
-              max-width="300"
-              :src="col.image"
-            ></v-img
-          ></v-row>
-          <v-row justify="center" justify-md="start">
-            <v-card-title
-              class="pricing__subtitle text-uppercase text-no-wrap mb-10"
-              :class="
-                site == 'creators'
-                  ? 'pricing__subtitle--creators'
-                  : 'pricing__subtitle--standard'
-              "
-            >
-              {{ col.title }}
-            </v-card-title>
-          </v-row>
-          <div v-for="item in col.items" :key="item.index">
-            <v-row justify="center" justify-md="start" class="mx-16 mx-md-0">
-              <v-col cols="1" md="0" class="d-md-none"></v-col>
-              <v-col cols="5" lg="6" xl="5">
-                <v-row>
-                  <p
-                    class="pricing__item ml-16 ml-md-0"
-                    :class="
-                      site == 'creators'
-                        ? 'pricing__item--creators'
-                        : 'pricing__item--standard'
-                    "
-                  >
-                    {{ item.item }}:
-                  </p>
-                </v-row>
-              </v-col>
-              <v-col cols="6" lg="6" xl="7">
-                <v-row
-                  justify="space-between"
-                  v-for="price in item.prices"
-                  :key="price.index"
+  <v-container class="pricing py-16">
+    <v-row>
+      <v-card-title
+        class="pricing__title text-uppercase white--text mx-auto pb-12"
+        :class="
+          site == 'creators'
+            ? 'pricing__title--creators'
+            : 'pricing__title--standard'
+        "
+        >pricing</v-card-title
+      >
+    </v-row>
+    <v-row>
+      <v-col
+        v-for="col in columns"
+        :key="col.index"
+        cols="12"
+        md="6"
+        lg="3"
+        class="mb-4 ml-0 mr-0 ml-md-16 mr-md-n16 ml-lg-0 mr-lg-0 ml-xl-8 mr-xl-n8"
+      >
+        <v-row justify="center" justify-md="start">
+          <v-img
+            class="pricing__image mx-4"
+            max-width="300"
+            :src="col.image"
+          ></v-img
+        ></v-row>
+        <v-row justify="center" justify-md="start">
+          <v-card-title
+            class="pricing__subtitle text-uppercase text-no-wrap mb-10"
+            :class="
+              site == 'creators'
+                ? 'pricing__subtitle--creators'
+                : 'pricing__subtitle--standard'
+            "
+          >
+            {{ col.title }}
+          </v-card-title>
+        </v-row>
+        <div v-for="item in col.items" :key="item.index">
+          <v-row justify="center" justify-md="start" class="pl-0 pl-md-4">
+            <v-col cols="1" sm="2" md="0" class="d-flex d-md-none"></v-col>
+            <v-col cols="5" md="6" xl="5">
+              <v-row>
+                <p
+                  class="pricing__item"
+                  :class="
+                    site == 'creators'
+                      ? 'pricing__item--creators'
+                      : 'pricing__item--standard'
+                  "
                 >
-                  <p class="pricing__price">{{ price }}</p>
-                </v-row>
-              </v-col>
-            </v-row>
-            <v-row class="ml-13 ml-md-0">
-              <p class="pricing__note ml-16 ml-md-1">{{ item.note }}</p>
-            </v-row>
-            <v-row>
-              <ul class="pricing__list mt-n4 ml-7">
+                  {{ item.item }}:
+                </p>
+              </v-row>
+            </v-col>
+            <v-col cols="6" sm="5" md="6" xl="7">
+              <v-row
+                justify="space-between"
+                v-for="price in item.prices"
+                :key="price.index"
+              >
+                <p class="pricing__price">{{ price }}</p>
+              </v-row>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="1" sm="2" md="0" class="d-flex d-md-none"></v-col>
+            <v-col cols="11" sm="10" md="12">
+              <p class="pricing__note ml-n3 ml-md-1 mt-n6">{{ item.note }}</p>
+              <ul class="pricing__list mt-n4">
                 <li v-for="list in item.list" :key="list.index">
                   {{ list }}
                 </li>
               </ul>
-            </v-row>
-          </div>
-        </v-col>
-      </v-row>
+            </v-col>
+          </v-row>
+        </div>
+      </v-col>
+    </v-row>
 
-      <v-row justify="center" justify-md="end">
-        <Button
-          v-for="button in buttons"
-          :key="button.index"
-          :name="button.name"
-          :to="button.to"
-        />
-      </v-row>
-    </v-container>
-  </div>
+    <v-row justify="center" justify-md="end">
+      <Button
+        v-for="button in buttons"
+        :key="button.index"
+        :name="button.name"
+        :to="button.to"
+      />
+    </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -123,8 +122,7 @@ export default {
               item: "Discord Emotes",
               prices: ["$30 each", "$20 each (set of 16)"]
             }
-          ],
-          cols: "4"
+          ]
         },
         {
           image: require("@/assets/images/creators/creators-socials.png"),
@@ -142,8 +140,7 @@ export default {
               item: "Twitch Panels",
               prices: ["$20 each"]
             }
-          ],
-          cols: "3"
+          ]
         },
         {
           image: require("@/assets/images/creators/creators-websites1.png"),
@@ -161,8 +158,7 @@ export default {
               item: "Add Merch Store",
               prices: ["$600"]
             }
-          ],
-          cols: "3"
+          ]
         },
         {
           image: require("@/assets/images/creators/creators-logo.png"),
@@ -173,8 +169,7 @@ export default {
               prices: ["$500"],
               note: "(Prices vary depending on project)"
             }
-          ],
-          cols: "2"
+          ]
         }
       ],
       standardColumns: [
@@ -206,8 +201,7 @@ export default {
               item: "Other Inquiries",
               prices: ["Contact me =)"]
             }
-          ],
-          cols: "3"
+          ]
         },
         {
           image: require("@/assets/images/standard/standard-brand-package.png"),
@@ -230,8 +224,7 @@ export default {
                 "Files for each design: .AI, .EPS, .PDF"
               ]
             }
-          ],
-          cols: "3"
+          ]
         },
         {
           image: require("@/assets/images/standard/standard-websites.png"),
@@ -249,8 +242,7 @@ export default {
               item: "Add Online Store",
               prices: ["Starting at $600"]
             }
-          ],
-          cols: "3"
+          ]
         },
         {
           image: require("@/assets/images/standard/standard-logo-design.png"),
@@ -261,8 +253,7 @@ export default {
               prices: ["$500"],
               note: "(Prices vary depending on project)"
             }
-          ],
-          cols: "3"
+          ]
         }
       ],
       buttons: [

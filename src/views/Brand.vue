@@ -1,12 +1,9 @@
 <template>
-  <div
-    class="brand pt-16"
-    :class="site == 'creators' ? 'brand__creators' : 'brand__standard'"
-  >
-    <v-container>
+  <div>
+    <v-container class="brand py-16">
       <v-row>
         <v-card-title
-          class="brand__title text-uppercase white--text mx-auto mb-12"
+          class="brand__title text-uppercase white--text mx-auto pb-12"
           :class="
             site == 'creators'
               ? 'brand__title--creators'
@@ -25,6 +22,7 @@
           <v-row
             ><v-img
               class="brand__image mx-auto"
+              contain
               max-width="400"
               :src="site == 'creators' ? col.imageCreators : col.imageStandard"
             ></v-img
@@ -55,16 +53,14 @@
           </v-row>
         </v-col>
       </v-row>
-      <v-row>
-        <div class="mx-auto">
-          <Button
-            v-for="button in buttons"
-            :key="button.index"
-            :name="button.name"
-            :to="button.to"
-            page="brand"
-          />
-        </div>
+      <v-row justify="center">
+        <Button
+          v-for="button in buttons"
+          :key="button.index"
+          :name="button.name"
+          :to="button.to"
+          page="brand"
+        />
       </v-row>
     </v-container>
   </div>
@@ -132,11 +128,6 @@ export default {
 
 <style lang="scss" scoped>
 .brand {
-  &__standard {
-    background: $standard-secondary;
-    padding-bottom: 200px;
-  }
-
   &__title {
     font-size: 88px;
 
@@ -180,8 +171,8 @@ export default {
 
   &__description {
     font-size: 20px;
-    color: $text-white;
     letter-spacing: 0.035em;
+
     &--creators {
       color: $text-white;
     }

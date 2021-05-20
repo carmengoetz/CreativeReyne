@@ -5,7 +5,7 @@
         <v-toolbar-title v-bind="attrs" v-on="on" class="mt-2 mt-lg-0">
           <router-link
             :to="{ name: 'Home' }"
-            class="nav__brand text-uppercase align-center mt-2"
+            class="nav__brand text-uppercase align-center mt-0 mt-lg-2"
             ><v-img
               v-if="site == 'creators'"
               width="44"
@@ -18,13 +18,13 @@
               height="44"
               src="@/assets/images/standard/standard-logo-thumb.png"
             ></v-img
-            ><span class="align-center ml-2 mt-1"
+            ><span class="align-center ml-2 mt-1 d-none d-sm-flex"
               >Creative Reyne</span
             ></router-link
           >
         </v-toolbar-title>
       </template>
-      <v-card tile flat color="white" width="300px" class="pa-0">
+      <v-card tile flat color="white" width="320px" class="pa-0">
         <v-list class="pa-0">
           <v-list-item v-if="site == 'standard'" class="pa-0">
             <v-list-item-content class="pa-0">
@@ -40,7 +40,7 @@
                   max-height="40"
                   src="@/assets/images/creators/creators-logo-thumb.png"
                 ></v-img>
-                <span class="align-center ml-2">Content Creators</span>
+                <span class="align-center mx-auto">Content Creators</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -58,7 +58,7 @@
                   max-height="40"
                   src="@/assets/images/standard/standard-logo-thumb.png"
                 ></v-img>
-                <span class="align-center ml-2">Standard Business</span>
+                <span class="align-center mx-auto">Standard Business</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -143,6 +143,10 @@ export default {
 
   @media (max-width: $lg) {
     padding: 0 60px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 0 20px;
   }
 
   &__brand {

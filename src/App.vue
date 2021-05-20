@@ -1,15 +1,18 @@
 <template>
   <v-app
     class="app"
-    :class="site == 'creators' ? 'app__creators' : 'app__standard'"
+    :class="
+      site == 'creators'
+        ? 'app__creators'
+        : $route.name == 'Portfolio' || $route.name == 'Brand'
+        ? 'app__standard--blue'
+        : 'app__standard--pink'
+    "
   >
     <Navigation />
-    <v-main class="">
-      <div class="app__container">
-        <ParticlesJS
-          v-if="site == 'creators'"
-          class="app__container--content1"
-        />
+    <v-main>
+      <div class="app__container py-0 py-md-16">
+        <!-- <ParticlesJS v-if="site == 'creators'" class="app__container--content1" /> -->
         <router-view :key="$route.path" class="app__container--content2" />
       </div>
     </v-main>
@@ -20,13 +23,14 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
-import ParticlesJS from "@/components/ParticlesJS.vue";
+// import ParticlesJS from "@/components/ParticlesJS.vue";
+
 export default {
   name: "App",
   components: {
     Navigation,
-    Footer,
-    ParticlesJS
+    Footer
+    // ParticlesJS,
   },
   computed: {
     site() {
@@ -71,7 +75,12 @@ export default {
   }
 
   &__standard {
-    background: $standard-primary !important;
+    &--blue {
+      background-color: $standard-secondary !important;
+    }
+    &--pink {
+      background: $standard-primary !important;
+    }
   }
 
   &__container {
@@ -81,6 +90,7 @@ export default {
     &--content2 {
       grid-column: 1;
       grid-row: 1;
+      overflow: hidden;
     }
 
     &--content2 {

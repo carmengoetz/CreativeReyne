@@ -1,70 +1,66 @@
 <template>
-  <div class="home">
-    <v-container class="mb-16 mt-0 mt-xl-16">
-      <v-row class="mt-16">
-        <v-col cols="12" class="col-lg-5">
-          <v-img
-            v-if="site == 'creators'"
-            class="home__image mt-lg-n10 mx-auto"
-            max-height="584"
-            width="600"
-            src="@/assets/images/creators/creators-logo.png"
-            ><template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row> </template
-          ></v-img>
-          <v-img
-            v-else
-            class="home__image mx-auto"
-            max-height="488"
-            width="500"
-            src="@/assets/images/standard/standard-logo.png"
-            ><template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row> </template
-          ></v-img>
-        </v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="12" class="col-lg-7">
-          <v-row class="mt-lg-0 mt-xl-12">
-            <v-card-title
-              class="home__title white--text mt-16 mx-auto mx-lg-0 text-no-wrap"
-              :class="
-                site == 'creators'
-                  ? 'home__title--creators'
-                  : 'home__title--standard'
-              "
-              >Graphic Design</v-card-title
-            >
-          </v-row>
-          <v-row class="mx-sm-auto">
-            <v-card-subtitle
-              class="home__subtitle white--text mt-10 mx-auto mx-lg-0 text-no-wrap"
-              >For content creators and gaming communities</v-card-subtitle
-            >
-          </v-row>
-          <v-row class="mt-16 mx-sm-auto">
-            <div class="mx-auto mx-lg-0">
-              <Button
-                v-for="button in buttons"
-                :key="button.index"
-                :name="button.name"
-                :to="button.to"
-              />
-            </div>
-          </v-row>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+  <v-container class="home mb-16 mt-0 mt-xl-16">
+    <v-row class="mt-16">
+      <v-col cols="12" class="col-lg-5">
+        <v-img
+          v-if="site == 'creators'"
+          class="home__image mt-lg-n10 mx-auto"
+          max-height="584"
+          width="600"
+          src="@/assets/images/creators/creators-logo.png"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
+        <v-img
+          v-else
+          class="home__image mx-auto"
+          max-height="488"
+          width="500"
+          src="@/assets/images/standard/standard-logo.png"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row> </template
+        ></v-img>
+      </v-col>
+      <v-spacer></v-spacer>
+      <v-col cols="12" class="col-lg-7">
+        <v-row class="mt-lg-0 mt-xl-12">
+          <v-card-title
+            class="home__title white--text mt-16 mx-auto mx-lg-0 text-no-wrap"
+            :class="
+              site == 'creators'
+                ? 'home__title--creators'
+                : 'home__title--standard'
+            "
+            >Graphic Design</v-card-title
+          >
+        </v-row>
+        <v-row class="mx-sm-auto">
+          <v-card-subtitle
+            class="home__subtitle white--text mt-10 mx-auto mx-lg-0 text-no-wrap"
+            >For content creators and gaming communities</v-card-subtitle
+          >
+        </v-row>
+        <v-row justify="center" justify-lg="start" class="mt-16 mx-sm-auto">
+          <Button
+            v-for="button in buttons"
+            :key="button.index"
+            :name="button.name"
+            :to="button.to"
+          />
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
