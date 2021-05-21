@@ -4,8 +4,8 @@
       <v-img
         v-for="image in images"
         :key="image.index"
-        class="portfolio__image mx-auto mt-16"
-        max-height="400"
+        class="portfolio__image mx-auto mt-16 hidden-md-and-down"
+        :max-height="site == 'creators' ? '' : '400'"
         :max-width="site == 'creators' ? '460' : '820'"
         :src="image.image"
         :lazy-src="image.imageLazy"
@@ -15,8 +15,25 @@
               indeterminate
               color="grey lighten-5"
             ></v-progress-circular>
-          </v-row> </template></v-img
-    ></v-row>
+          </v-row> </template
+      ></v-img>
+      <v-img
+        v-for="image in images"
+        :key="image.index"
+        class="portfolio__image mx-auto mt-16 hidden-lg-and-up"
+        max-height="400"
+        :max-width="site == 'creators' ? '300' : '300'"
+        :src="image.image"
+        :lazy-src="image.imageLazy"
+        ><template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+    </v-row>
 
     <v-row class="justify-end">
       <v-col cols="6">

@@ -16,7 +16,7 @@
         <v-col v-for="col in columns" :key="col.index" col="4">
           <v-row no-gutters
             ><v-img
-              class="brand__image mx-auto"
+              class="brand__image mx-auto hidden-sm-and-down"
               contain
               max-width="400"
               :src="site == 'creators' ? col.imageCreators : col.imageStandard"
@@ -31,8 +31,27 @@
                     indeterminate
                     color="grey lighten-5"
                   ></v-progress-circular>
-                </v-row> </template></v-img
-          ></v-row>
+                </v-row> </template
+            ></v-img>
+            <v-img
+              class="brand__image mx-auto hidden-md-and-up"
+              contain
+              max-width="300"
+              :src="site == 'creators' ? col.imageCreators : col.imageStandard"
+              :lazy-src="
+                site == 'creators'
+                  ? col.imageCreatorsLazy
+                  : col.imageStandardLazy
+              "
+              ><template v-slot:placeholder>
+                <v-row class="fill-height ma-0" align="center" justify="center">
+                  <v-progress-circular
+                    indeterminate
+                    color="grey lighten-5"
+                  ></v-progress-circular>
+                </v-row> </template
+            ></v-img>
+          </v-row>
           <v-row no-gutters>
             <v-card-title
               class="brand__subtitle text-uppercase mx-auto text-no-wrap my-2"

@@ -1,3 +1,13 @@
+export const landing = {
+  title: "Freelance Graphic Design",
+  creatorsLogo: require("@/assets/images/creators/creators-logo.png"),
+  creatorsLogoLazy: require("@/assets/images/creators/creators-logo-low.png"),
+  creatorsSubtitle: "Content Creators",
+  standardLogo: require("@/assets/images/standard/standard-logo.png"),
+  standardLogoLazy: require("@/assets/images/standard/standard-logo-low.png"),
+  standardSubtitle: "Standard Business"
+};
+
 export const home = {
   title: "Graphic Design",
   subtitle: "For content creators and gaming communities",

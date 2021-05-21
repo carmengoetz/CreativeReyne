@@ -4,7 +4,7 @@
       <v-col cols="12" lg="5" class="mt-0 mt-md-8 mt-xl-16">
         <v-img
           v-if="site == 'creators'"
-          class="home__image mx-auto"
+          class="home__image mx-auto mt-0 mt-xl-n8"
           max-height="584"
           width="600"
           :src="creatorsLogo"
@@ -41,7 +41,7 @@
           class="mt-0 mt-md-8 mt-xl-16"
         >
           <v-card-title
-            class="home__title white--text my-0 mt-md-16 text-center mx-lg-4"
+            class="home__title white--text my-0 mt-md-16 text-center"
             :class="
               site == 'creators'
                 ? 'home__title--creators'
@@ -53,7 +53,7 @@
         </v-row>
         <v-row justify="center" justify-lg="start" class="mx-sm-auto">
           <v-card-subtitle
-            class="home__subtitle white--text mt-0 mt-md-10 text-center mx-lg-2"
+            class="home__subtitle white--text mt-0 mt-md-10 mx-auto mx-md-n2"
           >
             {{ subtitle }}
           </v-card-subtitle>
@@ -149,8 +149,8 @@ export default {
       font-size: 32px;
     }
 
-    @media (max-width: $md) {
-      line-height: 2.1rem;
+    @media (max-width: $xl) {
+      line-height: 2rem;
     }
   }
 }

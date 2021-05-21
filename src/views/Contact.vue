@@ -47,7 +47,7 @@
         </v-row>
         <v-row no-gutters justify="center"
           ><v-card-title
-            class="contact__title text-uppercase pl-0 my-6 text-center"
+            class="contact__title contact__title--subtitle text-uppercase pl-0 my-6 text-center"
             :class="
               site == 'creators'
                 ? 'contact__title--creators'
@@ -121,6 +121,11 @@ export default {
     font-weight: 500;
     color: $text-white;
     word-break: normal !important;
+
+    &--subtitle {
+      line-height: 3rem;
+    }
+
     &--creators {
       font-family: $MADEEvolveSans;
     }

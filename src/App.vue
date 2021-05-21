@@ -1,26 +1,39 @@
 <template>
-  <v-app
-    class="app"
-    :class="
-      site == 'creators'
-        ? 'app__creators'
-        : $route.name == 'Portfolio' || $route.name == 'Brand'
-        ? 'app__standard--blue'
-        : 'app__standard--pink'
-    "
-  >
-    <Navigation />
-    <v-main>
-      <div class="app__container mt-4 py-16">
-        <ParticlesJS
-          v-if="site == 'creators'"
-          class="app__container--content1"
-        />
-        <router-view :key="$route.path" class="app__container--content2" />
+  <div class="app">
+    <ParticlesJS v-if="site == 'creators'" class="app--content1 particles" />
+
+    <v-app
+      class="app--content2"
+      :class="
+        $route.name == 'Landing'
+          ? 'app__landing'
+          : site == 'creators'
+          ? 'app__creators'
+          : $route.name == 'Portfolio' || $route.name == 'Brand'
+          ? 'app__standard--blue'
+          : 'app__standard--pink'
+      "
+    >
+      <div v-if="$route.name == 'Landing'">
+        <div class="mt-4 py-16">
+          <!-- <ParticlesJS v-if="site == 'creators'" /> -->
+          <router-view :key="$route.path" />
+        </div>
       </div>
-    </v-main>
-    <Footer :site="site" />
-  </v-app>
+      <div v-else>
+        <Navigation />
+        <v-main>
+          <div class="mt-4 py-16">
+            <!-- <ParticlesJS
+          v-if="site == 'creators'"
+        /> -->
+            <router-view :key="$route.path" />
+          </div>
+        </v-main>
+        <Footer :site="site" />
+      </div>
+    </v-app>
+  </div>
 </template>
 
 <script>
@@ -72,6 +85,20 @@ export default {
 
 .app {
   font-family: $AcuminPro;
+  display: grid;
+
+  &--content1,
+  &--content2 {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+  }
+
+  &__landing {
+    z-index: 1;
+    background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
+      -webkit-linear-gradient(10deg, transparent 50%, $standard-primary 0%) !important;
+  }
 
   &__creators {
     background: $creator-primary !important;
@@ -83,21 +110,6 @@ export default {
     }
     &--pink {
       background: $standard-primary !important;
-    }
-  }
-
-  &__container {
-    display: grid;
-
-    &--content1,
-    &--content2 {
-      grid-column: 1;
-      grid-row: 1;
-      overflow: hidden;
-    }
-
-    &--content2 {
-      z-index: 1;
     }
   }
 }
