@@ -1,7 +1,6 @@
 <template>
   <div class="app">
     <ParticlesJS v-if="site == 'creators'" class="app--content1 particles" />
-
     <v-app
       class="app--content2"
       :class="
@@ -16,7 +15,6 @@
     >
       <div v-if="$route.name == 'Landing'">
         <div class="mt-4 py-16">
-          <!-- <ParticlesJS v-if="site == 'creators'" /> -->
           <router-view :key="$route.path" />
         </div>
       </div>
@@ -24,13 +22,10 @@
         <Navigation />
         <v-main>
           <div class="mt-4 py-16">
-            <!-- <ParticlesJS
-          v-if="site == 'creators'"
-        /> -->
             <router-view :key="$route.path" />
           </div>
         </v-main>
-        <Footer :site="site" />
+        <Footer :site="site" class="app__footer" />
       </div>
     </v-app>
   </div>
@@ -111,6 +106,12 @@ export default {
     &--pink {
       background: $standard-primary !important;
     }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 }
 </style>

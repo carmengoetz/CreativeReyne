@@ -10,8 +10,8 @@
       <v-col cols="5" @click="changeToCreators">
         <router-link :to="{ name: 'Home' }" class="landing__link">
           <v-img
-            class="home__image mx-auto mt-0 mt-lg-n8"
-            width="400"
+            class="home__image mx-auto mt-16 mt-lg-8 mb-16"
+            width="405"
             :src="creatorsLogo"
             :lazy-src="creatorsLogoLazy"
             ><template v-slot:placeholder>
@@ -24,7 +24,7 @@
           ></v-img>
           <v-row>
             <v-card-title
-              class="landing__subtitle landing__subtitle--creators mx-auto text-center my-8"
+              class="landing__subtitle landing__subtitle--creators mx-auto text-center my-6"
             >
               {{ creatordsSubtitle }}</v-card-title
             >
@@ -35,7 +35,7 @@
       <v-col cols="5" @click="changeToStandard">
         <router-link :to="{ name: 'Home' }" class="landing__link">
           <v-img
-            class="home__image mx-auto"
+            class="home__image mx-auto mt-12 mb-16 mt-lg-16"
             max-height="348"
             width="350"
             :src="standardLogo"

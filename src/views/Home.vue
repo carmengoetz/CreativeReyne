@@ -4,7 +4,7 @@
       <v-col cols="12" lg="5" class="mt-0 mt-md-8 mt-xl-16">
         <v-img
           v-if="site == 'creators'"
-          class="home__image mx-auto mt-0 mt-xl-n8"
+          class="home__image mx-auto mt-4 mt-xl-n8"
           max-height="584"
           width="600"
           :src="creatorsLogo"
