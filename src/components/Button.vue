@@ -3,7 +3,6 @@
     large
     outlined
     tile
-    @click="toTop"
     :to="{ name: to }"
     class="button white--text mt-8 mt-lg-16 py-6 mx-3"
     :height="height ? height : 75"
@@ -15,7 +14,8 @@
         ? 'button__standard--white'
         : 'button__standard--black'
     "
-    >{{ name }}</v-btn
+  >
+    {{ name }}</v-btn
   >
 </template>
 
@@ -26,16 +26,6 @@ export default {
   computed: {
     site() {
       return this.$store.state.site;
-    }
-  },
-  methods: {
-    toTop() {
-      this.intervalId = setInterval(() => {
-        if (window.pageYOffset === 0) {
-          clearInterval(this.intervalId);
-        }
-        window.scroll(0, window.pageYOffset - 50);
-      }, 20);
     }
   }
 };
