@@ -1,5 +1,5 @@
 <template>
-  <v-container class="projects">
+  <v-container class="projects my-8 my-md-16">
     <v-row>
       <v-img
         v-for="image in images"
@@ -22,7 +22,7 @@
         :key="image.index"
         class="portfolio__image mx-auto mt-16 hidden-lg-and-up"
         max-height="400"
-        :max-width="site == 'creators' ? '300' : '300'"
+        max-width="300"
         :src="image.image"
         :lazy-src="image.imageLazy"
         ><template v-slot:placeholder>

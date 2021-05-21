@@ -20,7 +20,7 @@
       </div>
       <div v-else>
         <Navigation />
-        <v-main>
+        <v-main class="pb-16">
           <div class="mt-4 py-16">
             <router-view :key="$route.path" />
           </div>
