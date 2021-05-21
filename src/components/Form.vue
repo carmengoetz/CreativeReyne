@@ -92,14 +92,14 @@
       />
     </v-row>
 
-    <v-row no-gutters justify="end">
+    <v-row no-gutters justify="end" class="ml-4 mr-n2 ml-sm-0 mr-sm-0">
       <v-btn
         :disabled="!formIsValid"
         large
         outlined
         tile
         type="submit"
-        class="form__button white--text py-6 ma-5"
+        class="form__button white--text py-6 ma-4 ma-md-2"
         :class="
           site == 'creators'
             ? 'form__button--creators'
@@ -226,6 +226,10 @@ export default {
 
     @media (max-width: $xl) {
       font-size: 16px;
+    }
+
+    @media (max-width: $sm) {
+      width: 100% !important;
     }
 
     &[disabled] {

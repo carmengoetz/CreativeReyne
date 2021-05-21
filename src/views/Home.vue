@@ -58,11 +58,7 @@
             {{ subtitle }}
           </v-card-subtitle>
         </v-row>
-        <v-row
-          justify="center"
-          justify-lg="start"
-          class="mt-0 mt-lg-16 mx-sm-auto"
-        >
+        <v-row justify="center" justify-lg="start" class="mt-0 mt-lg-16">
           <Button
             v-for="button in buttons"
             :key="button.index"

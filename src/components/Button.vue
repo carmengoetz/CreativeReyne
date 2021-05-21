@@ -41,6 +41,10 @@ export default {
     font-size: 16px;
   }
 
+  @media (max-width: $sm) {
+    width: 100% !important;
+  }
+
   &__creators {
     border: 6px solid $creator-secondary;
   }
