@@ -6,24 +6,27 @@
         :class="
           site == 'creators'
             ? 'pricing__title--creators mb-4 mb-md-8'
-            : 'pricing__title--standard  mb-8 mb-md-18'
+            : 'pricing__title--standard  mb-8 mb-md-16'
         "
         >{{ title }}</v-card-title
       >
     </v-row>
-    <v-row no-gutters>
+    <v-row
+      no-gutters
+      justify="center"
+      class="ml-4 mr-n4 ml-sm-16 mr-sm-n16 ml-md-16 mr-md-n16"
+    >
       <v-col
         v-for="col in columns"
         :key="col.index"
         cols="12"
         md="6"
         xl="3"
-        class="ml-0 mr-0 ml-md-16 mr-md-n16"
+        class="ml-0 mr-0 ml-sm-16 mr-sm-n16 ml-md-0 mr-md-0"
       >
         <v-row
           no-gutters
-          justify="center"
-          justify-md="start"
+          justify="start"
           class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
         >
           <v-img
@@ -41,8 +44,7 @@
         ></v-row>
         <v-row
           no-gutters
-          justify="center"
-          justify-md="start"
+          justify="start"
           class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
         >
           <v-card-title
@@ -60,43 +62,45 @@
           <v-row
             no-gutters
             justify="start"
-            justify-md="start"
             class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
           >
-            <v-col cols="2" sm="3" md="0" class="d-flex d-md-none"></v-col>
-            <v-col cols="5" sm="4" md="5" xl="5">
-              <v-row no-gutters>
-                <p
-                  class="pricing__item"
-                  :class="
-                    site == 'creators'
-                      ? 'pricing__item--creators'
-                      : 'pricing__item--standard'
-                  "
-                >
-                  {{ item.item }}:
-                </p>
-              </v-row>
+            <v-col cols="4" sm="3" md="4" lg="3" xl="5">
+              <p
+                class="pricing__item"
+                :class="
+                  site == 'creators'
+                    ? 'pricing__item--creators'
+                    : 'pricing__item--standard'
+                "
+              >
+                {{ item.item }}:
+              </p>
             </v-col>
-            <v-col cols="5" md="6" xl="7">
-              <v-row no-gutters v-for="price in item.prices" :key="price.index">
-                <p class="pricing__price">{{ price }}</p>
-              </v-row>
+            <v-col cols="8" sm="9" md="8" lg="9" xl="7">
+              <p
+                v-for="price in item.prices"
+                :key="price.index"
+                class="pricing__price"
+              >
+                {{ price }}
+              </p>
             </v-col>
           </v-row>
           <v-row
             no-gutters
             class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
           >
-            <v-col cols="1" sm="2" md="0" class="d-flex d-md-none"></v-col>
-            <v-col cols="11" sm="10" md="12">
-              <p class="pricing__note mt-n4">{{ item.note }}</p>
-              <ul class="pricing__list ml-2 mt-n4">
-                <li v-for="list in item.list" :key="list.index">
-                  {{ list }}
-                </li>
-              </ul>
-            </v-col>
+            <p class="pricing__note mt-n4">{{ item.note }}</p>
+          </v-row>
+          <v-row
+            no-gutters
+            class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
+          >
+            <ul class="pricing__list ml-2 mt-n4">
+              <li v-for="list in item.list" :key="list.index">
+                {{ list }}
+              </li>
+            </ul>
           </v-row>
         </div>
       </v-col>

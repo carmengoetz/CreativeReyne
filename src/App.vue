@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <ParticlesJS v-if="site == 'creators'" class="app--content1 particles" />
+    <ParticlesJS v-if="site == 'creators'" class="app--content1" />
     <v-app
       class="app--content2"
       :class="
@@ -13,10 +13,8 @@
           : 'app__standard--pink'
       "
     >
-      <div v-if="$route.name == 'Landing'">
-        <div class="mt-4 py-16">
-          <router-view :key="$route.path" />
-        </div>
+      <div v-if="$route.name == 'Landing'" class="mt-4 py-16">
+        <router-view :key="$route.path" />
       </div>
       <div v-else>
         <Navigation />
@@ -93,6 +91,11 @@ export default {
     z-index: 1;
     background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
       -webkit-linear-gradient(10deg, transparent 50%, $standard-primary 0%) !important;
+
+    @media (max-width: $md) {
+      background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
+        -webkit-linear-gradient(-80deg, transparent 41%, $standard-primary 0%) !important;
+    }
   }
 
   &__creators {

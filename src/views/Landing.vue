@@ -1,16 +1,16 @@
 <template>
-  <v-container class="landing mt-0 mt-xl-16">
+  <v-container class="landing mt-n8 mt-xl-16">
     <v-row>
       <v-card-title
-        class="landing__title mx-auto text-uppercase text-center mb-16"
+        class="landing__title mx-auto text-uppercase text-center mb-0 mb-md-16"
         >{{ title }}</v-card-title
       >
     </v-row>
     <v-row>
-      <v-col cols="5" @click="changeToCreators">
+      <v-col cols="12" md="5" @click="changeToCreators">
         <router-link :to="{ name: 'Home' }" class="landing__link">
           <v-img
-            class="home__image mx-auto mt-16 mt-lg-8 mb-16"
+            class="home__image mx-auto mt-0 mt-md-16 mt-lg-8 mb-0 mb-md-16"
             width="405"
             :src="creatorsLogo"
             :lazy-src="creatorsLogoLazy"
@@ -24,7 +24,7 @@
           ></v-img>
           <v-row>
             <v-card-title
-              class="landing__subtitle landing__subtitle--creators mx-auto text-center my-6"
+              class="landing__subtitle landing__subtitle--creators mx-auto text-center my-0 my-md-6"
             >
               {{ creatordsSubtitle }}</v-card-title
             >
@@ -32,10 +32,10 @@
         </router-link>
       </v-col>
       <v-spacer></v-spacer>
-      <v-col cols="5" @click="changeToStandard">
+      <v-col cols="12" md="5" @click="changeToStandard">
         <router-link :to="{ name: 'Home' }" class="landing__link">
           <v-img
-            class="home__image mx-auto mt-12 mb-16 mt-lg-16"
+            class="home__image mx-auto mt-8 mt-md-12 mt-lg-16 mb-0 mb-md-16"
             max-height="348"
             width="350"
             :src="standardLogo"
@@ -50,7 +50,7 @@
           ></v-img>
           <v-row>
             <v-card-title
-              class="landing__subtitle landing__subtitle--standard mx-auto text-uppercase text-center my-16"
+              class="landing__subtitle landing__subtitle--standard mx-auto text-uppercase text-center my-10 my-md-16"
             >
               {{ standardSubtitle }}</v-card-title
             >
@@ -108,12 +108,15 @@ export default {
 
     @media (max-width: $xl) {
       font-size: 80px;
+      line-height: 4rem;
     }
     @media (max-width: $md) {
+      font-size: 60px;
       line-height: 3rem;
     }
     @media (max-width: $sm) {
-      font-size: 60px;
+      font-size: 40px;
+      line-height: 2rem;
     }
   }
 
