@@ -90,10 +90,22 @@ export default {
     overflow: hidden;
   }
 
+  &--content1 {
+    height: 80vh;
+    min-height: 100%;
+  }
+
   &__landing {
     z-index: 1;
-    background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
-      -webkit-linear-gradient(10deg, transparent 50%, $standard-primary 0%) !important;
+    background: transparent url("./assets/images/landing-page.svg") top right
+      no-repeat !important;
+    background-attachment: fixed;
+    width: 100%;
+
+    @media (max-width: $xl) {
+      background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
+        -webkit-linear-gradient(10deg, transparent 50%, $standard-primary 0%) !important;
+    }
 
     @media (max-width: $md) {
       background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),

@@ -135,6 +135,5 @@ export default {
 
 #particles-js {
   background-color: $creator-primary;
-  max-height: 100%;
 }
 </style>
