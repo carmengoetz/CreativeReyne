@@ -44,6 +44,14 @@ const routes = [
     name: "Brand",
     component: () =>
       import(/* webpackChunkName: "build" */ "../views/Brand.vue")
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "404",
+    component: () => import(/* webpackChunkName: "404" */ "../views/404.vue"),
+    meta: {
+      notFound: true
+    }
   }
 ];
 

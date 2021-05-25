@@ -143,6 +143,7 @@ export default {
       standardLogo: nav.standardLogo,
       standardLogoLazy: nav.standardLogoLazy,
       pages: [
+        { path: "/build-your-brand", name: "Build Your Brand", exact: false },
         { path: "/portfolio", name: "Portfolio", exact: false },
         { path: "/pricing", name: "Pricing", exact: false },
         { path: "/contact", name: "Contact", exact: false }
