@@ -19,33 +19,50 @@ export const home = {
 
 export const brand = {
   title: "why choose creative reyne?",
-  columns: [
+  creatorsColumns: [
     {
-      imageCreators: require("@/assets/images/creators/creators-logo.png"),
-      imageCreatorsLazy: require("@/assets/images/creators/creators-logo-low.png"),
-      imageStandard: require("@/assets/images/standard/standard-print-design1.png"),
-      imageStandardLazy: require("@/assets/images/standard/standard-print-design1-low.png"),
+      image: require("@/assets/images/creators/creators-logo.png"),
+      imageLazy: require("@/assets/images/creators/creators-logo-low.png"),
       title: "Experience",
       description:
         "With over 10 years of experience in graphic design and printing, you can rest knowing I will find a solution that works for you and your platform"
     },
     {
-      imageCreators: require("@/assets/images/creators/creators-emotes.png"),
-      imageCreatorsLazy: require("@/assets/images/creators/creators-emotes-low.png"),
-      imageStandard: require("@/assets/images/standard/standard-shirt.png"),
-      imageStandardLazy: require("@/assets/images/standard/standard-shirt-low.png"),
+      image: require("@/assets/images/creators/creators-emotes.png"),
+      imageLazy: require("@/assets/images/creators/creators-emotes-low.png"),
       title: "Tailored Process",
       description:
         "It all begins with an idea. Maybe you want to launch a new stream. Maybe you want to turn your youtube channel into something more. Or maybe you have a podcast to share with the world. Whatever it is, I will make sure you don’t go unnoticed"
     },
     {
-      imageCreators: require("@/assets/images/creators/creators-websites1.png"),
-      imageCreatorsLazy: require("@/assets/images/creators/creators-websites1-low.png"),
-      imageStandard: require("@/assets/images/standard/standard-print-design2.png"),
-      imageStandardLazy: require("@/assets/images/standard/standard-print-design2-low.png"),
+      image: require("@/assets/images/creators/creators-websites1.png"),
+      imageLazy: require("@/assets/images/creators/creators-websites1-low.png"),
       title: "Industry Insider",
       description:
         "10 years of experience doesn’t just mean I know what to do, but also who to talk to. From the best local printers to the coolest product vendors, we know them all and can work with them to make sure your project is the best it can be."
+    }
+  ],
+  standardColumns: [
+    {
+      image: require("@/assets/images/standard/standard-print-design1.png"),
+      imageLazy: require("@/assets/images/standard/standard-print-design1-low.png"),
+      title: "Experience",
+      description:
+        "With over 10 years of experience in graphic design and printing, you can rest knowing I will find a solution that works for you and your business."
+    },
+    {
+      image: require("@/assets/images/standard/standard-shirt.png"),
+      imageLazy: require("@/assets/images/standard/standard-shirt-low.png"),
+      title: "Tailored Process",
+      description:
+        "It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, I will make sure you don’t go unnoticed."
+    },
+    {
+      image: require("@/assets/images/standard/standard-print-design2.png"),
+      imageLazy: require("@/assets/images/standard/standard-print-design2-low.png"),
+      title: "Industry Insider",
+      description:
+        "10 years of experience doesn’t just mean I know what to do, but also who to talk to. From the best local printers to the coolest product vendors, I know them all and can work with them to make sure your project is the best it can be."
     }
   ]
 };

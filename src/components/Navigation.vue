@@ -7,62 +7,47 @@
             :to="{ name: 'Home' }"
             class="nav__brand text-uppercase align-center mt-0 mt-lg-2"
             ><v-img
-              v-if="site == 'creators'"
               width="44"
-              height="48"
-              :src="creatorsLogo"
-              :laz-src="creatorsLogoLazy"
+              :height="site == 'creators' ? '48' : '44'"
+              :src="site == 'creators' ? creatorsLogo : standardLogo"
+              :laz-src="
+                site == 'creators' ? creatorsLogoLazy : standardLogoLazy
+              "
             ></v-img>
-            <v-img
-              v-else
-              width="44"
-              height="44"
-              :src="standardLogo"
-              :laz-src="standardLogoLazy"
-            ></v-img
-            ><span class="align-center ml-2 mt-1 d-none d-sm-flex">{{
+            <span class="align-center ml-2 mt-1 d-none d-sm-flex">{{
               title
             }}</span></router-link
           >
         </v-toolbar-title>
       </template>
-      <v-card tile flat color="white" width="320px" class="pa-0">
+      <v-card
+        tile
+        flat
+        color="white"
+        width="320px"
+        class="pa-0 hidden-sm-and-down"
+      >
         <v-list class="pa-0">
-          <v-list-item v-if="site == 'standard'" class="pa-0">
+          <v-list-item class="pa-0">
             <v-list-item-content class="pa-0">
               <v-btn
                 text
                 tile
                 height="72"
                 class="nav__button text-uppercase justify-start"
-                @click="changeToCreators"
+                @click="changeSite"
               >
                 <v-img
                   max-width="36"
                   max-height="40"
-                  :src="creatorsLogo"
-                  :laz-src="creatorsLogoLazy"
+                  :src="site == 'creators' ? standardLogo : creatorsLogo"
+                  :laz-src="
+                    site == 'creators' ? standardLogoLazy : creatorsLogoLazy
+                  "
                 ></v-img>
-                <span class="align-center mx-auto">{{ creatorsTitle }}</span>
-              </v-btn>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item v-else class="pa-0">
-            <v-list-item-content class="pa-0">
-              <v-btn
-                text
-                tile
-                height="72"
-                class="nav__button text-uppercase justify-start"
-                @click="changeToStandard"
-              >
-                <v-img
-                  max-width="36"
-                  max-height="40"
-                  :src="standardLogo"
-                  :laz-src="standardLogoLazy"
-                ></v-img>
-                <span class="align-center mx-auto">{{ standardTitle }}</span>
+                <span class="align-center mx-auto">{{
+                  site == "creators" ? standardTitle : creatorsTitle
+                }}</span>
               </v-btn>
             </v-list-item-content>
           </v-list-item>
@@ -113,6 +98,29 @@
               </router-link>
             </v-list-item-content>
           </v-list-item>
+          <v-list-item>
+            <v-list-item-content class="pa-0">
+              <v-btn
+                text
+                tile
+                height="72"
+                class="nav__button text-uppercase justify-start"
+                @click="changeSite"
+              >
+                <v-img
+                  max-width="36"
+                  max-height="40"
+                  :src="site == 'creators' ? standardLogo : creatorsLogo"
+                  :laz-src="
+                    site == 'creators' ? standardLogoLazy : creatorsLogoLazy
+                  "
+                ></v-img>
+                <span class="align-center mx-auto">{{
+                  site == "creators" ? standardTitle : creatorsTitle
+                }}</span>
+              </v-btn>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-card>
     </v-menu>
@@ -152,6 +160,11 @@ export default {
     },
     changeToStandard() {
       this.$store.dispatch("changeToStandard");
+    },
+    changeSite() {
+      this.site == "creators"
+        ? this.$store.dispatch("changeToStandard")
+        : this.$store.dispatch("changeToCreators");
     }
   }
 };

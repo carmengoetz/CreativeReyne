@@ -1,6 +1,9 @@
 <template>
   <div class="app">
-    <ParticlesJS v-if="site == 'creators'" class="app--content1" />
+    <ParticlesJS
+      v-if="site == 'creators' || $route.name == 'Landing'"
+      class="app--content1"
+    />
     <v-app
       class="app--content2"
       :class="

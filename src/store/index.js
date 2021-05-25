@@ -1,5 +1,6 @@
 import Vuex from "vuex";
 import Vue from "vue";
+import VuexPersistence from "vuex-persist";
 
 Vue.use(Vuex);
 
@@ -26,5 +27,7 @@ export default new Vuex.Store({
     changeToStandard(context) {
       context.commit("changeToStandard");
     }
-  }
+  },
+
+  plugins: [new VuexPersistence().plugin]
 });

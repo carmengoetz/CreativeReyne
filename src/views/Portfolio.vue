@@ -42,7 +42,7 @@
           </v-card-title>
           <v-row no-gutters>
             <p
-              class="portfolio__description mx-16 text-center"
+              class="portfolio__description mx-4 mx-sm-16 text-center"
               :class="
                 site == 'creators'
                   ? 'portfolio__description--creators'

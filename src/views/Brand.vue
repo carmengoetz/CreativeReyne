@@ -3,7 +3,7 @@
     <v-container class="brand my-8 my-md-16">
       <v-row no-gutters>
         <v-card-title
-          class="brand__title text-uppercase white--text text-center"
+          class="brand__title text-uppercase white--text mx-auto text-center"
           :class="
             site == 'creators'
               ? 'brand__title--creators mb-4 mb-md-8'
@@ -19,12 +19,8 @@
               class="brand__image mx-auto hidden-sm-and-down"
               contain
               max-width="400"
-              :src="site == 'creators' ? col.imageCreators : col.imageStandard"
-              :lazy-src="
-                site == 'creators'
-                  ? col.imageCreatorsLazy
-                  : col.imageStandardLazy
-              "
+              :src="col.image"
+              :lazy-src="col.imageLazy"
               ><template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
@@ -37,12 +33,8 @@
               class="brand__image mx-auto hidden-md-and-up"
               contain
               max-width="300"
-              :src="site == 'creators' ? col.imageCreators : col.imageStandard"
-              :lazy-src="
-                site == 'creators'
-                  ? col.imageCreatorsLazy
-                  : col.imageStandardLazy
-              "
+              :src="col.image"
+              :lazy-src="col.imageLazy"
               ><template v-slot:placeholder>
                 <v-row class="fill-height ma-0" align="center" justify="center">
                   <v-progress-circular
@@ -65,7 +57,7 @@
             </v-card-title>
             <v-row no-gutters>
               <p
-                class="brand__description mx-16 text-center"
+                class="brand__description mx-4 mx-sm-16 text-center"
                 :class="
                   site == 'creators'
                     ? 'brand__description--creators'
@@ -100,15 +92,11 @@ export default {
   components: {
     Button
   },
-  computed: {
-    site() {
-      return this.$store.state.site;
-    }
-  },
   data: () => {
     return {
       title: brand.title,
-      columns: brand.columns,
+      creatorsColumns: brand.creatorsColumns,
+      standardColumns: brand.standardColumns,
       buttons: [
         {
           name: "Portfolio",
@@ -124,6 +112,16 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    columns: function() {
+      return this.$store.state.site == "creators"
+        ? this.creatorsColumns
+        : this.standardColumns;
+    },
+    site() {
+      return this.$store.state.site;
+    }
   },
   created() {
     document.title = "Creative Reyne - Build Your Brand";
