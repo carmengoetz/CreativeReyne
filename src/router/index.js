@@ -41,7 +41,7 @@ const routes = [
   },
   {
     path: "/build-your-brand",
-    name: "Brand",
+    name: "Build Your Brand",
     component: () =>
       import(/* webpackChunkName: "build" */ "../views/Brand.vue")
   },

@@ -19,13 +19,17 @@
       "
     >
       <div v-if="$route.name == 'Landing'" class="mt-4 py-16">
-        <router-view :key="$route.path" />
+        <transition name="fade">
+          <router-view :key="$route.path" />
+        </transition>
       </div>
       <div v-else>
         <Navigation />
         <v-main class="pb-16">
           <div class="mt-4 py-16">
-            <router-view :key="$route.path" />
+            <transition name="fade">
+              <router-view :key="$route.path" />
+            </transition>
           </div>
         </v-main>
         <Footer :site="site" class="app__footer" />
@@ -133,5 +137,14 @@ export default {
     bottom: 0;
     width: 100%;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

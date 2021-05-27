@@ -6,7 +6,7 @@
         :key="image.index"
         class="portfolio__image mx-auto mt-16 hidden-md-and-down"
         :max-height="site == 'creators' ? '' : '400'"
-        :max-width="site == 'creators' ? '460' : '820'"
+        :max-width="site == 'creators' ? '450' : '820'"
         :src="image.image"
         :lazy-src="image.imageLazy"
         ><template v-slot:placeholder>

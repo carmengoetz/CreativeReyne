@@ -1,5 +1,5 @@
 <template>
-  <v-container class="four-oh-four mt-n8 mt-xl-16">
+  <v-container class="four-oh-four mt-n8 mt-xl-16 pb-0">
     <v-row no-gutters>
       <v-col cols="12" md="5">
         <v-row no-gutters>
@@ -23,7 +23,7 @@
             outlined
             tile
             :to="{ name: 'Landing' }"
-            class="four-oh-four__button white--text mt-8 mt-lg-16 py-6 mx-3"
+            class="four-oh-four__button white--text mt-8 mt-xl-16 py-6 mx-3"
             height="75"
             width="272"
           >
@@ -42,7 +42,7 @@
         </v-row>
         <v-row no-gutters>
           <v-img
-            class="four-oh-four__pika mx-auto"
+            class="four-oh-four__pika mx-auto mb-n16"
             width="650"
             src="@/assets/images/404-pika.png"
             lazy-src="@/assets/images/404-pika-low.png"
@@ -84,9 +84,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.column-pika {
-  height: 100%;
-}
 .four-oh-four {
   &__title {
     font-size: 64px;
@@ -99,6 +96,7 @@ export default {
     @media (max-width: $xl) {
       font-size: 52px;
       line-height: 3rem;
+      margin-top: 160px;
     }
     @media (max-width: $md) {
       font-size: 40px;
@@ -106,10 +104,10 @@ export default {
     }
   }
 
-  &__pika {
-    position: absolute;
-    top: 710px;
-  }
+  //   &__pika {
+  //     position: absolute;
+  //     top: 710px;
+  //   }
 
   &__button {
     font-family: $Consolas;

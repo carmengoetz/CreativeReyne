@@ -91,7 +91,7 @@ export default {
       buttons: [
         {
           name: "Build Your Brand",
-          to: "Brand"
+          to: "Build Your Brand"
         },
         {
           name: "Portfolio",
