@@ -19,15 +19,13 @@
       "
     >
       <div v-if="$route.name == 'Landing'" class="mt-4 py-16">
-        <transition name="fade">
-          <router-view :key="$route.path" />
-        </transition>
+        <router-view :key="$route.path" />
       </div>
       <div v-else>
         <Navigation />
         <v-main class="pb-16">
           <div class="mt-4 py-16">
-            <transition name="fade">
+            <transition name="fade" mode="out-in">
               <router-view :key="$route.path" />
             </transition>
           </div>
@@ -141,9 +139,12 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease;
 }
-.fade-enter,
+
+.fade-enter-from {
+  opacity: 1;
+}
 .fade-leave-to {
   opacity: 0;
 }

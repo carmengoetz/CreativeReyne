@@ -90,9 +90,6 @@ export default {
     changeToStandard() {
       this.$store.dispatch("changeToStandard");
     }
-  },
-  created() {
-    document.title = "Creative Reyne";
   }
 };
 </script>

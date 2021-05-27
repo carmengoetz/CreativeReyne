@@ -1,38 +1,81 @@
 <template>
   <v-container class="projects my-8 my-md-16">
     <v-row>
-      <v-img
+      <v-dialog
         v-for="image in images"
         :key="image.index"
-        class="portfolio__image mx-auto mt-16 hidden-md-and-down"
-        :max-height="site == 'creators' ? '' : '400'"
-        :max-width="site == 'creators' ? '450' : '820'"
-        :src="image.image"
-        :lazy-src="image.imageLazy"
-        ><template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row> </template
-      ></v-img>
-      <v-img
-        v-for="image in images"
-        :key="image.index"
-        class="portfolio__image mx-auto mt-16 hidden-lg-and-up"
-        max-height="400"
-        max-width="300"
-        :src="image.image"
-        :lazy-src="image.imageLazy"
-        ><template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row> </template
-      ></v-img>
+        v-model="dialog[image.index]"
+        transition="fade-transition"
+      >
+        <template v-slot:activator="{ on, attrs }">
+          <!-- <v-hover v-slot="{ hover }">
+            <v-card :elevation="hover ? 16 : 0"> -->
+          <v-img
+            class="portfolio__image mx-auto mt-16 hidden-md-and-down"
+            :max-height="site == 'creators' ? '' : '400'"
+            :max-width="site == 'creators' ? '450' : '820'"
+            :src="image.image"
+            :lazy-src="image.imageLazy"
+            v-bind="attrs"
+            v-on="on"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
+          <v-img
+            class="portfolio__image mx-auto mt-16 hidden-lg-and-up"
+            max-height="400"
+            max-width="300"
+            :src="image.image"
+            :lazy-src="image.imageLazy"
+            v-bind="attrs"
+            v-on="on"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
+          <!-- </v-card>
+          </v-hover> -->
+        </template>
+        <v-card color="rgba(0, 0, 0, 0.5)" class="py-13">
+          <!-- <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="white"
+              fab
+              text
+              @click="
+                dialog[image.index] = false;
+                return;
+              "
+            >
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </v-card-actions> -->
+          <v-img
+            class="portfolio__image mx-auto"
+            :max-height="site == 'creators' ? '' : '1000'"
+            max-width="1200"
+            :src="image.image"
+            :lazy-src="image.imageLazy"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
+        </v-card>
+      </v-dialog>
     </v-row>
 
     <v-row class="justify-end">
@@ -58,7 +101,7 @@ import Button from "@/components/Button.vue";
 import { projects } from "@/constants";
 
 export default {
-  name: "Portfolio",
+  name: "Projects",
   components: {
     Button
   },
@@ -83,12 +126,12 @@ export default {
         ? this.projects.creatorsImages
         : this.projects.standardImages;
     },
+    dialog: function() {
+      return this.images.map(() => false);
+    },
     site() {
       return this.$store.state.site;
     }
-  },
-  created() {
-    document.title = "Creative Reyne - Projects";
   }
 };
 </script>

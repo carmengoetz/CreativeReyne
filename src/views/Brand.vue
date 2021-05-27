@@ -122,9 +122,6 @@ export default {
     site() {
       return this.$store.state.site;
     }
-  },
-  created() {
-    document.title = "Creative Reyne - Build Your Brand";
   }
 };
 </script>

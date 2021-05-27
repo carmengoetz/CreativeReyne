@@ -114,9 +114,6 @@ export default {
     site() {
       return this.$store.state.site;
     }
-  },
-  created() {
-    document.title = "Creative Reyne - Portfolio";
   }
 };
 </script>
