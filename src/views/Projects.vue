@@ -11,7 +11,7 @@
           <!-- <v-hover v-slot="{ hover }">
             <v-card :elevation="hover ? 16 : 0"> -->
           <v-img
-            class="portfolio__image mx-auto mt-16 hidden-md-and-down"
+            class="projects__image mx-auto mt-16 hidden-md-and-down"
             :max-height="site == 'creators' ? '' : '400'"
             :max-width="site == 'creators' ? '450' : '820'"
             :src="image.image"
@@ -27,7 +27,7 @@
               </v-row> </template
           ></v-img>
           <v-img
-            class="portfolio__image mx-auto mt-16 hidden-lg-and-up"
+            class="projects__image mx-auto mt-16 hidden-lg-and-up"
             max-height="400"
             max-width="300"
             :src="image.image"
@@ -61,7 +61,7 @@
             </v-btn>
           </v-card-actions> -->
           <v-img
-            class="portfolio__image mx-auto"
+            class="mx-auto"
             :max-height="site == 'creators' ? '' : '1000'"
             max-width="1200"
             :src="image.image"
@@ -135,3 +135,11 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.projects {
+  &__image:hover {
+    cursor: pointer;
+  }
+}
+</style>
