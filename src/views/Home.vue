@@ -1,6 +1,6 @@
 <template>
   <v-container class="home my-8 my-md-16">
-    <v-row class="mt-0 mt-xl-16">
+    <v-row no-gutters class="mt-0 mt-xl-16">
       <v-col cols="12" lg="5" class="mt-0 mt-md-8 mt-xl-16">
         <v-img
           v-if="site == 'creators'"
@@ -36,6 +36,7 @@
       <v-spacer></v-spacer>
       <v-col cols="12" lg="7">
         <v-row
+          no-gutters
           justify="center"
           justify-lg="start"
           class="mt-0 mt-md-8 mt-xl-16"
@@ -51,14 +52,24 @@
             {{ title }}
           </v-card-title>
         </v-row>
-        <v-row justify="center" justify-lg="start" class="mx-sm-auto">
+        <v-row
+          no-gutters
+          justify="center"
+          justify-lg="start"
+          class="mx-sm-auto"
+        >
           <v-card-subtitle
             class="home__subtitle white--text mt-0 mt-md-10 mx-auto mx-md-n2"
           >
             {{ subtitle }}
           </v-card-subtitle>
         </v-row>
-        <v-row justify="center" justify-lg="start" class="mt-0 mt-lg-16">
+        <v-row
+          no-gutters
+          justify="center"
+          justify-lg="start"
+          class="mt-0 mt-lg-16"
+        >
           <Button
             v-for="button in buttons"
             :key="button.index"

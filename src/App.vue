@@ -113,7 +113,7 @@ export default {
 
     @media (max-width: $md) {
       background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
-        -webkit-linear-gradient(-80deg, transparent 41%, $standard-primary 0%) !important;
+        -webkit-linear-gradient(-80deg, transparent 50%, $standard-primary 0%) !important;
     }
   }
 

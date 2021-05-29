@@ -4,7 +4,7 @@
       <v-col cols="12" md="5">
         <v-row no-gutters>
           <v-img
-            class="four-oh-four__image mx-auto mt-16"
+            class="four-oh-four__image mx-auto mt-4 mt-md-16"
             width="600"
             :src="creatorsLogo"
             :lazy-src="creatorsLogoLazy"
@@ -23,7 +23,7 @@
             outlined
             tile
             :to="{ name: 'Landing' }"
-            class="four-oh-four__button white--text mt-8 mt-xl-16 py-6 mx-3"
+            class="four-oh-four__button white--text mt-0 mt-md-8 mt-xl-16 py-6 mx-3"
             height="75"
             width="272"
           >
@@ -40,9 +40,9 @@
             Error 404. page does not exists!</v-card-title
           >
         </v-row>
-        <v-row no-gutters>
+        <v-row align-content="end">
           <v-img
-            class="four-oh-four__pika mx-auto mb-n16"
+            class="four-oh-four__pika mx-auto mb-n4 mb-md-n16 mt-4 mt-md-8 mt-xl-16"
             width="650"
             src="@/assets/images/404-pika.png"
             lazy-src="@/assets/images/404-pika-low.png"
@@ -87,7 +87,6 @@ export default {
     word-break: normal !important;
     font-family: $BebasNeue !important;
     color: $text-white;
-
     margin-top: 300px;
 
     @media (max-width: $xl) {
@@ -98,6 +97,7 @@ export default {
     @media (max-width: $md) {
       font-size: 40px;
       line-height: 2rem;
+      margin-top: 80px;
     }
   }
 

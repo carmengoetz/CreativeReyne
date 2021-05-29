@@ -2,7 +2,7 @@
   <v-container class="landing mt-n8 mt-xl-16">
     <v-row>
       <v-card-title
-        class="landing__title mx-auto text-uppercase text-center mb-0 mb-md-16"
+        class="landing__title mx-auto text-uppercase text-center pa-0 pa-md-4 mb-0 mb-md-16"
         >{{ title }}</v-card-title
       >
     </v-row>

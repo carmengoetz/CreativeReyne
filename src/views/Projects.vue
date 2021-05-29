@@ -1,11 +1,13 @@
 <template>
   <v-container class="projects my-8 my-md-16">
-    <v-row>
+    <v-row no-gutters>
       <v-dialog
         v-for="image in images"
         :key="image.index"
         v-model="dialog[image.index]"
         transition="fade-transition"
+        max-width="1200"
+        scrollable="false"
       >
         <template v-slot:activator="{ on, attrs }">
           <!-- <v-hover v-slot="{ hover }">
@@ -45,7 +47,8 @@
           <!-- </v-card>
           </v-hover> -->
         </template>
-        <v-card color="rgba(0, 0, 0, 0.5)" class="py-13">
+
+        <v-card color="rgba(0, 0, 0, 0.5)">
           <!-- <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
@@ -61,7 +64,6 @@
             </v-btn>
           </v-card-actions> -->
           <v-img
-            class="mx-auto"
             :max-height="site == 'creators' ? '' : '1000'"
             max-width="1200"
             :src="image.image"
@@ -78,12 +80,14 @@
       </v-dialog>
     </v-row>
 
-    <v-row class="justify-end">
-      <v-col cols="6">
-        <Button name="Back" to="Portfolio" />
+    <v-row no-gutters>
+      <v-col cols="12" sm="6">
+        <v-row no-gutters justify="center" justify-sm="start">
+          <Button name="Back" to="Portfolio" />
+        </v-row>
       </v-col>
-      <v-col cols="6">
-        <v-row class="justify-end">
+      <v-col cols="12" sm="6">
+        <v-row no-gutters justify="center" justify-sm="end">
           <Button
             v-for="button in buttons"
             :key="button.index"
