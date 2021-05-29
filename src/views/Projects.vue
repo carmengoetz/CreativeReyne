@@ -1,6 +1,6 @@
 <template>
   <v-container class="projects my-8 my-md-16">
-    <v-row no-gutters>
+    <v-row>
       <v-dialog
         v-for="image in images"
         :key="image.index"
@@ -14,8 +14,8 @@
             <v-card :elevation="hover ? 16 : 0"> -->
           <v-img
             class="projects__image mx-auto mt-16 hidden-md-and-down"
-            :max-height="site == 'creators' ? '' : '400'"
-            :max-width="site == 'creators' ? '450' : '820'"
+            :height="site == 'creators' ? '460' : '400'"
+            :max-width="site == 'creators' ? '460' : '820'"
             :src="image.image"
             :lazy-src="image.imageLazy"
             v-bind="attrs"

@@ -2,14 +2,16 @@
   <div class="app">
     <ParticlesJS
       v-if="
-        site == 'creators' || $route.name == 'Landing' || $route.name == '404'
+        site == 'creators' ||
+          $route.name == 'Landing' ||
+          $route.name == 'FourOhFour'
       "
       class="app--content1"
     />
     <v-app
       class="app--content2"
       :class="
-        $route.name == 'Landing' || $route.name == '404'
+        $route.name == 'Landing' || $route.name == 'FourOhFour'
           ? 'app__landing'
           : site == 'creators'
           ? 'app__creators'

@@ -22,6 +22,7 @@
             large
             outlined
             tile
+            exact
             :to="{ name: 'Landing' }"
             class="four-oh-four__button white--text mt-0 mt-md-8 mt-xl-16 py-6 mx-3"
             height="75"
@@ -64,7 +65,7 @@
 import { landing } from "@/constants";
 
 export default {
-  name: "404",
+  name: "FourOhFour",
   components: {},
   data: () => {
     return {

@@ -138,8 +138,9 @@ const routes = [
   },
   {
     path: "/:catchAll(.*)",
-    name: "404",
-    component: () => import(/* webpackChunkName: "404" */ "../views/404.vue"),
+    name: "FourOhFour",
+    component: () =>
+      import(/* webpackChunkName: "404" */ "../views/FourOhFour.vue"),
     meta: {
       notFound: true,
       title: "Creative Reyne - 404",
