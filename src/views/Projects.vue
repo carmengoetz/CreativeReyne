@@ -7,15 +7,14 @@
         v-model="dialog[image.index]"
         transition="fade-transition"
         max-width="1200"
-        scrollable="false"
       >
         <template v-slot:activator="{ on, attrs }">
           <!-- <v-hover v-slot="{ hover }">
             <v-card :elevation="hover ? 16 : 0"> -->
           <v-img
             class="projects__image mx-auto mt-16 hidden-md-and-down"
-            :height="site == 'creators' ? '460' : '400'"
-            :max-width="site == 'creators' ? '460' : '820'"
+            height="400"
+            max-width="820"
             :src="image.image"
             :lazy-src="image.imageLazy"
             v-bind="attrs"
@@ -48,21 +47,18 @@
           </v-hover> -->
         </template>
 
-        <v-card color="rgba(0, 0, 0, 0.5)">
-          <!-- <v-card-actions>
+        <v-card color="transparent">
+          <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
               color="white"
               fab
               text
-              @click="
-                dialog[image.index] = false;
-                return;
-              "
+              @click="$set(dialog, image.index, false)"
             >
               <v-icon>mdi-close</v-icon>
             </v-btn>
-          </v-card-actions> -->
+          </v-card-actions>
           <v-img
             :max-height="site == 'creators' ? '' : '1000'"
             max-width="1200"
@@ -121,7 +117,8 @@ export default {
           name: "Contact",
           to: "Contact"
         }
-      ]
+      ],
+      dialog: []
     };
   },
   computed: {
@@ -130,8 +127,9 @@ export default {
         ? this.projects.creatorsImages
         : this.projects.standardImages;
     },
-    dialog: function() {
-      return this.images.map(() => false);
+    dialogs() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      return (this.dialog = this.images.map(() => false));
     },
     site() {
       return this.$store.state.site;

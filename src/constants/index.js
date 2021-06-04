@@ -135,53 +135,43 @@ export const projects = {
   creatorsImages: [
     {
       index: 0,
-      image: require("@/assets/images/creators/creators-logo-design1.png"),
-      imageLazy: require("@/assets/images/creators/creators-logo-design1-low.png")
+      image: require("@/assets/images/creators/creators-projects1.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects1.png")
     },
     {
       index: 1,
-      image: require("@/assets/images/creators/creators-logo-design2.png"),
-      imageLazy: require("@/assets/images/creators/creators-logo-design2-low.png")
+      image: require("@/assets/images/creators/creators-projects2.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects2.png")
     },
     {
       index: 2,
-      image: require("@/assets/images/creators/creators-logo-design3.png"),
-      imageLazy: require("@/assets/images/creators/creators-logo-design3-low.png")
+      image: require("@/assets/images/creators/creators-projects3.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects3.png")
     },
     {
       index: 3,
-      image: require("@/assets/images/creators/creators-websites1.png"),
-      imageLazy: require("@/assets/images/creators/creators-websites1-low.png")
+      image: require("@/assets/images/creators/creators-projects4.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects4.png")
     },
     {
       index: 4,
-      image: require("@/assets/images/creators/creators-websites2.png"),
-      imageLazy: require("@/assets/images/creators/creators-websites2-low.png")
+      image: require("@/assets/images/creators/creators-projects5.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects5.png")
     },
     {
       index: 5,
-      image: require("@/assets/images/creators/creators-websites3.png"),
-      imageLazy: require("@/assets/images/creators/creators-websites3-low.png")
+      image: require("@/assets/images/creators/creators-projects6.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects6.png")
     },
     {
       index: 6,
-      image: require("@/assets/images/creators/creators-badges1.png"),
-      imageLazy: require("@/assets/images/creators/creators-badges1-low.png")
+      image: require("@/assets/images/creators/creators-projects7.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects7.png")
     },
     {
       index: 7,
-      image: require("@/assets/images/creators/creators-badges2.png"),
-      imageLazy: require("@/assets/images/creators/creators-badges2-low.png")
-    },
-    {
-      index: 8,
-      image: require("@/assets/images/creators/creators-emotes.png"),
-      imageLazy: require("@/assets/images/creators/creators-emotes-low.png")
-    },
-    {
-      index: 9,
-      image: require("@/assets/images/creators/creators-brand-packages.png"),
-      imageLazy: require("@/assets/images/creators/creators-brand-packages-low.png")
+      image: require("@/assets/images/creators/creators-projects8.png"),
+      imageLazy: require("@/assets/images/creators/creators-projects8.png")
     }
   ],
   standardImages: [

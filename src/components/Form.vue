@@ -91,7 +91,7 @@
         v-model="form.message"
       />
     </v-row>
-
+    <input id="form_site" name="from_site" type="text" :value="site" hidden />
     <v-row no-gutters justify="end" class="ml-4 mr-n2 ml-sm-0 mr-sm-0">
       <v-btn
         :disabled="!formIsValid"
@@ -143,7 +143,11 @@ export default {
   },
 
   methods: {
-    sendEmail: e => {
+    resetForm() {
+      this.form = Object.assign({}, this.defaultForm);
+      this.$refs.form.reset();
+    },
+    sendEmail(e) {
       emailjs
         .sendForm(
           "service_4ysvek7",
@@ -154,6 +158,7 @@ export default {
         .then(
           result => {
             alert("Message Sent!");
+            this.resetForm();
             console.log("SUCCESS!", result.status, result.text);
           },
           error => {
