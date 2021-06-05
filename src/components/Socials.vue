@@ -3,7 +3,7 @@
     <v-btn
       v-for="social in socials"
       :key="social.name"
-      class="mr-2"
+      class="mx-1"
       :class="className"
       :color="site == 'creators' || page == 'contact' ? 'white' : 'black'"
       icon

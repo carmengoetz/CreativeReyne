@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute elevate-on-scroll height="80px" class="nav py-0">
+  <v-app-bar fixed flat hide-on-scroll height="80px" class="nav py-0">
     <v-menu bottom open-on-hover tile offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-toolbar-title v-bind="attrs" v-on="on" class="mt-2 mt-lg-0">

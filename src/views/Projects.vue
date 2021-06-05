@@ -47,7 +47,7 @@
           </v-hover> -->
         </template>
 
-        <v-card color="transparent">
+        <v-card color="transparent" flat>
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
@@ -60,7 +60,7 @@
             </v-btn>
           </v-card-actions>
           <v-img
-            :max-height="site == 'creators' ? '' : '1000'"
+            max-height="1000"
             max-width="1200"
             :src="image.image"
             :lazy-src="image.imageLazy"

@@ -21,6 +21,7 @@ export const brand = {
   title: "why choose creative reyne?",
   creatorsColumns: [
     {
+      index: 0,
       image: require("@/assets/images/creators/creators-logo.png"),
       imageLazy: require("@/assets/images/creators/creators-logo-low.png"),
       title: "Experience",
@@ -28,6 +29,7 @@ export const brand = {
         "With over 10 years of experience in graphic design and printing, you can rest knowing I will find a solution that works for you and your platform"
     },
     {
+      index: 1,
       image: require("@/assets/images/creators/creators-emotes.png"),
       imageLazy: require("@/assets/images/creators/creators-emotes-low.png"),
       title: "Tailored Process",
@@ -35,6 +37,7 @@ export const brand = {
         "It all begins with an idea. Maybe you want to launch a new stream. Maybe you want to turn your youtube channel into something more. Or maybe you have a podcast to share with the world. Whatever it is, I will make sure you don’t go unnoticed"
     },
     {
+      index: 2,
       image: require("@/assets/images/creators/creators-websites1.png"),
       imageLazy: require("@/assets/images/creators/creators-websites1-low.png"),
       title: "Industry Insider",
@@ -44,6 +47,7 @@ export const brand = {
   ],
   standardColumns: [
     {
+      index: 0,
       image: require("@/assets/images/standard/standard-print-design1.png"),
       imageLazy: require("@/assets/images/standard/standard-print-design1-low.png"),
       title: "Experience",
@@ -51,6 +55,7 @@ export const brand = {
         "With over 10 years of experience in graphic design and printing, you can rest knowing I will find a solution that works for you and your business."
     },
     {
+      index: 1,
       image: require("@/assets/images/standard/standard-shirt.png"),
       imageLazy: require("@/assets/images/standard/standard-shirt-low.png"),
       title: "Tailored Process",
@@ -58,6 +63,7 @@ export const brand = {
         "It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, I will make sure you don’t go unnoticed."
     },
     {
+      index: 2,
       image: require("@/assets/images/standard/standard-print-design2.png"),
       imageLazy: require("@/assets/images/standard/standard-print-design2-low.png"),
       title: "Industry Insider",
@@ -71,6 +77,7 @@ export const portfolio = {
   title: "make it stand out",
   creatorsColumns: [
     {
+      index: 0,
       image: require("@/assets/images/creators/creators-logo-design2.png"),
       imageLazy: require("@/assets/images/creators/creators-logo-design2-low.png"),
       title: "Logo Design",
@@ -78,6 +85,7 @@ export const portfolio = {
         "Your logo is the face of your brand. With a wide range of logo designs under my belt, I’m ready to bring your project to life with a tailored design based on your taste and my market research."
     },
     {
+      index: 1,
       image: require("@/assets/images/creators/creators-emotes.png"),
       imageLazy: require("@/assets/images/creators/creators-emotes-low.png"),
       title: "Emotes & Badges",
@@ -85,6 +93,7 @@ export const portfolio = {
         "Whether you’re a streamer looking for cool emotes and badges for twitch, or a gaming community looking to spice up your discord, I’ve got you covered."
     },
     {
+      index: 2,
       image: require("@/assets/images/creators/creators-brand-packages.png"),
       imageLazy: require("@/assets/images/creators/creators-brand-packages-low.png"),
       title: "Brand Packages",
@@ -92,6 +101,7 @@ export const portfolio = {
         "Branding is a little more than just a logo. It’s a color pallet, a recognizable theme, and most importantly it’s a uniform look across all your online platforms. Take pride in the project you’re starting with a branding package."
     },
     {
+      index: 3,
       image: require("@/assets/images/creators/creators-websites2.png"),
       imageLazy: require("@/assets/images/creators/creators-websites2-low.png"),
       title: "Website Design",
@@ -101,6 +111,7 @@ export const portfolio = {
   ],
   standardColumns: [
     {
+      index: 0,
       image: require("@/assets/images/standard/standard-logo-design2.png"),
       imageLazy: require("@/assets/images/standard/standard-logo-design2-low.png"),
       title: "Logo Design",
@@ -108,6 +119,7 @@ export const portfolio = {
         "Logo design is the face of your business. With a wide range of logo designs under my belt, I’m ready to bring your project to life with a tailored design based on your taste and my market research."
     },
     {
+      index: 1,
       image: require("@/assets/images/standard/standard-print-design3.png"),
       imageLazy: require("@/assets/images/standard/standard-print-design3-low.png"),
       title: "Print Design",
@@ -115,6 +127,7 @@ export const portfolio = {
         "Print is the core of most storefront companies. With experience not only in design, but also managing and working in print production, I can make sure that all your designs fit the medium."
     },
     {
+      index: 2,
       image: require("@/assets/images/standard/standard-brand-package2.png"),
       imageLazy: require("@/assets/images/standard/standard-brand-package2-low.png"),
       title: "Brand Packages",
@@ -122,6 +135,7 @@ export const portfolio = {
         "Branding is a little more than just a logo. It’s a color pallet, a recognizable theme, and most importantly it’s a uniform look across all your ads and product lines. Take pride in the project you’re starting."
     },
     {
+      index: 3,
       image: require("@/assets/images/standard/standard-websites2.png"),
       imageLazy: require("@/assets/images/standard/standard-websites2-low.png"),
       title: "Website Design",
@@ -217,6 +231,7 @@ export const pricing = {
   title: "pricing",
   creatorsColumns: [
     {
+      index: 0,
       image: require("@/assets/images/creators/creators-emotes.png"),
       imageLazy: require("@/assets/images/creators/creators-emotes-low.png"),
       title: "Emotes/Badges",
@@ -239,6 +254,7 @@ export const pricing = {
       ]
     },
     {
+      index: 1,
       image: require("@/assets/images/creators/creators-socials.png"),
       imageLazy: require("@/assets/images/creators/creators-socials-low.png"),
       title: "Social Package",
@@ -258,6 +274,7 @@ export const pricing = {
       ]
     },
     {
+      index: 2,
       image: require("@/assets/images/creators/creators-websites1.png"),
       imageLazy: require("@/assets/images/creators/creators-websites1-low.png"),
       title: "Websites",
@@ -277,6 +294,7 @@ export const pricing = {
       ]
     },
     {
+      index: 3,
       image: require("@/assets/images/creators/creators-logo.png"),
       imageLazy: require("@/assets/images/creators/creators-logo-low.png"),
       title: "Logo Design",
@@ -291,6 +309,7 @@ export const pricing = {
   ],
   standardColumns: [
     {
+      index: 0,
       image: require("@/assets/images/standard/standard-print-design1.png"),
       imageLazy: require("@/assets/images/standard/standard-print-design1-low.png"),
       title: "Print Design",
@@ -322,6 +341,7 @@ export const pricing = {
       ]
     },
     {
+      index: 1,
       image: require("@/assets/images/standard/standard-brand-package.png"),
       imageLazy: require("@/assets/images/standard/standard-brand-package-low.png"),
       title: "Social Package",
@@ -346,6 +366,7 @@ export const pricing = {
       ]
     },
     {
+      index: 2,
       image: require("@/assets/images/standard/standard-websites.png"),
       imageLazy: require("@/assets/images/standard/standard-websites-low.png"),
       title: "Websites",
@@ -365,6 +386,7 @@ export const pricing = {
       ]
     },
     {
+      index: 3,
       image: require("@/assets/images/standard/standard-logo-design.png"),
       imageLazy: require("@/assets/images/standard/standard-logo-design-low.png"),
       title: "Logo Design",

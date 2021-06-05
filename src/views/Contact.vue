@@ -60,7 +60,7 @@
           <Socials
             class="contact__socials my-4"
             size="60px"
-            className="mr-10"
+            className="mx-5"
             page="contact"
           />
         </v-row>
@@ -110,6 +110,10 @@ export default {
     &--standard {
       font-weight: 700;
       color: $text-black;
+    }
+
+    @media (max-width: $md) {
+      font-size: 20px;
     }
   }
 

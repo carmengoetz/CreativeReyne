@@ -29,18 +29,64 @@
           justify="start"
           class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
         >
-          <v-img
-            class="pricing__image"
-            max-width="300"
-            :src="col.image"
-            :lazy-src="col.imageLazy"
-            ><template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row> </template></v-img
+          <v-dialog
+            :key="col.index"
+            v-model="dialog[col.index]"
+            transition="fade-transition"
+            max-width="800"
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-img
+                class="pricing__image"
+                max-width="300"
+                :src="col.image"
+                :lazy-src="col.imageLazy"
+                v-bind="attrs"
+                v-on="on"
+                ><template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
+            </template>
+
+            <v-card color="transparent">
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                  color="white"
+                  fab
+                  text
+                  @click="$set(dialog, col.index, false)"
+                >
+                  <v-icon>mdi-close</v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-img
+                max-width="800"
+                :src="col.image"
+                :lazy-src="col.imageLazy"
+                class="mx-auto"
+                ><template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
+            </v-card> </v-dialog
         ></v-row>
         <v-row
           no-gutters
@@ -140,7 +186,8 @@ export default {
           name: "Contact",
           to: "Contact"
         }
-      ]
+      ],
+      dialog: []
     };
   },
   computed: {
@@ -148,6 +195,10 @@ export default {
       return this.$store.state.site == "creators"
         ? this.creatorsColumns
         : this.standardColumns;
+    },
+    dialogs() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      return (this.dialog = this.columns.map(() => false));
     },
     site() {
       return this.$store.state.site;
