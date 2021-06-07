@@ -43,7 +43,7 @@
         </v-row>
         <v-row align-content="end">
           <v-img
-            class="four-oh-four__pika mx-auto mb-n4 mb-md-n16 mt-4 mt-md-8 mt-xl-16"
+            class="four-oh-four__pika mx-auto mb-n4 mb-md-n16 mt-0 mt-md-4 mt-xl-16"
             width="650"
             src="@/assets/images/404-pika.png"
             lazy-src="@/assets/images/404-pika-low.png"

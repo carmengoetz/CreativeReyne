@@ -19,6 +19,7 @@
             v-model="dialog[col.index]"
             transition="fade-transition"
             max-width="800"
+            content-class="elevation-0"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-img
@@ -58,7 +59,7 @@
               </v-card-actions>
               <v-img
                 :max-height="site == 'creators' ? '800' : '400'"
-                max-width="800"
+                width="800"
                 :src="col.image"
                 :lazy-src="col.imageLazy"
                 class="mx-auto"

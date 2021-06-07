@@ -34,6 +34,7 @@
             v-model="dialog[col.index]"
             transition="fade-transition"
             max-width="800"
+            content-class="elevation-0"
           >
             <template v-slot:activator="{ on, attrs }">
               <v-img

@@ -6,11 +6,10 @@
         :key="image.index"
         v-model="dialog[image.index]"
         transition="fade-transition"
-        max-width="1200"
+        max-width="1400"
+        content-class="elevation-0"
       >
         <template v-slot:activator="{ on, attrs }">
-          <!-- <v-hover v-slot="{ hover }">
-            <v-card :elevation="hover ? 16 : 0"> -->
           <v-img
             class="projects__image mx-auto mt-16 hidden-md-and-down"
             height="400"
@@ -19,6 +18,7 @@
             :lazy-src="image.imageLazy"
             v-bind="attrs"
             v-on="on"
+            @click="carouselIndex = image.index"
             ><template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -43,11 +43,9 @@
                 ></v-progress-circular>
               </v-row> </template
           ></v-img>
-          <!-- </v-card>
-          </v-hover> -->
         </template>
 
-        <v-card color="transparent" flat>
+        <v-card color="transparent" flat elevation="0">
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn
@@ -59,19 +57,27 @@
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-card-actions>
-          <v-img
-            max-height="1000"
-            max-width="1200"
-            :src="image.image"
-            :lazy-src="image.imageLazy"
-            ><template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular
-                  indeterminate
-                  color="grey lighten-5"
-                ></v-progress-circular>
-              </v-row> </template
-          ></v-img>
+          <v-carousel hide-delimiters v-model="carouselIndex" height="auto">
+            <v-carousel-item v-for="item in images" :key="item.index">
+              <v-img
+                max-width="1200"
+                :src="item.image"
+                :lazy-src="item.imageLazy"
+                class="mx-auto"
+                ><template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
+            </v-carousel-item>
+          </v-carousel>
         </v-card>
       </v-dialog>
     </v-row>
@@ -118,7 +124,8 @@ export default {
           to: "Contact"
         }
       ],
-      dialog: []
+      dialog: [],
+      carouselIndex: 0
     };
   },
   computed: {
