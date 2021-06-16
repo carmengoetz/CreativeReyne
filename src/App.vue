@@ -59,30 +59,30 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: "BebasNeue";
-  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
-}
+// @font-face {
+//   font-family: "BebasNeue";
+//   src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
+// }
 
-@font-face {
-  font-family: "MADEEvolveSansEVO";
-  src: url("/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf") format("opentype");
-}
+// @font-face {
+//   font-family: "MADEEvolveSansEVO";
+//   src: url("/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: "MADEEvolveSans";
-  src: url("/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype");
-}
+// @font-face {
+//   font-family: "MADEEvolveSans";
+//   src: url("/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: "AcuminPro";
-  src: url("/fonts/Acumin-RPro.otf") format("opentype");
-}
+// @font-face {
+//   font-family: "AcuminPro";
+//   src: url("/fonts/Acumin-RPro.otf") format("opentype");
+// }
 
-@font-face {
-  font-family: "Consolas";
-  src: url("/fonts/CONSOLA.TTF") format("truetype");
-}
+// @font-face {
+//   font-family: "Consolas";
+//   src: url("/fonts/CONSOLA.TTF") format("truetype");
+// }
 
 .app {
   font-family: $AcuminPro;
