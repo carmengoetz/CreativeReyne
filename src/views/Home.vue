@@ -61,7 +61,7 @@
           <v-card-subtitle
             class="home__subtitle white--text mt-0 mt-md-10 mx-auto mx-md-n2"
           >
-            {{ subtitle }}
+            {{ site == "creators" ? creatorsSubtitle : standardSubtitle }}
           </v-card-subtitle>
         </v-row>
         <v-row
@@ -94,7 +94,8 @@ export default {
   data: () => {
     return {
       title: home.title,
-      subtitle: home.subtitle,
+      creatorsSubtitle: home.creatorsSubtitle,
+      standardSubtitle: home.standardSubtitle,
       creatorsLogo: home.creatorsLogo,
       creatorsLogoLazy: home.creatorsLogoLazy,
       standardLogo: home.standardLogo,

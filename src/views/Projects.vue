@@ -83,12 +83,12 @@
     </v-row>
 
     <v-row no-gutters>
-      <v-col cols="12" sm="6">
+      <!-- <v-col cols="12" sm="6">
         <v-row no-gutters justify="center" justify-sm="start">
           <Button name="Back" to="Portfolio" />
         </v-row>
-      </v-col>
-      <v-col cols="12" sm="6">
+      </v-col> -->
+      <v-col>
         <v-row no-gutters justify="center" justify-sm="end">
           <Button
             v-for="button in buttons"

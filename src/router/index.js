@@ -45,28 +45,9 @@ const routes = [
     path: "/portfolio",
     name: "Portfolio",
     component: () =>
-      import(/* webpackChunkName: "portfolio" */ "../views/Portfolio.vue"),
-    meta: {
-      title: "Creative Reyne - Portfolio",
-      metaTags: [
-        {
-          name: "description",
-          content: "The about page of our example app."
-        },
-        {
-          property: "og:description",
-          content: "The about page of our example app."
-        }
-      ]
-    }
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-    component: () =>
       import(/* webpackChunkName: "projects" */ "../views/Projects.vue"),
     meta: {
-      title: "Creative Reyne - Projects",
+      title: "Creative Reyne - Portfolio",
       metaTags: [
         {
           name: "description",

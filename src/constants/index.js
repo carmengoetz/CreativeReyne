@@ -10,7 +10,8 @@ export const landing = {
 
 export const home = {
   title: "Graphic Design",
-  subtitle: "For content creators and gaming communities",
+  creatorsSubtitle: "For content creators and gaming communities",
+  standardSubtitle: "For local businesses and corporations",
   creatorsLogo: require("@/assets/images/creators/creators-logo.png"),
   creatorsLogoLazy: require("@/assets/images/creators/creators-logo-low.png"),
   standardLogo: require("@/assets/images/standard/standard-logo.png"),
