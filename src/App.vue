@@ -61,28 +61,27 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: "BebasNeue";
-  src: url("./assets/fonts/BebasNeue-Regular.ttf") format("truetype");
+  src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "MADEEvolveSansEVO";
-  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf")
-    format("opentype");
+  src: url("/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf") format("opentype");
 }
 
 @font-face {
   font-family: "MADEEvolveSans";
-  src: url("./assets/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype");
+  src: url("/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "AcuminPro";
-  src: url("./assets/fonts/Acumin-RPro.otf") format("opentype");
+  src: url("/fonts/Acumin-RPro.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Consolas";
-  src: url("./assets/fonts/CONSOLA.TTF") format("truetype");
+  src: url("/fonts/CONSOLA.TTF") format("truetype");
 }
 
 .app {
