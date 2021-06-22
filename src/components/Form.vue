@@ -150,10 +150,10 @@ export default {
     sendEmail(e) {
       emailjs
         .sendForm(
-          "service_pmpyb7o",
+          "service_9il80s6",
           "template_x0tre6e",
           e.target,
-          "user_20V2lpCRDxS6tEJvEjxAP"
+          "user_TizWSfwcrkb0j1KWkJu5c"
         )
         .then(
           result => {
