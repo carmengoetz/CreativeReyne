@@ -150,8 +150,8 @@ export default {
     sendEmail(e) {
       emailjs
         .sendForm(
-          "service_4ysvek7",
-          "template_lg8tddi",
+          "service_pmpyb7o",
+          "template_x0tre6e",
           e.target,
           "user_20V2lpCRDxS6tEJvEjxAP"
         )
