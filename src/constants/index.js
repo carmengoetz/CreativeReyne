@@ -224,6 +224,11 @@ export const projects = {
       index: 6,
       image: require("@/assets/images/standard/standard-projects7.png"),
       imageLazy: require("@/assets/images/standard/standard-projects7-low.png")
+    },
+    {
+      index: 7,
+      image: require("@/assets/images/standard/standard-design-and-print.png"),
+      imageLazy: require("@/assets/images/standard/standard-design-and-print-low.png")
     }
   ]
 };
