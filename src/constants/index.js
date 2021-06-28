@@ -150,85 +150,85 @@ export const projects = {
   creatorsImages: [
     {
       index: 0,
-      image: require("@/assets/images/creators/creators-projects1.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects1-low.png")
+      image: require("@/assets/images/creators/Eve-Online-Forbidden-Federation-Logo.png"),
+      imageLazy: require("@/assets/images/creators/Eve-Online-Forbidden-Federation-Logo-Low.png")
     },
     {
       index: 1,
-      image: require("@/assets/images/creators/creators-projects2.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects2-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Lex-Talionis-Logo.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Lex-Talionis-Logo-Low.png")
     },
     {
       index: 2,
-      image: require("@/assets/images/creators/creators-projects3.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects3-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Star-Arsenal-Website-Design.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Star-Arsenal-Website-Design-Low.png")
     },
     {
       index: 3,
-      image: require("@/assets/images/creators/creators-projects4.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects4-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Logo.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Logo-Low.png")
     },
     {
       index: 4,
-      image: require("@/assets/images/creators/creators-projects5.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects5-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Website-Design.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Website-Design-Low.png")
     },
     {
       index: 5,
-      image: require("@/assets/images/creators/creators-projects6.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects6-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Website-Design.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Website-Design-Low.png")
     },
     {
       index: 6,
-      image: require("@/assets/images/creators/creators-projects7.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects7-low.png")
+      image: require("@/assets/images/creators/Creative-Reyne-Twitch-TV-Evolving-Badge-Design.png"),
+      imageLazy: require("@/assets/images/creators/Creative-Reyne-Twitch-TV-Evolving-Badge-Design-Low.png")
     },
     {
       index: 7,
-      image: require("@/assets/images/creators/creators-projects8.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects8-low.png")
+      image: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Discord-Emote-Design.png"),
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Black-Fleet-Discord-Emote-Design-Low.png")
     }
   ],
   standardImages: [
     {
       index: 0,
-      image: require("@/assets/images/standard/standard-projects1.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects1-low.png")
+      image: require("@/assets/images/standard/Servex-App-Logo-Design.png"),
+      imageLazy: require("@/assets/images/standard/Servex-App-Logo-Design-Low.png")
     },
     {
       index: 1,
-      image: require("@/assets/images/standard/standard-projects2.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects2-low.png")
+      image: require("@/assets/images/standard/Rad-Repetitive-Advterising-Sticker-Logo-MTV-Design.png"),
+      imageLazy: require("@/assets/images/standard/Rad-Repetitive-Advterising-Sticker-Logo-MTV-Design-Low.png")
     },
     {
       index: 2,
-      image: require("@/assets/images/standard/standard-projects3.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects3-low.png")
+      image: require("@/assets/images/standard/Cinergie-Film-Festival-Saskatoon-Poster-Print-Design.png"),
+      imageLazy: require("@/assets/images/standard/Cinergie-Film-Festival-Saskatoon-Poster-Print-Design-Low.png")
     },
     {
       index: 3,
-      image: require("@/assets/images/standard/standard-projects4.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects4-low.png")
+      image: require("@/assets/images/standard/The-Poetry-Elf-Logo-Design.png"),
+      imageLazy: require("@/assets/images/standard/The-Poetry-Elf-Logo-Design-Low.png")
     },
     {
       index: 4,
-      image: require("@/assets/images/standard/standard-projects5.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects5-low.png")
+      image: require("@/assets/images/standard/Atlas-Apparel-Co-Journey-Further-Logo-Design.png"),
+      imageLazy: require("@/assets/images/standard/Atlas-Apparel-Co-Journey-Further-Logo-Design-Low.png")
     },
     {
       index: 5,
-      image: require("@/assets/images/standard/standard-projects6.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects6-low.png")
+      image: require("@/assets/images/standard/Big-Beaver-Brewing-Calgary-Logo-Design.png"),
+      imageLazy: require("@/assets/images/standard/Big-Beaver-Brewing-Calgary-Logo-Design-Low.png")
     },
     {
       index: 6,
-      image: require("@/assets/images/standard/standard-projects7.png"),
-      imageLazy: require("@/assets/images/standard/standard-projects7-low.png")
+      image: require("@/assets/images/standard/The-Poetry-Burlesque-Pen-Woman-Logo-Design.png"),
+      imageLazy: require("@/assets/images/standard/The-Poetry-Burlesque-Pen-Woman-Logo-Design-Low.png")
     },
     {
       index: 7,
-      image: require("@/assets/images/standard/standard-design-and-print.png"),
-      imageLazy: require("@/assets/images/standard/standard-design-and-print-low.png")
+      image: require("@/assets/images/standard/Creative-Reyne-Design-And-Print-Postcard-Design.png"),
+      imageLazy: require("@/assets/images/standard/Creative-Reyne-Design-And-Print-Postcard-Design-Low.png")
     }
   ]
 };
