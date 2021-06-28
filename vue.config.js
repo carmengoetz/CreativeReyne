@@ -14,8 +14,7 @@ module.exports = {
         "https://creativereyne.com/home",
         "https://creativereyne.com/brand",
         "https://creativereyne.com/contact",
-        "https://creativereyne.com/portfolio",
-        "https://creativereyne.com/projects"
+        "https://creativereyne.com/portfolio"
       ]
     }
   }
