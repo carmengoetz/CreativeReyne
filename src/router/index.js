@@ -14,11 +14,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:url",
@@ -26,7 +28,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "twitter:url",
@@ -44,11 +47,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:url",
@@ -56,7 +61,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "twitter:url",
@@ -75,11 +81,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:url",
@@ -87,7 +95,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "twitter:url",
@@ -106,11 +115,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
         },
         {
           property: "og:url",
@@ -118,7 +129,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
         },
         {
           property: "twitter:url",
@@ -137,11 +149,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
         },
         {
           property: "og:url",
@@ -149,7 +163,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
         },
         {
           property: "twitter:url",
@@ -168,11 +183,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
         },
         {
           property: "og:url",
@@ -180,7 +197,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
         },
         {
           property: "twitter:url",
@@ -200,11 +218,13 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:url",
@@ -212,7 +232,8 @@ const routes = [
         },
         {
           property: "twitter:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "twitter:url",
