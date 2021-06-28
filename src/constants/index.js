@@ -151,42 +151,42 @@ export const projects = {
     {
       index: 0,
       image: require("@/assets/images/creators/creators-projects1.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects1.png")
+      imageLazy: require("@/assets/images/creators/creators-projects1-low.png")
     },
     {
       index: 1,
       image: require("@/assets/images/creators/creators-projects2.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects2.png")
+      imageLazy: require("@/assets/images/creators/creators-projects2-low.png")
     },
     {
       index: 2,
       image: require("@/assets/images/creators/creators-projects3.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects3.png")
+      imageLazy: require("@/assets/images/creators/creators-projects3-low.png")
     },
     {
       index: 3,
       image: require("@/assets/images/creators/creators-projects4.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects4.png")
+      imageLazy: require("@/assets/images/creators/creators-projects4-low.png")
     },
     {
       index: 4,
       image: require("@/assets/images/creators/creators-projects5.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects5.png")
+      imageLazy: require("@/assets/images/creators/creators-projects5-low.png")
     },
     {
       index: 5,
       image: require("@/assets/images/creators/creators-projects6.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects6.png")
+      imageLazy: require("@/assets/images/creators/creators-projects6-low.png")
     },
     {
       index: 6,
       image: require("@/assets/images/creators/creators-projects7.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects7.png")
+      imageLazy: require("@/assets/images/creators/creators-projects7-low.png")
     },
     {
       index: 7,
       image: require("@/assets/images/creators/creators-projects8.png"),
-      imageLazy: require("@/assets/images/creators/creators-projects8.png")
+      imageLazy: require("@/assets/images/creators/creators-projects8-low.png")
     }
   ],
   standardImages: [
@@ -224,6 +224,11 @@ export const projects = {
       index: 6,
       image: require("@/assets/images/standard/standard-projects7.png"),
       imageLazy: require("@/assets/images/standard/standard-projects7-low.png")
+    },
+    {
+      index: 7,
+      image: require("@/assets/images/standard/standard-design-and-print.png"),
+      imageLazy: require("@/assets/images/standard/standard-design-and-print-low.png")
     }
   ]
 };

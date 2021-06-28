@@ -14,11 +14,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca"
         }
       ]
     }
@@ -32,11 +47,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/home"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/home"
         }
       ]
     }
@@ -51,11 +81,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/portfolio"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/portfolio"
         }
       ]
     }
@@ -70,11 +115,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/pricing"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "Industry leading Graphic Design with the most competitive prices on the market."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/pricing"
         }
       ]
     }
@@ -89,11 +149,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/contact"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "Quotes & other inquires for industry leading Graphic Design & Print Services. Get in touch today and start building your brand."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/contact"
         }
       ]
     }
@@ -108,11 +183,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/build-your-brand"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "10 years of experience, a tailored process, and industry standards make it easy to build a brand identity with Creative Reyne."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/build-your-brand"
         }
       ]
     }
@@ -128,11 +218,26 @@ const routes = [
       metaTags: [
         {
           name: "description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
         },
         {
           property: "og:description",
-          content: "The about page of our example app."
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/404"
+        },
+        {
+          property: "twitter:description",
+          content:
+            "High quality, professional, Graphic Design & Print Service for content creators and standard businesses."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/404"
         }
       ]
     }
