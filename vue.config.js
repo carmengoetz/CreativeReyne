@@ -12,7 +12,7 @@ module.exports = {
       urls: [
         "https://creativereyne.com/",
         "https://creativereyne.com/home",
-        "https://creativereyne.com/brand",
+        "https://creativereyne.com/build-your-brand",
         "https://creativereyne.com/contact",
         "https://creativereyne.com/portfolio"
       ]
