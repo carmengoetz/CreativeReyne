@@ -1,9 +1,9 @@
 export const landing = {
   title: "Freelance Graphic Design",
-  creatorsLogo: require("@/assets/images/creators/creators-logo.png"),
+  creatorsLogo: require("@/assets/images/creators/Creative-Reyne-Logo-01.png"),
   creatorsLogoLazy: require("@/assets/images/creators/creators-logo-low.png"),
   creatorsSubtitle: "Content Creators",
-  standardLogo: require("@/assets/images/standard/standard-logo.png"),
+  standardLogo: require("@/assets/images/standard/Creative-Reyne-Logo-02.png"),
   standardLogoLazy: require("@/assets/images/standard/standard-logo-low.png"),
   standardSubtitle: "Standard Business"
 };
@@ -14,7 +14,7 @@ export const home = {
   standardSubtitle: "For local businesses and corporations",
   creatorsLogo: require("@/assets/images/creators/Creative-Reyne-Logo-01.png"),
   creatorsLogoLazy: require("@/assets/images/creators/creators-logo-low.png"),
-  standardLogo: require("@/assets/images/standard/sCreative-Reyne-Logo-02.png"),
+  standardLogo: require("@/assets/images/standard/Creative-Reyne-Logo-02.png"),
   standardLogoLazy: require("@/assets/images/standard/standard-logo-low.png")
 };
 
@@ -197,8 +197,8 @@ export const projects = {
     },
     {
       index: 1,
-      image: require("@/assets/images/standard/Rad-Repetitive-Advterising-Sticker-Logo-MTV-Design.png"),
-      imageLazy: require("@/assets/images/standard/Rad-Repetitive-Advterising-Sticker-Logo-MTV-Design-Low.png")
+      image: require("@/assets/images/standard/Rad-Repetitive-Advertising-Sticker-Logo-MTV-Design.png"),
+      imageLazy: require("@/assets/images/standard/Rad-Repetitive-Advertising-Sticker-Logo-MTV-Design-Low.png")
     },
     {
       index: 2,
@@ -301,7 +301,7 @@ export const pricing = {
     },
     {
       index: 3,
-      image: require("@/assets/images/creators/creators-logo.png"),
+      image: require("@/assets/images/creators/Creative-Reyne-Logo-01.png"),
       imageLazy: require("@/assets/images/creators/creators-logo-low.png"),
       title: "Logo Design",
       items: [
