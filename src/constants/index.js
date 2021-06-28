@@ -166,7 +166,7 @@ export const projects = {
     {
       index: 3,
       image: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Logo.png"),
-      imageLazy: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Logo-Low.png")
+      imageLazy: require("@/assets/images/creators/Star-Citizen-Renegade-Squadron-Logo-low.png")
     },
     {
       index: 4,
