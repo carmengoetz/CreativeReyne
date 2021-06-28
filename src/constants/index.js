@@ -12,9 +12,9 @@ export const home = {
   title: "Graphic Design",
   creatorsSubtitle: "For content creators and gaming communities",
   standardSubtitle: "For local businesses and corporations",
-  creatorsLogo: require("@/assets/images/creators/creators-logo.png"),
+  creatorsLogo: require("@/assets/images/creators/Creative-Reyne-Logo-01.png"),
   creatorsLogoLazy: require("@/assets/images/creators/creators-logo-low.png"),
-  standardLogo: require("@/assets/images/standard/standard-logo.png"),
+  standardLogo: require("@/assets/images/standard/sCreative-Reyne-Logo-02.png"),
   standardLogoLazy: require("@/assets/images/standard/standard-logo-low.png")
 };
 
@@ -23,7 +23,7 @@ export const brand = {
   creatorsColumns: [
     {
       index: 0,
-      image: require("@/assets/images/creators/creators-logo.png"),
+      image: require("@/assets/images/creators/Creative-Reyne-Logo-01.png"),
       imageLazy: require("@/assets/images/creators/creators-logo-low.png"),
       title: "Experience",
       description:
