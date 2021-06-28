@@ -19,6 +19,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca"
         }
       ]
     }
@@ -37,6 +49,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/home"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/home"
         }
       ]
     }
@@ -56,6 +80,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/portfolio"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/portfolio"
         }
       ]
     }
@@ -75,6 +111,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/pricing"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/pricing"
         }
       ]
     }
@@ -94,6 +142,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/contact"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/contact"
         }
       ]
     }
@@ -113,6 +173,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/build-your-brand"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/build-your-brand"
         }
       ]
     }
@@ -133,6 +205,18 @@ const routes = [
         {
           property: "og:description",
           content: "The about page of our example app."
+        },
+        {
+          property: "og:url",
+          content: "https://creativereyne.ca/404"
+        },
+        {
+          property: "twitter:description",
+          content: "The about page of our example app."
+        },
+        {
+          property: "twitter:url",
+          content: "https://creativereyne.ca/404"
         }
       ]
     }
