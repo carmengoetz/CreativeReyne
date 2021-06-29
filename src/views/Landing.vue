@@ -36,7 +36,7 @@
         <router-link :to="{ name: 'Home' }" class="landing__link">
           <v-img
             class="home__image mx-auto mt-8 mt-md-12 mt-xl-16 mb-0 mb-md-16"
-            max-height="348"
+            max-height="350"
             width="350"
             :src="standardLogo"
             :lazy-src="standardLogoLazy"

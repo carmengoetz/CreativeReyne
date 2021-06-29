@@ -20,7 +20,7 @@
         <v-img
           v-else
           class="home__image mx-auto"
-          max-height="488"
+          max-height="500"
           width="500"
           :src="standardLogo"
           :lazy-src="standardLogoLazy"

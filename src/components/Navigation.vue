@@ -104,7 +104,7 @@
                 text
                 tile
                 height="72"
-                class="nav__button text-uppercase justify-start"
+                class="nav__button text-uppercase justify-start pa-0"
                 @click="changeSite"
               >
                 <v-img
