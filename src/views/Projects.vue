@@ -11,7 +11,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-img
-            class="projects__image mx-auto mt-16 hidden-md-and-down"
+            class="projects__image mx-auto mb-16 d-none d-xl-flex"
             height="400"
             max-width="820"
             :src="image.image"
@@ -28,7 +28,24 @@
               </v-row> </template
           ></v-img>
           <v-img
-            class="projects__image mx-auto mt-16 hidden-lg-and-up"
+            class="projects__image mx-auto mb-16 d-none d-lg-flex d-xl-none"
+            max-height="400"
+            max-width="500"
+            :src="image.image"
+            :lazy-src="image.imageLazy"
+            v-bind="attrs"
+            v-on="on"
+            @click="carouselIndex = image.index"
+            ><template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="grey lighten-5"
+                ></v-progress-circular>
+              </v-row> </template
+          ></v-img>
+          <v-img
+            class="projects__image mx-auto mb-16 d-lg-none"
             max-height="400"
             max-width="300"
             :src="image.image"

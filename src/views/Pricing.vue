@@ -14,14 +14,14 @@
     <v-row
       no-gutters
       justify="center"
-      class="ml-4 mr-n4 ml-sm-16 mr-sm-n16 ml-md-16 mr-md-n16"
+      class="ml-4 mr-n4 ml-sm-16 mr-sm-n16 ml-md-16 mr-md-n16 ml-lg-0 mr-lg-0 ml-xl-16 mr-xl-n16"
     >
       <v-col
         v-for="col in columns"
         :key="col.index"
         cols="12"
         md="6"
-        xl="3"
+        lg="3"
         class="ml-0 mr-0 ml-sm-16 mr-sm-n16 ml-md-0 mr-md-0"
       >
         <v-row
@@ -38,8 +38,27 @@
           >
             <template v-slot:activator="{ on, attrs }">
               <v-img
-                class="pricing__image"
+                class="pricing__image d-none d-xl-flex"
                 max-width="300"
+                :src="col.image"
+                :lazy-src="col.imageLazy"
+                v-bind="attrs"
+                v-on="on"
+                ><template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
+                  </v-row> </template
+              ></v-img>
+              <v-img
+                class="pricing__image d-xl-none"
+                max-width="200"
                 :src="col.image"
                 :lazy-src="col.imageLazy"
                 v-bind="attrs"
@@ -111,7 +130,7 @@
             justify="start"
             class="ml-0 mr-0 ml-lg-16 mr-lg-n16 ml-xl-0 mr-xl-0"
           >
-            <v-col cols="4" sm="3" md="4" lg="3" xl="5">
+            <v-col cols="4" sm="3" md="4" lg="5">
               <p
                 class="pricing__item"
                 :class="
@@ -123,7 +142,7 @@
                 {{ item.item }}:
               </p>
             </v-col>
-            <v-col cols="8" sm="9" md="8" lg="9" xl="7">
+            <v-col cols="8" sm="9" md="8" lg="7">
               <p
                 v-for="price in item.prices"
                 :key="price.index"
