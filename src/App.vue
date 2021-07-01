@@ -100,7 +100,7 @@ export default {
     &--home {
       background-image: url("./assets/images/standard-home.png"),
         linear-gradient(180deg, #2b2b2b -27.49%, #f3797b 38.16%) !important;
-      background-size: 2600px !important;
+      background-size: contain !important;
       background-position: center 0 !important;
       background-repeat: no-repeat !important;
 

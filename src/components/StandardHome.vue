@@ -2,8 +2,22 @@
   <div>
     <v-row no-gutters class="mt-0">
       <v-img
-        class="home__image mx-auto"
+        class="home__image mx-auto d-lg-none d-xl-flex"
         max-width="300"
+        :src="standardLogo"
+        :lazy-src="standardLogoLazy"
+        ><template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="grey lighten-5"
+            ></v-progress-circular>
+          </v-row> </template
+      ></v-img>
+
+      <v-img
+        class="home__image mx-auto d-none d-lg-flex d-xl-none mt-n8"
+        max-width="200"
         :src="standardLogo"
         :lazy-src="standardLogoLazy"
         ><template v-slot:placeholder>
@@ -107,8 +121,85 @@ export default {
     word-break: normal !important;
     margin-top: 420px;
 
+    @media (max-width: 2250px) {
+      margin-top: 400px;
+    }
+
+    @media (max-width: 2200px) {
+      margin-top: 380px;
+    }
+
+    @media (max-width: 2150px) {
+      margin-top: 340px;
+    }
+
+    @media (max-width: 2100px) {
+      margin-top: 320px;
+    }
+
+    @media (max-width: 2050px) {
+      margin-top: 300px;
+    }
+
+    @media (max-width: 2000px) {
+      margin-top: 280px;
+    }
+
+    @media (max-width: 1950px) {
+      margin-top: 240px;
+    }
+
     @media (max-width: $xl) {
+      margin-top: 400px;
       font-size: 80px;
+    }
+
+    @media (max-width: 1850px) {
+      margin-top: 370px;
+    }
+
+    @media (max-width: 1800px) {
+      margin-top: 340px;
+    }
+
+    @media (max-width: 1750px) {
+      margin-top: 310px;
+    }
+
+    @media (max-width: 1700px) {
+      margin-top: 280px;
+    }
+
+    @media (max-width: 1650px) {
+      margin-top: 240px;
+    }
+
+    @media (max-width: 1600px) {
+      margin-top: 220px;
+    }
+
+    @media (max-width: 1550px) {
+      margin-top: 200px;
+    }
+
+    @media (max-width: 1500px) {
+      margin-top: 180px;
+    }
+
+    @media (max-width: 1450px) {
+      margin-top: 140px;
+    }
+
+    @media (max-width: 1400px) {
+      margin-top: 120px;
+    }
+
+    @media (max-width: 1350px) {
+      margin-top: 110px;
+    }
+
+    @media (max-width: 1300px) {
+      margin-top: 100px;
     }
 
     @media (max-width: $lg) {
