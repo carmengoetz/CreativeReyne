@@ -2,21 +2,8 @@
   <div>
     <v-row no-gutters class="mt-0">
       <v-img
-        class="home__image mx-auto d-none d-xl-flex"
+        class="home__image mx-auto"
         max-width="300"
-        :src="standardLogo"
-        :lazy-src="standardLogoLazy"
-        ><template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-progress-circular
-              indeterminate
-              color="grey lighten-5"
-            ></v-progress-circular>
-          </v-row> </template
-      ></v-img>
-      <v-img
-        class="home__image mx-auto mt-n8 d-xl-none"
-        max-width="200"
         :src="standardLogo"
         :lazy-src="standardLogoLazy"
         ><template v-slot:placeholder>
@@ -105,9 +92,6 @@ export default {
       font-family: $BebasNeue !important;
     }
 
-    @media (max-width: $xl) {
-      font-size: 80px;
-    }
     @media (max-width: $md) {
       line-height: 3rem;
     }
@@ -121,25 +105,20 @@ export default {
     font-size: 100px;
     letter-spacing: 0.515em;
     word-break: normal !important;
-    margin-top: 400px;
+    margin-top: 420px;
 
     @media (max-width: $xl) {
       font-size: 80px;
-      margin-top: 220px;
     }
 
     @media (max-width: $lg) {
       font-size: 60px;
-    }
-
-    @media (max-width: $md) {
-      font-size: 60px;
-      margin-top: 200px;
-      line-height: 3rem;
-    }
-
-    @media (max-width: $md) {
       margin-top: 150px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 48px;
+      line-height: 0.8em;
     }
   }
 
@@ -148,7 +127,11 @@ export default {
     word-break: normal !important;
 
     @media (max-width: $xl) {
-      font-size: 40px;
+      font-size: 56px;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 48px;
     }
 
     @media (max-width: $md) {

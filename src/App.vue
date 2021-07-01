@@ -100,15 +100,24 @@ export default {
     &--home {
       background-image: url("./assets/images/standard-home.png"),
         linear-gradient(180deg, #2b2b2b -27.49%, #f3797b 38.16%) !important;
-      background-size: contain !important;
+      background-size: 2600px !important;
       background-position: center 0 !important;
       background-repeat: no-repeat !important;
 
-      @media (max-width: $xl) {
-        background-position: center 80px !important;
-      }
       @media (max-width: $lg) {
-        background-size: 1364px !important;
+        background: linear-gradient(
+          140deg,
+          $standard-primary 20%,
+          $standard-secondary 80%
+        ) !important;
+      }
+
+      @media (min-width: 2600px) {
+        background: linear-gradient(
+          140deg,
+          $standard-primary 20%,
+          $standard-secondary 80%
+        ) !important;
       }
     }
   }
