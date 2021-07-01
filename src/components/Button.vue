@@ -7,13 +7,7 @@
     class="button white--text mt-8 mt-lg-16 py-6 mx-3"
     :height="height ? height : 75"
     :width="width ? width : 272"
-    :class="
-      site == 'creators'
-        ? 'button__creators'
-        : page == 'brand'
-        ? 'button__standard--white'
-        : 'button__standard--black'
-    "
+    :class="site == 'creators' ? 'button__creators' : 'button__standard--white'"
   >
     {{ name }}</v-btn
   >
@@ -51,10 +45,6 @@ export default {
   }
 
   &__standard {
-    &--black {
-      border: 6px solid $text-black;
-    }
-
     &--white {
       border: 6px solid $text-white;
       color: $text-black !important;

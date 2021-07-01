@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <ParticlesJS
+    <CreatorsParticlesJS
       v-if="
         site == 'creators' ||
           $route.name == 'Landing' ||
@@ -8,6 +8,7 @@
       "
       class="app--content1"
     />
+    <StandardParticlesJS v-else class="app--content1" />
     <v-app
       class="app--content2"
       :class="
@@ -15,9 +16,9 @@
           ? 'app__landing'
           : site == 'creators'
           ? 'app__creators'
-          : $route.name == 'Portfolio' || $route.name == 'Brand'
-          ? 'app__standard--blue'
-          : 'app__standard--pink'
+          : $route.name == 'Home'
+          ? 'app__standard--home'
+          : 'app__standard'
       "
     >
       <div v-if="$route.name == 'Landing'" class="mt-4 py-16">
@@ -41,14 +42,16 @@
 <script>
 import Navigation from "@/components/Navigation.vue";
 import Footer from "@/components/Footer.vue";
-import ParticlesJS from "@/components/ParticlesJS.vue";
+import CreatorsParticlesJS from "@/components/CreatorsParticlesJS.vue";
+import StandardParticlesJS from "@/components/StandardParticlesJS.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
     Footer,
-    ParticlesJS
+    CreatorsParticlesJS,
+    StandardParticlesJS
   },
   computed: {
     site() {
@@ -59,31 +62,6 @@ export default {
 </script>
 
 <style lang="scss">
-// @font-face {
-//   font-family: "BebasNeue";
-//   src: url("/fonts/BebasNeue-Regular.ttf") format("truetype");
-// }
-
-// @font-face {
-//   font-family: "MADEEvolveSansEVO";
-//   src: url("/fonts/MADE\ Evolve\ Sans\ Regular\ EVO.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "MADEEvolveSans";
-//   src: url("/fonts/MADE\ Evolve\ Sans\ Regular.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "AcuminPro";
-//   src: url("/fonts/Acumin-RPro.otf") format("opentype");
-// }
-
-// @font-face {
-//   font-family: "Consolas";
-//   src: url("/fonts/CONSOLA.TTF") format("truetype");
-// }
-
 .app {
   font-family: $AcuminPro;
   display: grid;
@@ -102,20 +80,10 @@ export default {
 
   &__landing {
     z-index: 1;
-    background: transparent url("./assets/images/landing-page.svg") top right
-      no-repeat !important;
-    background-attachment: fixed;
-    width: 100%;
-
-    @media (max-width: $xl) {
-      background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
-        -webkit-linear-gradient(10deg, transparent 50%, $standard-primary 0%) !important;
-    }
-
-    @media (max-width: $md) {
-      background: -webkit-linear-gradient(transparent, rgba(135, 60, 255, 0) 0%),
-        -webkit-linear-gradient(-80deg, transparent 50%, $standard-primary 0%) !important;
-    }
+    background: url("./assets/images/landing-page.png") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 
   &__creators {
@@ -123,11 +91,25 @@ export default {
   }
 
   &__standard {
-    &--blue {
-      background-color: $standard-secondary !important;
-    }
-    &--pink {
-      background: $standard-primary !important;
+    background: linear-gradient(
+      140deg,
+      $standard-primary 20%,
+      $standard-secondary 80%
+    ) !important;
+
+    &--home {
+      background-image: url("./assets/images/standard-home.png"),
+        linear-gradient(180deg, #2b2b2b -27.49%, #f3797b 38.16%) !important;
+      background-size: contain !important;
+      background-position: center 0 !important;
+      background-repeat: no-repeat !important;
+
+      @media (max-width: $xl) {
+        background-position: center 80px !important;
+      }
+      @media (max-width: $lg) {
+        background-size: 1364px !important;
+      }
     }
   }
 

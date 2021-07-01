@@ -218,14 +218,17 @@ export default {
 
       &[disabled] {
         border: 4px solid rgba(213, 31, 38, 0.5);
+        color: rgba(255, 255, 255, 0.5) !important;
       }
     }
 
     &--standard {
-      border: 4px solid $text-black;
+      border: 6px solid $text-white;
+      color: $text-black !important;
 
       &[disabled] {
-        border: 4px solid rgba(26, 26, 26, 0.5);
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        color: rgba(26, 26, 26, 0.5) !important;
       }
     }
 
@@ -239,7 +242,6 @@ export default {
 
     &[disabled] {
       background: rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.5) !important;
     }
   }
 }
