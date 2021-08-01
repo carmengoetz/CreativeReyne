@@ -56,7 +56,7 @@
     </v-menu>
     <v-spacer></v-spacer>
 
-    <v-toolbar-items class="nav__links hidden-sm-and-down">
+    <v-toolbar-items class="nav__links hidden-md-and-down">
       <router-link
         v-for="page in pages"
         :key="page.index"
@@ -71,12 +71,12 @@
         {{ page.name }}
       </router-link>
     </v-toolbar-items>
-    <v-menu bottom tile offset-y class="hidden-md-and-up">
+    <v-menu bottom tile offset-y class="hidden-lg-and-up">
       <template v-slot:activator="{ on, attrs }">
         <v-app-bar-nav-icon
           v-bind="attrs"
           v-on="on"
-          class="hidden-md-and-up"
+          class="hidden-lg-and-up"
         ></v-app-bar-nav-icon>
       </template>
       <v-card>
@@ -104,7 +104,7 @@
                 text
                 tile
                 height="72"
-                class="nav__button text-uppercase justify-start"
+                class="nav__button text-uppercase justify-start pa-0"
                 @click="changeSite"
               >
                 <v-img

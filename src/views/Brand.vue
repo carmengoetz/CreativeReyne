@@ -24,7 +24,7 @@
             >
               <template v-slot:activator="{ on, attrs }">
                 <v-img
-                  class="brand__image mx-auto hidden-sm-and-down"
+                  class="brand__image mx-auto d-none d-xl-flex"
                   contain
                   max-width="400"
                   :src="col.image"
@@ -44,7 +44,7 @@
                     </v-row> </template
                 ></v-img>
                 <v-img
-                  class="brand__image mx-auto hidden-md-and-up"
+                  class="brand__image mx-auto d-xl-none"
                   contain
                   max-width="300"
                   :src="col.image"
@@ -108,7 +108,7 @@
             </v-card-title>
             <v-row no-gutters>
               <p
-                class="brand__description mx-4 mx-sm-16 text-center"
+                class="brand__description mx-4 mx-sm-8 text-center"
                 :class="
                   site == 'creators'
                     ? 'brand__description--creators'
@@ -223,6 +223,10 @@ export default {
       color: $text-black !important;
       letter-spacing: 0.24em;
     }
+
+    @media (max-width: $md) {
+      font-size: 36px;
+    }
   }
 
   &__description {
@@ -235,6 +239,10 @@ export default {
 
     &--standard {
       color: $text-black;
+    }
+
+    @media (max-width: $xl) {
+      font-size: 20px;
     }
   }
 }
